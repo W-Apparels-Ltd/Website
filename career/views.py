@@ -6,7 +6,7 @@ from rest_framework import status
 from .serializers import JobApplicationSerializer, ContactSerializer
 from .models import JobApplication, Contact
 from django.http import Http404
-from rest_framework.permissions import AllowAny
+
 
 
 # job applications create view
@@ -24,7 +24,6 @@ from rest_framework.permissions import AllowAny
 
 
 class JobApplicationCreateView(APIView):
-    # permission_classes = (AllowAny,)
 
     def post(self, request):
         data = request.data
@@ -35,7 +34,7 @@ class JobApplicationCreateView(APIView):
         return Response("success")
     
 #list api view
-#
+
 class JobApplicationListView(APIView):
     def get(self, request, format=None):
         job_applications = JobApplication.objects.all()
