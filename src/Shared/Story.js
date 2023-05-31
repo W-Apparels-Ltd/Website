@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../images/ourstory-300x225-1.jpg'
+import img from '../images/factory_purpose/ourstory-300x225-1.jpg'
 
 const Story = () => {
   return (

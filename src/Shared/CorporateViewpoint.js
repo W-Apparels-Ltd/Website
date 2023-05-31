@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../images/333333.jpg'
+import img from '../images/factory_purpose/33333-1.jpg'
 
 const CorporateViewpoint = () => {
   return (

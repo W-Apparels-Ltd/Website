@@ -1,14 +1,14 @@
 import React from 'react';
-import sis1 from '../images/888888.jpg'
-import sis2 from '../images/aftab-1.jpg'
-import sis3 from '../images/333333-1.jpg'
+import sis1 from '../images/factory_purpose/888888.jpg'
+import sis2 from '../images/factory_purpose/aftab-1.jpg'
+import sis3 from '../images/factory_purpose/333333-1.jpg'
 
 const SisterConcern = () => {
   return (
-    <div className=' min-h-screen  bg-base-100 lg:px-20'>  
+    <div className=' min-h-screen  bg-base-100 lg:px-20'>
       <div className='pb-20'>
-          <div className='p-20 text-center'><h1 className='text-5xl text-primary font-bold'>Sister Concern</h1></div>
-          <div className='px-20 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>
+        <div className='p-20 text-center'><h1 className='text-5xl text-primary font-bold'>Sister Concern</h1></div>
+        <div className='px-20 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>
           <div className="card w-50 bg-base-100 shadow-xl">
             <figure><img src={sis1} alt="Shoes" /></figure>
             <div className="card-body">
@@ -39,8 +39,8 @@ const SisterConcern = () => {
               </div>
             </div>
           </div>
-          
-          </div>
+
+        </div>
       </div>
     </div>
   );
