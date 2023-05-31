@@ -25,14 +25,16 @@ const Nav = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-bold">
+            <li><a>About Us</a></li>
+            <li><a>Products</a></li>
             <li><a>Facilities</a></li>
             <li><a>Our Clients</a></li>
-            <li><a>Products</a></li>
-            <li><a>Meet The Team</a></li>
+            <li><a>Our Team</a></li>
+            <li><a>Careers</a></li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Get started</a>
+          <a className="btn">Send us a Message</a>
         </div>
       </div>
     </div>
