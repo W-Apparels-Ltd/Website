@@ -1,11 +1,11 @@
 import React from 'react';
-import img from '../images/1.jpg'
+import img from '../images/factory_purpose/1.jpg'
 import '../Shared/Banner.css'
 import { Button, Carousel, Typography } from '@material-tailwind/react';
 const Banner = () => {
   return (
     <Carousel autoplay='true' loop='true'>
-      
+
       <div className="relative w-full" >
         <img
           src={img}
@@ -78,7 +78,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      
+
     </Carousel>
   );
 };
