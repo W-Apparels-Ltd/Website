@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../images/wapparels_logo.jpeg'
+import { Link } from 'react-router-dom';
 
 
 const Nav = () => {
@@ -12,12 +13,12 @@ const Nav = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 ">
-              <li><a>About us</a></li>
-              <li><a>Facilities</a></li>
-              <li><a>Clientele</a></li>
-              <li><a>Products</a></li>
-              <li><a>Meet Our Team</a></li>
-
+            <Link><li><a>About Us</a></li></Link>
+            <Link><li><a>Products</a></li></Link>
+            <Link><li><a>Facilities</a></li></Link>
+            <Link><li><a>Our Clients</a></li></Link>
+            <Link to='/meettheteam'><li><a>Our Team</a></li></Link>
+            <Link><li><a>Careers</a></li></Link>
             </ul>
           </div>
 
@@ -25,12 +26,13 @@ const Nav = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-bold">
-            <li><a>About Us</a></li>
-            <li><a>Products</a></li>
-            <li><a>Facilities</a></li>
-            <li><a>Our Clients</a></li>
-            <li><a>Our Team</a></li>
-            <li><a>Careers</a></li>
+            <Link><li><a>About Us</a></li></Link>
+            <Link><li><a>Products</a></li></Link>
+            <Link><li><a>Facilities</a></li></Link>
+            <Link><li><a>Our Clients</a></li></Link>
+            <Link to='/meettheteam'><li><a>Our Team</a></li></Link>
+            <Link><li><a>Careers</a></li></Link>
+        
           </ul>
         </div>
         <div className="navbar-end">

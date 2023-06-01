@@ -13,7 +13,7 @@ const Banner = () => {
         <img
           src={img}
           alt="image 2"
-          className="h-full w-full object-cover"
+          className="h-[550px] w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
           <div className="w-3/4 text-center md:w-2/4">
@@ -46,7 +46,7 @@ const Banner = () => {
         <img
           src={img2}
           alt="image 2"
-          className="h-full w-full object-cover"
+          className="h-[550px] w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
           <div className="w-3/4 text-center md:w-2/4">
@@ -80,7 +80,7 @@ const Banner = () => {
         <img
           src={img3}
           alt="image 2"
-          className="h-full w-full object-cover"
+          className="h-[550px] w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
           <div className="w-3/4 text-center md:w-2/4">
