@@ -4,7 +4,7 @@ import Dr from '../images/personnel/400md-300x300-1.png'
 const ManagingDirectorMessage = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-red-50 px-20 py-10">
+      <div className="hero min-h-screen bg-[#e5e4e2] px-20 py-10">
 
         <div className='text-center'>
           <h1 className="text-4xl font-bold">Managing Director Message</h1>

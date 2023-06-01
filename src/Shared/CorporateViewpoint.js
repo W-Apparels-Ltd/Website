@@ -4,7 +4,7 @@ import img from '../images/factory_purpose/33333-1.jpg'
 const CorporateViewpoint = () => {
   return (
     <div>
-      <div className="hero lg:min-h-screen bg-red-50 px-20">
+      <div className="hero lg:min-h-screen bg-[#e5e4e2] px-20">
         <div className="hero-content flex-col lg:flex-row lg:items-center">
           <img src={img} className="w-2/5 rounded-lg shadow-2xl" />
           <div className='ps-20'>

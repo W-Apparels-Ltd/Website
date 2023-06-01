@@ -35,7 +35,7 @@ const MeetTheTeam = () => {
               <div className='text-center'>
               <h1 className="text-4xl font-bold">Directors</h1>
               </div>
-              <div className='flex justify-around'>
+              <div className='flex justify-around lg:ms-10'>
                 <div className='text-center m-5'>
                   
                   <div className='grid justify-items-center mt-10'>

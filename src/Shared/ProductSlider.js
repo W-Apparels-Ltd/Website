@@ -30,8 +30,8 @@ const ProductSlider = () => {
     }
   };
   return (
-    <div className=' min-h-screen  bg-red-50 lg:px-20'>  
-      <div className='pb-20 bg-red-50'>
+    <div className=' min-h-screen  bg-[#e5e4e2] lg:px-20'>  
+      <div className='pb-20 '>
           <div className='p-20 text-center'><h1 className='text-5xl text-primary font-bold'>Apparel Products</h1></div>
           <div>
             <Carousel responsive={responsive} 
