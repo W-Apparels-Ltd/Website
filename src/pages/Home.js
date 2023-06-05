@@ -10,6 +10,7 @@ import Facilities from '../Shared/Facilities';
 import OurClients from '../Shared/OurClients';
 import Contact from '../Shared/Contact';
 import ProductSlider from '../Shared/ProductSlider';
+import { ToastContainer } from 'react-toastify';
 
 const Home = () => {
   return (
@@ -24,8 +25,9 @@ const Home = () => {
       <ManagingDirectorMessage></ManagingDirectorMessage>
       <Facilities></Facilities>
       <OurClients></OurClients>
-  
       <Contact></Contact>
+      <ToastContainer/>
+
      
     </div>
   );

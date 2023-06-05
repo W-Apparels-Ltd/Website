@@ -1,11 +1,74 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import product1 from '../images/inventory/111111-768x768.png'
 import product2 from '../images/inventory/222222-1.png'
 import product3 from '../images/inventory/2222222-removebg-preview.png'
+import product4 from '../images/inventory/3 (1).jpg'
+import product5 from '../images/inventory/3 (2).jpg'
+import product6 from '../images/inventory/3 (3).jpg'
+import product7 from '../images/inventory/3 (4).jpg'
+import product8 from '../images/inventory/3 (5).jpg'
+import ProductItem from './ProductItem';
 
 const ProductSlider = () => {
+  const img=[
+    {
+      _id:"01",
+      img:product1,
+      name:'product',
+      des: 'product details'
+      
+    },
+    {
+      _id:"02",
+      img:product2,
+      name:'product',
+      des: 'product details'
+    },
+    {
+      _id:"03",
+      img:product3,
+      name:'product',
+      des: 'product details'
+    },
+    {
+      _id:"04",
+      img:product4,
+      name:'product',
+      des: 'product details'
+    },
+    {
+      _id:"05",
+      img:product5,
+      name:'product',
+      des: 'product details'
+    },
+    {
+      _id:"06",
+      img:product6,
+      name:'product',
+      des: 'product details'
+    },
+    {
+      _id:"07",
+      img:product7,
+      name:'product',
+      des: 'product details'
+    },
+    {
+      _id:"08",
+      img:product8,
+      name:'product',
+      des: 'product details'
+    },
+  ]
+  const [product, setProduct]=useState([]);
+  useEffect(()=>{
+    fetch('http://localhost:5000/products')
+    .then(res=>res.json())
+    .then(data=> setProduct(data))
+  },[])
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -56,47 +119,12 @@ const ProductSlider = () => {
             rtl={false}
             shouldResetAutoplay
             swipeable>
-                <div className="card  bg-base-100 shadow-xl m-5 ">
-                  <figure><img src={product1} alt="Shoes" /></figure>
-                  <div className='m-5'>
-                    <h2 className='font-bold'>Shoes!</h2>
-                    <p className='mb-2'>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className='flex justify-end'>
-                      <button className="btn btn-primary ">Inquire Now</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="card  bg-base-100 shadow-xl  m-5 ">
-                  <figure><img src={product2} alt="Shoes" /></figure>
-                  <div className='m-5'>
-                    <h2 className='font-bold'>Shoes!</h2>
-                    <p className='mb-2'>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className='flex justify-end'>
-                      <button className="btn btn-primary ">Inquire Now</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="card  bg-base-100 shadow-xl m-5 ">
-                  <figure><img src={product3} alt="Shoes" /></figure>
-                  <div className='m-5'>
-                    <h2 className='font-bold'>Shoes!</h2>
-                    <p className='mb-2'>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className='flex justify-end'>
-                      <button className="btn btn-primary ">Inquire Now</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="card  bg-base-100 shadow-xl  m-5 ">
-                  <figure><img src={product2} alt="Shoes" /></figure>
-                  <div className='m-5'>
-                    <h2 className='font-bold'>Shoes!</h2>
-                    <p className='mb-2'>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className='flex justify-end'>
-                      <button className="btn btn-primary ">Inquire Now</button>
-                    </div>
-                  </div>
-                </div>
-                
+               {
+                img.map(item=>
+                  <ProductItem key={item._id} item={item}
+                  ></ProductItem>
+                  )
+               }
                 
               
             </Carousel>

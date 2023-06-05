@@ -4,6 +4,8 @@ import Main from './Layout/Main';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import MeetTheTeam from './pages/MeetTheTeam';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   const router = createBrowserRouter([{

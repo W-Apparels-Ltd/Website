@@ -15,7 +15,7 @@ const SisterConcern = () => {
               <h2 className="card-title">Quality apparels ltd.</h2>
               <p>Aftabunnesa Garments Ltd. is 9 storied 100% export oriented factory initiating its activities since September, 2019.....</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover: duration-150">Read More</button>
+                
               </div>
             </div>
           </div>
@@ -25,7 +25,7 @@ const SisterConcern = () => {
               <h2 className="card-title">Aftabunessa Garments</h2>
               <p>Aftabunnesa Garments Ltd. is 9 storied 100% export oriented factory initiating its activities since September, 2019.....</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover: duration-150">Read More</button>
+                
               </div>
             </div>
           </div>
@@ -35,7 +35,7 @@ const SisterConcern = () => {
               <h2 className="card-title">3NA Fashion</h2>
               <p>The Industry has a yearly production capacity of 28,00,000 lakh pieces (2.8 million pieces) of woven-wear.....</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover: duration-150">Read More</button>
+                
               </div>
             </div>
           </div>

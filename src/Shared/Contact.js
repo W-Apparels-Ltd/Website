@@ -2,8 +2,53 @@ import React from 'react';
 import fb from '../images/584ac2d03ac3a570f94a666d.png'
 import li from '../images/inss-removebg-preview.png'
 import ins from '../images/Insss-removebg-preview.png'
+import { toast } from 'react-toastify';
+
 
 const Contact = () => {
+  const handleSubmit=event=>{
+    event.preventDefault();
+    const form = event.target;
+    const name=form.name.value;
+    const email =form.email.value;
+    const subject=form.subject.value;
+    const message =form.message.value;
+
+    const emaildata={
+      name,
+      email,
+      subject,
+      message
+    }
+    console.log(emaildata);
+    
+    console.log(emaildata);
+    fetch('http://localhost:5000/contactus',{
+      method:'POST',
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(emaildata)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data);
+      if(data.status===201){
+        console.log('mail sent');
+        toast.success('Successfully Sent!', {
+          position: toast.POSITION.TOP_RIGHT
+      });
+      }
+      else{
+        console.log('error');
+        toast.error('Please try again!', {
+          position: toast.POSITION.TOP_RIGHT
+      });
+      }
+      
+    })
+    form.reset();
+  }
   return (
 
     <div className=" bg-base-200 p-20 ">
@@ -44,34 +89,34 @@ const Contact = () => {
 
         </div>
         <div className="card flex-shrink-0 lg:w-1/2 w-full max-w-xl shadow-2xl bg-base-100">
-          <form className="card-body">
+          <form onSubmit={handleSubmit} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Name</span>
               </label>
-              <input type="text" placeholder="name" className="input input-bordered" />
+              <input name='name' type="text" placeholder="name" className="input input-bordered" />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Email</span>
               </label>
-              <input type="text" placeholder="email" className="input input-bordered" />
+              <input name='email' type="text" placeholder="email" className="input input-bordered" />
 
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Subject</span>
               </label>
-              <input type="text" placeholder="subject" className="input input-bordered" />
+              <input name='subject' type="text" placeholder="subject" className="input input-bordered" />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Message</span>
               </label>
-              <textarea className="textarea textarea-bordered" placeholder="message"></textarea>
+              <textarea name='message' className="textarea textarea-bordered" placeholder="message"></textarea>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Send Message</button>
+              <input type='submit' value='Send Message' className="btn btn-primary"></input>
             </div>
           </form>
         </div>
