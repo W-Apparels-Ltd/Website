@@ -12,6 +12,7 @@ import Contact from '../Shared/Contact';
 import ProductSlider from '../Shared/ProductSlider';
 import { ToastContainer } from 'react-toastify';
 
+
 const Home = () => {
   return (
     <div>
@@ -26,6 +27,7 @@ const Home = () => {
       <Facilities></Facilities>
       <OurClients></OurClients>
       <Contact></Contact>
+      
       <ToastContainer/>
 
      

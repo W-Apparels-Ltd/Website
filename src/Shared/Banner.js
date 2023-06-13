@@ -5,30 +5,30 @@ import img3 from '../images/factory_purpose/333333-1.jpg'
 
 import '../Shared/Banner.css'
 import { Button, Carousel, Typography } from '@material-tailwind/react';
-import { Fade, Slide, Zoom } from 'react-awesome-reveal';
+import { Fade, Flip, Hinge, JackInTheBox, Roll, Slide, Zoom } from 'react-awesome-reveal';
 const Banner = () => {
   return (
-    <Carousel autoplay='true' loop='true'>
+    <Carousel autoplay='true' loop='true' prevArrow={false} nextArrow={false}>
 
       <div className="relative w-full" >
         <img
           src={img}
           alt="image 2"
-          className="h-[600px] w-full object-cover"
+          className="h-[650px] w-full object-cover"
         />
-        <div className="absolute inset-0 grid h-full w-full items-center ps-20 pb-25 bg-black/75">
-          <div className=" md:w-2/4">
+        <div className="absolute inset-0 grid h-full w-full place-content-end place-items-end bg-black/75">
+          <div className=" md:w-2/4 text-right m-5 lg:m-20">
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl "
+              className="mb-4 text-xl md:text-3xl lg:text-4xl "
             >
               <Slide>Quality over Mediocrity</Slide>
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 opacity-80"
+              className="mb-12 opacity-80 text-md"
             >
               <Slide direction='right'>In an industry driven by mass production, our commitment to quality sets us apart. We believe in prioritizing excellence over mediocrity, setting higher standards that redefine the RMG sector.</Slide>
             </Typography>
@@ -40,50 +40,55 @@ const Banner = () => {
         <img
           src={img2}
           alt="image 2"
-          className="h-[600px] w-full object-cover"
+          className="h-[650px] w-full object-cover"
         />
-        <div className="absolute inset-0 grid h-full w-full items-center ps-20 pb-25 bg-black/75">
-          <div className="md:w-2/4">
+        <div className="absolute inset-0 grid h-full w-full lg:place-items-start place-items-end  lg:ps-20 p-5 bg-black/75">
+          <div className="md:w-2/4 lg:w-2/4 ">
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-2 mt-20  text-xl md:text-3xl lg:text-4xl"
             >
-              <Slide>Unlocking Potential: Creating Boundless Employment Opportunities</Slide>
+              <Slide direction='right'>Unlocking Potential: Creating Boundless Employment Opportunities</Slide>
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 opacity-80"
+              className="mb-12 opacity-80 text-md"
             >
-              <Slide direction='right'>We are dedicated to empowering lives by providing meaningful employment opportunities. We understand the transformative power of work and believe in fostering an inclusive environment that embraces growth and development.</Slide>
+              <Slide direction='left'>We are dedicated to empowering lives by providing meaningful employment opportunities. We understand the transformative power of work and believe in fostering an inclusive environment that embraces growth and development.</Slide>
             </Typography>
-           
-          </div>
+            </div>
+            
         </div>
+        
+            
+           
+          
+        
       </div>
 
       <div className="relative w-full">
         <img
           src={img3}
           alt="image 2"
-          className="h-[600px] w-full object-cover"
+          className="h-[650px] w-full object-cover"
         />
-        <div className="absolute inset-0 grid h-full w-full items-center ps-20 pb-25 bg-black/75">
-          <div className=" md:w-2/4">
+        <div className="absolute inset-0 grid h-full w-full lg:place-items-center place-items-end bg-black/75">
+          <div className=" md:w-3/4 text-center">
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl "
+              className="lg:mb-4 text-xl md:text-3xl lg:text-4xl"
             >
-              <Slide>Empowering Local Businesses for a Thriving Community</Slide>
+              <Fade>Empowering Local Businesses for a Thriving Community</Fade>
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 opacity-80"
+              className="mb-12 opacity-80 text-sm"
             >
-             <Slide direction='right'> We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem.   </Slide>          </Typography>
+             <Slide className='p-5' direction='right'> We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem.   </Slide>          </Typography>
             
           </div>
         </div>

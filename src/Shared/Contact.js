@@ -23,7 +23,7 @@ const Contact = () => {
     console.log(emaildata);
     
     console.log(emaildata);
-    fetch('http://localhost:5000/contactus',{
+    fetch('https://wapparels-server.vercel.app/contactus',{
       method:'POST',
       headers:{
         'content-type':'application/json'
@@ -51,16 +51,16 @@ const Contact = () => {
   }
   return (
 
-    <div className=" bg-base-200 p-20 ">
-      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start">
-        <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold text-primary">Contact Us</h1>
+    <div id='contactus' className=" bg-base-200 lg:p-20">
+      <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-start">
+        <div className="p-5 lg:p-0 lg:text-left">
+          <h1 className="lg:text-5xl text-2xl md:text-3xl font-bold text-primary">Contact Us</h1>
           <p className="pt-6">W. Apparels Ltd.
             295 JA/ 4 Rayer Bazar, Dhaka 1209<br />
             Phone: +8802 9181198,<br /> Email: info@wapparels.com
           </p>
           <div className='font-bold'><h1>Follow us on:</h1></div>
-          <div className='flex flex-row my-4'>
+          <div className='flex flex-row my-4 '>
 
             <div className='me-3'>
               <div className='flex justify-center'>
@@ -82,8 +82,10 @@ const Contact = () => {
             </div>
 
           </div>
-          <div className='me-12'>
-            <iframe className='w-[550px] h-[300px]' id="gmap_canvas" src="https://maps.google.com/maps?q=W apparels&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          <div className='lg:me-12 '>
+            <iframe className='
+            w-[250px] h-[100px]
+            lg:w-[550px] lg:h-[300px] mb-5' id="gmap_canvas" src="https://maps.google.com/maps?q=W apparels&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
           </div>
 
 

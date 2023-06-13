@@ -6,11 +6,13 @@ module.exports = withMT({
     "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
 ],
 daisyui: {
+  base:false,
   themes: [
     {
       mytheme: {
       
-  primary: "#291334",
+  primary: "rgba(1,1,1,0.7)",
+  'primary-content': '#ffffff',
       
   secondary: "#19D3AE",
       
