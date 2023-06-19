@@ -4,12 +4,14 @@ import Story from '../Shared/Story';
 import BuildingsandOccupants from '../Shared/BuildingsandOccupants';
 import CorporateViewpoint from '../Shared/CorporateViewpoint';
 import MessageFromtheChairman from '../Shared/MessageFromtheChairman';
-import Product from '../Shared/Product';
 import SisterConcern from '../Shared/SisterConcern';
 import ManagingDirectorMessage from '../Shared/ManagingDirectorMessage';
 import Facilities from '../Shared/Facilities';
 import OurClients from '../Shared/OurClients';
 import Contact from '../Shared/Contact';
+import ProductSlider from '../Shared/ProductSlider';
+import { ToastContainer } from 'react-toastify';
+
 
 const Home = () => {
   return (
@@ -19,13 +21,15 @@ const Home = () => {
       <BuildingsandOccupants></BuildingsandOccupants>
       <CorporateViewpoint></CorporateViewpoint>
       <MessageFromtheChairman></MessageFromtheChairman>
-      <Product></Product>
+      <ProductSlider></ProductSlider>
       <SisterConcern></SisterConcern>
       <ManagingDirectorMessage></ManagingDirectorMessage>
       <Facilities></Facilities>
       <OurClients></OurClients>
-  
       <Contact></Contact>
+      
+      <ToastContainer/>
+
      
     </div>
   );
