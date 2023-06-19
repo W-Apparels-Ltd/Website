@@ -5,6 +5,7 @@ import D1 from '../images/personnel/team-2.png'
 import D2 from '../images/personnel/team-3-removebg-preview.jpg'
 import D3 from '../images/personnel/team-4.jpg'
 import NS from '../images/personnel/NS.jpeg'
+import CS from '../images/personnel/IMG_2447(1) (1).jpg'
 
 
 const MeetTheTeam = () => {
@@ -20,13 +21,13 @@ const MeetTheTeam = () => {
           <div className='bg-base-200 '>
           <div className=" bg-base-200 px-10 pt-20">
             <div className='text-center'>
-              <h1 className="lg:text-4xl text-3xl font-bold">Managing Director</h1>
+              <h1 className="lg:text-4xl text-3xl font-bold">Chairman</h1>
             </div>
-            <div className='grid lg:grid-cols-2 grid-cols justify-items-center justify-center  m-10'>
+            <div className='grid  grid-cols justify-items-center justify-center  m-5'>
               <div className='text-center'>
                   
                   <div className='grid justify-items-center mt-10'>
-                      <img className='w-48 h-48 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                      <img className='w-52 h-52 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
                   </div>
                   <div className='my-4'>
                     <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold">Nigher Sultana</h1>
@@ -34,6 +35,15 @@ const MeetTheTeam = () => {
                   </div>
                 
                 </div>
+              
+            </div>
+          </div>
+          <div className=" bg-base-200 px-10 pt-20">
+            <div className='text-center'>
+              <h1 className="lg:text-4xl text-3xl font-bold">Managing Director</h1>
+            </div>
+            <div className='grid  grid-cols justify-items-center justify-center  m-5'>
+              
               <div className='text-center'>
                   
                   <div className='grid justify-items-center mt-10'>
@@ -92,7 +102,7 @@ const MeetTheTeam = () => {
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
-                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={CS} alt="" />
                   </div>
                   <div className='my-4'>
                     <h1 className="text-xl lg:text-3xl  font-bold">Name</h1>

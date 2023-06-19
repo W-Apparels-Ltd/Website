@@ -7,7 +7,6 @@ import amforibsci from '../images/Certificates/amforibsci-removebg-preview.png'
 import amforibepi from '../images/Certificates/amfori-bepi-removebg-preview.png'
 import alliance from '../images/Certificates/alliance-removebg-preview.png'
 import rsc from '../images/Certificates/RSC.png'
-import { Flip } from 'react-awesome-reveal';
 import Costing from '../Shared/Costing';
 import FireAndSafety from '../Shared/FireAndSafety';
 
@@ -29,26 +28,26 @@ const Teams = () => {
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 justify-items-center items-center p-5'>
               <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300'>
-                <Flip><img className='lg:w-60 w-44 object-cover'  src={bcl} alt="" /></Flip>
+                <img className='lg:w-60 w-44 object-cover'  src={bcl} alt="" />
               </div>
               <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300'>
-                <Flip><img className='lg:w-60 w-44 object-cover'  src={cpi} alt="" /></Flip>
+                <img className='lg:w-60 w-44 object-cover'  src={cpi} alt="" />
               </div>
               <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300'>
-                <Flip><img className='lg:w-60 w-44 object-cover' src={alliance} alt="" /></Flip>
+                <img className='lg:w-60 w-44 object-cover' src={alliance} alt="" />
               </div>
               <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300'>
-                <Flip><img className='lg:w-60 w-44 object-cover' src={oekotex} alt="" /></Flip>
+                <img className='lg:w-60 w-44 object-cover' src={oekotex} alt="" />
               </div>
               <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300'>
-                <Flip><img className='lg:w-60 w-44 object-cover' src={amforibsci} alt="" /></Flip>
+                <img className='lg:w-60 w-44 object-cover' src={amforibsci} alt="" />
               </div>
               <div className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300'>
-                <Flip><img className='lg:w-60 w-44 object-cover' src={amforibepi} alt="" /></Flip>
+                <img className='lg:w-60 w-44 object-cover' src={amforibepi} alt="" />
               </div>
               
               <div className='mt-5 lg:col-span-3 md:col-span-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300'>
-                <Flip><img className='lg:w-60 w-44 object-cover' src={rsc} alt="" /></Flip>
+                <img className='lg:w-60 w-44 object-cover' src={rsc} alt="" />
               </div>
 
             </div>

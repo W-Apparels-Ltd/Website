@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import costing from '../images/costing.jpg'
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import SearchBar from './SearchBar';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4, v5 as uuidv5 } from 'uuid';
+
 
 const CostingForm = () => {
   const [title,settitle]=useState([]);
@@ -10,7 +11,8 @@ const CostingForm = () => {
   const[list,setlist]=useState([]);
   const [CM,setCM]=useState('0');
   const [sum,setSum]=useState('0');
-  let c=1;
+  const [fob,setfob]=useState('0');
+  
   const handleCalculate=event=>{
     event.preventDefault();
     const form = event.target;
@@ -20,14 +22,40 @@ const CostingForm = () => {
     console.log(total);
     let totalsum=parseFloat(sum)+ parseFloat(total);
     setSum(totalsum);
-    const newList = list.concat({id: uuidv4(),quantity,price,total,name:title.title});
+    const newList = list.concat({id:uuidv4(),quantity,price,total,name:title.title});
     setlist(newList);
+    const result= (parseFloat(fob)* 12)-totalsum;
+
+    setCM(result.toFixed(2));
     form.reset();
   }
   const handleChange=event=>{
     event.preventDefault();
-    const result= (parseFloat(event.target.value)* 12)-parseFloat(sum);
-    setCM(result);
+    if(event.target.value!=""){
+      setfob(event.target.value);
+      const result= (parseFloat(event.target.value)* 12)-parseFloat(sum);
+      setCM(result.toFixed(2));
+    }
+    else{
+      setCM((0* 12)-parseFloat(sum));
+    }
+    
+  }
+  const handledelete=(id,total)=>{
+    if(sum===""){
+      sum=0;
+    }
+    if(fob===""){
+      fob=0;
+    }
+    const s=parseFloat(sum).toFixed(2)-total;
+    const cm = parseFloat(fob)*12 - s;
+
+    setSum(s);
+    setCM(cm.toFixed(2));
+    const list1 = list.filter(e => e.id !== id);
+    setlist(list1);
+  
   }
   
   const data=[
@@ -69,11 +97,11 @@ const CostingForm = () => {
   return (
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${costing})`,
-    }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg">
+    }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg ">
       <div>
           <div className='p-20 text-center'><h1 className='text-5xl text-white font-bold mt-5'>Costing</h1></div>
       </div>
-      <div className='mt-20 bg-base-100 lg:p-20 p-10'>
+      <div className='mt-20 bg-base-100 lg:p-20 p-10 relative z-0'>
       <div>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
@@ -178,7 +206,7 @@ const CostingForm = () => {
           <SearchBar setsuccess={setsuccess} settitle={settitle} data={data} placeholder="Enter a item Name..."  ></SearchBar>
           
 
-          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 ">
 
           {
             success && 
@@ -192,6 +220,7 @@ const CostingForm = () => {
                     type="number"
                     name="quantity"
                     id="quantity"
+                    step="any"
                     autoComplete="address-level2"
                     className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 md:text-md md:leading-6"
                   />
@@ -202,11 +231,12 @@ const CostingForm = () => {
                     type="number"
                     name="price"
                     id="price"
+                    step="any"
                     autoComplete="address-level2"
                     className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 md:text-md md:leading-6"
                   />
                 </div>
-                <div><p className='ms-1'>/Yds</p></div>
+                <div><p className='ms-1'>Dollar</p></div>
                 <input type='submit' value='ADD'  className='ms-2 btn btn-primary btn-sm'/>
               </form>
             </div>
@@ -220,8 +250,8 @@ const CostingForm = () => {
       
         
           <div className="border-b border-gray-900/10 pb-12">
-          <div className='overflow-x-auto'>
-            <table className="table w-full">
+          <div className='overflow-x-auto '>
+            <table className="table w-full z-[0]">
               {/* head */}
               <thead>
                 <tr>
@@ -230,6 +260,7 @@ const CostingForm = () => {
                   <th>Quantity</th>
                   <th>Price</th>
                   <th>Total</th>
+                  <th></th>
 
                   
                 </tr>
@@ -241,8 +272,9 @@ const CostingForm = () => {
                   <th>{++i}</th>
                   <td>{item.name}</td>
                   <td>{item.quantity}</td>
-                  <td>{item.price}</td>
-                  <td>US ${item.total}</td>
+                  <td>US ${item.price}</td>
+                  <td>US ${item.total.toFixed(2)}</td>
+                  <td><button onClick={()=>handledelete(item.id,item.total)} className='btn btn-sm btn-primary'>delete</button></td>
                   </tr>
                 ))}
                 
@@ -250,7 +282,7 @@ const CostingForm = () => {
               </tbody>
             </table>
           </div>
-              <div className='flex justify-between mt-5'>
+              <div className='flex lg:flex-row md:flex-row flex-col justify-between mt-5'>
                 <div className='flex items-center'>
                     <label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">
                             FOB:
@@ -267,8 +299,8 @@ const CostingForm = () => {
                   </div>
                   
               </div>
-              <div className='text-xl font-bold'>
-                    <h1>Total Costing: <span className='text-[green]'>US ${CM}</span></h1>
+              <div className='text-xl font-bold mt-4 lg:mt-0 md:mt-0'>
+                    <h1>CM: <span className='text-[green]'>US ${CM}</span></h1>
               </div>
           </div>
             

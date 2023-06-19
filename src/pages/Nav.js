@@ -1,8 +1,6 @@
 import React from 'react';
 import logo from '../images/wapparels_logo.jpeg'
 import { Link } from 'react-router-dom';
-import '../pages/Nav.css'
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { HashLink } from 'react-router-hash-link';
 
 
@@ -31,9 +29,10 @@ const Nav = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-bold text-white">
-            <li className=' hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)] rounded-xl'><HashLink smooth to='/#aboutus'>About Us</HashLink></li>
-           
-            <li className='hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)]  rounded-xl' ><HashLink smooth to='/#products'>Products</HashLink></li>
+            
+            <li className='hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)]  rounded-xl'><HashLink smooth to='/#aboutus'>About Us</HashLink></li>
+            
+            <li className=' rounded-xl hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)] ' ><HashLink smooth to='/#products'>Products</HashLink></li>
             <li className='hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)] rounded-xl'><HashLink smooth to='/#facilities'>Facilities</HashLink></li>
             <li className='hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)]  rounded-xl'><HashLink smooth to='/#ourclients'>Our Clients</HashLink></li>
             <Link to='/meettheteam'><li className='hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)] rounded-xl'><a>Our Team</a></li></Link>

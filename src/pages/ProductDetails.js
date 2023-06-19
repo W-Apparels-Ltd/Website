@@ -1,7 +1,5 @@
 import React from 'react';
-import { Fade, Flip, Slide, Zoom } from 'react-awesome-reveal';
 import { useLoaderData } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import Thankyoumodal from '../modal/Thankyoumodal';
 import bg from '../images/factory_purpose/1.jpg'
 
@@ -55,21 +53,21 @@ const ProductDetails = () => {
     }}  
     className="relative  mx-auto w-full bg-cover  ">
       <div className='absulate text-white bg-black/75'>
-      <div className='text-center py-10'>
+      <div className='text-center pt-10 lg:py-20'>
         <h1 className="text-4xl font-bold mt-8">Product Details</h1>
       </div>
       <div className='flex flex-col lg:flex-row lg:justify-around lg:items-start'>
           <div>
               <div className='flex justify-center'>
-                <Flip><img className='w-80' src={img} alt="" /></Flip>
+                <img className='w-80' src={img} alt="" />
               </div>
               <div className='flex justify-center'>
                 
                   
-                  <Zoom><div><h1 className='text-3xl font-bold'>{label}</h1></div></Zoom>
+                  <div><h1 className='text-3xl font-bold'>{label}</h1></div>
               </div>
 
-              <Slide>
+              
               <div className='flex justify-center'>
                 <div class="card w-72">
                   <div class="card-body">
@@ -81,7 +79,7 @@ const ProductDetails = () => {
                   </div>
                 </div>
               </div>
-              </Slide>
+              
           </div>
       
           <div className="card flex-shrink-0 lg:w-1/2 w-full max-w-xl shadow-2xl bg-base-100 text-black">

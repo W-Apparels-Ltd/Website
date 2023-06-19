@@ -34,6 +34,7 @@ const SearchBar = ({placeholder,data,settitle,setsuccess}) => {
     <div className="search">
       <div className="searchInputs">
         <input
+          className='inputclass'
           type="text"
           placeholder={placeholder}
           value={wordEntered}
@@ -48,7 +49,7 @@ const SearchBar = ({placeholder,data,settitle,setsuccess}) => {
         </div>
       </div>
       {filteredData.length != 0 && (
-        <div className="dataResult">
+        <div className="dataResult absolute z-10">
           {filteredData.slice(0, 15).map((value, key) => {
             return (
               <a className="dataItem" onClick={()=>handleSelect(value)}  target="_blank">
