@@ -3,6 +3,7 @@ import fb from '../images/584ac2d03ac3a570f94a666d.png'
 import li from '../images/inss-removebg-preview.png'
 import ins from '../images/Insss-removebg-preview.png'
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 
 const Contact = () => {
@@ -62,24 +63,29 @@ const Contact = () => {
           <div className='font-bold'><h1>Follow us on:</h1></div>
           <div className='flex flex-row my-4 '>
 
+            <Link to='https://www.linkedin.com/company/w-apparels-ltd/'>
             <div className='me-3'>
               <div className='flex justify-center'>
                 <img className='w-15 h-5 ' src={li} alt="" />
               </div>
               <h1 className='font-bold'>Linkedin</h1>
             </div >
-            <div className='me-3'>
+            </Link>
+            <Link to='https://www.facebook.com/profile.php?id=100063651540871'><div className='me-3'>
               <div className='flex justify-center'>
                 <img className='w-15 h-5 ' src={fb} alt="" />
               </div>
               <h1 className='font-bold'>facebook</h1>
             </div>
+            </Link>
+            <Link>
             <div className='me-3'>
               <div className='flex justify-center'>
                 <img className='w-15 h-5 ' src={ins} alt="" />
               </div>
               <h1 className='font-bold'>Instagram</h1>
             </div>
+            </Link>
 
           </div>
           <div className='lg:me-12 '>

@@ -11,6 +11,7 @@ import OurClients from '../Shared/OurClients';
 import Contact from '../Shared/Contact';
 import ProductSlider from '../Shared/ProductSlider';
 import { ToastContainer } from 'react-toastify';
+import OurCertificates from '../Shared/OurCertificates';
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       <ProductSlider></ProductSlider>
       <SisterConcern></SisterConcern>
       <ManagingDirectorMessage></ManagingDirectorMessage>
+      <OurCertificates></OurCertificates>
       <Facilities></Facilities>
       <OurClients></OurClients>
       <Contact></Contact>

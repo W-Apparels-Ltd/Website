@@ -1,10 +1,11 @@
 import React from 'react';
 
-const OurclientsPic = ({item}) => {
+const OurCertificatesPic = ({item}) => {
   return (
     <div className='flex justify-center'>
       <img src={item.img} alt="" />
     </div>
   );
 };
-export default OurclientsPic;
+
+export default OurCertificatesPic;

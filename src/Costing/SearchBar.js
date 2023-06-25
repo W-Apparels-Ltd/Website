@@ -54,6 +54,7 @@ const SearchBar = ({placeholder,data,settitle,setsuccess}) => {
             return (
               <a className="dataItem" onClick={()=>handleSelect(value)}  target="_blank">
                 <p>{value.title} </p>
+                
               </a>
             );
           })}

@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Thankyoumodal from '../modal/Thankyoumodal';
 import bg from '../images/factory_purpose/1.jpg'
+import { Flip } from 'react-awesome-reveal';
 
 const ProductDetails = () => {
   const {_id,label,fabrictype,size,img}= useLoaderData();
@@ -59,7 +60,7 @@ const ProductDetails = () => {
       <div className='flex flex-col lg:flex-row lg:justify-around lg:items-start'>
           <div>
               <div className='flex justify-center'>
-                <img className='w-80' src={img} alt="" />
+                <Flip><img className='w-80' src={img} alt="" /></Flip>
               </div>
               <div className='flex justify-center'>
                 
@@ -69,15 +70,13 @@ const ProductDetails = () => {
 
               
               <div className='flex justify-center'>
-                <div class="card w-72">
+             
                   <div class="card-body">
-                    <h2 class="card-title">LABLE: {label}</h2>
-                    <h2 class="card-title">FABRIC: {fabrictype}</h2>
-                    <h2 class="card-title">Size: {size}</h2>
-                    
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 >LABLE: {label}</h2>
+                    <h2 >FABRIC: {fabrictype}</h2>
+                    <h2 >Size: {size}</h2>   
                   </div>
-                </div>
+              
               </div>
               
           </div>

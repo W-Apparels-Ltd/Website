@@ -1,14 +1,17 @@
 import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import client1 from '../images/clients/blueseven-removebg-preview.png'
-import client2 from '../images/clients/hellenic_logo.png'
-import client3 from '../images/clients/pep_and_co_logo.png'
-import client4 from '../images/clients/woolworth_logo.png'
-import client5 from '../images/clients/download__3_-removebg-preview.png'
-import client6 from '../images/clients/southpole-removebg-preview.png'
-import client7 from '../images/clients/LPP_LOGO_RGB-removebg-preview.png'
-import client8 from '../images/clients/unnamed-removebg-preview (1).png'
+import client1 from '../images/clients/logo-1-dark.png'
+import client2 from '../images/clients/logo-2-dark.png'
+import client3 from '../images/clients/logo-3-dark.png'
+import client4 from '../images/clients/logo-4-dark.png'
+import client5 from '../images/clients/logo-5-dark.png'
+import client6 from '../images/clients/logo-6-dark.png'
+import client7 from '../images/clients/logo-7-dark.png'
+import client8 from '../images/clients/logo-8-dark.png'
+import client9 from '../images/clients/logo-9-dark.png'
+import client10 from '../images/clients/logo-10-dark.png'
+import client11 from '../images/clients/logo-11-dark.png'
 import OurclientsPic from './OurclientsPic';
 
 const OurClients = () => {
@@ -16,6 +19,10 @@ const OurClients = () => {
     {
       _id:1,
       img:client1
+    },
+    {
+      _id:1,
+      img:client2
     },
     
     {
@@ -41,6 +48,18 @@ const OurClients = () => {
     {
       _id:8,
       img:client8
+    },
+    {
+      _id:8,
+      img:client9
+    },
+    {
+      _id:8,
+      img:client10
+    },
+    {
+      _id:8,
+      img:client11
     },
   ]
   const responsive = {
@@ -69,8 +88,8 @@ const OurClients = () => {
   return (
     <div id='ourclients' className=' bg-base-100 '>
       <div>
-        <div className='lg:p-15 text-center'><h1 className='lg:text-5xl text-2xl md:text-3xl font-bold text-primary'>Our clients</h1></div>
-        <div className='my-20'>
+        <div className='lg:p-15 text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Our clients</h1></div>
+        <div className='my-10'>
             <Carousel responsive={responsive} 
             additionalTransfrom={0}
             arrows={false}

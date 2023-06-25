@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import ProductItem from './ProductItem';
+import { Link } from 'react-router-dom';
 
 const ProductSlider = () => {
   
@@ -72,7 +73,7 @@ const ProductSlider = () => {
               
             </Carousel>
           </div>
-          <div className='text-center mt-10'><a className='btn btn-primary'>Product Gallery</a></div>
+          <div className='text-center mt-10'><Link to='/productgallery' className='btn btn-primary'>Product Gallery</Link></div>
       </div>
     </div>
     

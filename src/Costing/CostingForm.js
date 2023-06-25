@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import costing from '../images/costing.jpg'
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import SearchBar from './SearchBar';
 import { v4 as uuidv4, v5 as uuidv5 } from 'uuid';
+import logo from '../images/wapparels_logo.jpeg'
+import ReactToPrint, { useReactToPrint } from 'react-to-print';
+
 
 
 const CostingForm = () => {
@@ -12,6 +15,8 @@ const CostingForm = () => {
   const [CM,setCM]=useState('0');
   const [sum,setSum]=useState('0');
   const [fob,setfob]=useState('0');
+  const componentRef=useRef();
+ 
   
   const handleCalculate=event=>{
     event.preventDefault();
@@ -55,7 +60,7 @@ const CostingForm = () => {
     setCM(cm.toFixed(2));
     const list1 = list.filter(e => e.id !== id);
     setlist(list1);
-  
+    
   }
   
   const data=[
@@ -94,10 +99,12 @@ const CostingForm = () => {
     },
 
   ]
+  
+  
   return (
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${costing})`,
-    }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg ">
+    }}  className= "divcontents  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg ">
       <div>
           <div className='p-20 text-center'><h1 className='text-5xl text-white font-bold mt-5'>Costing</h1></div>
       </div>
@@ -203,7 +210,7 @@ const CostingForm = () => {
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Item's Description with Consumption</h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">Please input details carefully.</p>
-          <SearchBar setsuccess={setsuccess} settitle={settitle} data={data} placeholder="Enter a item Name..."  ></SearchBar>
+          <SearchBar setsuccess={setsuccess} settitle={settitle} data={data} placeholder="Enter An Accessory Name..."  ></SearchBar>
           
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 ">
@@ -251,7 +258,7 @@ const CostingForm = () => {
         
           <div className="border-b border-gray-900/10 pb-12">
           <div className='overflow-x-auto '>
-            <table className="table w-full z-[0]">
+            <table className="table table-compact w-full z-0">
               {/* head */}
               <thead>
                 <tr>
@@ -314,13 +321,14 @@ const CostingForm = () => {
         <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
           Cancel
         </button>
+          
         <button
-        
           className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Save
         </button>
       </div>
+            
         </div>
       </div>
     </div>

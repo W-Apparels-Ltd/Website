@@ -13,6 +13,8 @@ import Career from './pages/Career';
 import CareerForm from './pages/CareerForm';
 import Costing from './Shared/Costing';
 import CostingForm from './Costing/CostingForm';
+import PrintFast from './Costing/PrintFast';
+import ProductGallary from './pages/ProductGallary';
 
 
 function App() {
@@ -61,8 +63,13 @@ function App() {
         path:'/costing',
         element:<CostingForm></CostingForm>
       },
+      {
+        path:'/productgallery',
+        element:<ProductGallary></ProductGallary>
+      },
+      
 
-    ]
+    ],
   }])
   return (
     <div className='	mx-auto'>

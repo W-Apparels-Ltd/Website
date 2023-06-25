@@ -6,6 +6,7 @@ import D2 from '../images/personnel/team-3-removebg-preview.jpg'
 import D3 from '../images/personnel/team-4.jpg'
 import NS from '../images/personnel/NS.jpeg'
 import CS from '../images/personnel/IMG_2447(1) (1).jpg'
+import Chair from '../images/personnel/ChairAvater.jpg'
 
 
 const MeetTheTeam = () => {
@@ -27,7 +28,7 @@ const MeetTheTeam = () => {
               <div className='text-center'>
                   
                   <div className='grid justify-items-center mt-10'>
-                      <img className='w-52 h-52 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                      <img className='w-52 h-52 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={Chair} alt="" />
                   </div>
                   <div className='my-4'>
                     <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold">Nigher Sultana</h1>
@@ -171,7 +172,17 @@ const MeetTheTeam = () => {
                 </div>
               <div className='text-center m-5'>
                   
-                <div className='grid justify-items-center mt-10'>
+                <div className='grid justify-items-center mt-10 '>
+                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                  </div>
+                  <div className='my-4'>
+                    <h1 className="text-xl lg:text-3xl font-bold">Name</h1>
+                    <p className="text-xl">Designation</p>
+                  </div>
+                </div>
+              <div className='text-center m-5'>
+                  
+                <div className='grid justify-items-center mt-10 '>
                       <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
                   </div>
                   <div className='my-4'>

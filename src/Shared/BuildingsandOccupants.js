@@ -3,6 +3,7 @@ import img from '../images/factory_purpose/4444.jpg'
 import img1 from '../images/factory_purpose/888888.jpg'
 import img2 from '../images/factory_purpose/333333-1.jpg'
 import { Link } from 'react-router-dom';
+import '../Shared/BuildingandOccupants.css'
 
 const BuildingsandOccupants = () => {
   return (
@@ -21,8 +22,13 @@ const BuildingsandOccupants = () => {
             <h1 className="lg:text-5xl text-2xl md:text-3xl font-bold">Buildings and Occupants</h1>
             <p className="py-6 lg:text-xl text-md">W.Apparels New Generation Apparels is a compliant Woven/knitwear manufacturer based in Bangladesh and is a project of W.Apparels. The company was set up in 1992 to provide one stop manufacturing service to the fashion industry ensuring quality, reliability, sustainability and social responsibility. The founder is A.M Akhter Hossain who is a prominent business man in the country known for his ethical business practices. The industry has an yearly production capacity of 48,00,000 lac pice (4.8 million pieces) of knitwear and 36,00,000 lac pice (3.6 million pieces). The factory is well equipped with latest manufacturing.
             </p>
-            <div className='mb-3 text-center lg:text-left'>
-              <Link to='/building' className='btn btn-primary '>Read more</Link>
+            <div className='mx-10 my-5 text-center lg:text-left'>
+              <Link to='/building' className='arrow'>    
+              
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </Link>
             </div>
           </div>
         </div>

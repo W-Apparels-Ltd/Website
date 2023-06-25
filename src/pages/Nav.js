@@ -2,9 +2,61 @@ import React from 'react';
 import logo from '../images/wapparels_logo.jpeg'
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-
+import '../pages/Nav.css'
+import { useState } from 'react';
 
 const Nav = () => {
+  const [filteredData, setFilteredData] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
+  const handleFilter = (event) => {
+    const searchWord = event.target.value;
+    setWordEntered(searchWord);
+    const newFilter = data.filter((value) => {
+      return value.title.toLowerCase().includes(searchWord.toLowerCase());
+    });
+
+    if (searchWord === "") {
+      setFilteredData([]);
+    } else {
+      setFilteredData(newFilter);
+    }
+  };
+  const handleSelect=(value)=>{
+    setFilteredData([]);
+    setWordEntered("");
+  }
+  const data=[
+    {
+      title:'About Us',
+      goto:'/#aboutus'
+    },
+    {
+      title:'Products',
+      goto: '/#products'
+    },
+    {
+      title:'Facilities',
+      goto:'/#facilities'
+    },
+    {
+      title:'Our Clients',
+      goto:'/#ourclients'
+    },
+    {
+      title:'Our Team',
+      goto:'/meettheteam'
+    },
+    {
+      title:'Careers',
+      goto:'/career'
+    },
+    {
+      title:'Our Profile',
+      goto:'https://wapparels.com/WApparelsNewProfile.pdf'
+    },
+    
+
+  ]
   return (
     <div className='sticky z-10  -mb-[75px]'  style={{
       'background-color':'linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73))'
@@ -41,9 +93,30 @@ const Nav = () => {
           </ul>
         </div>
         <div className="navbar-end ">
-        <form>
-          <i className='fa fa-search text-white fa-lg m-5'></i>
-        </form>
+        <div class="searchBox flex justify-center items-center flex-wrap	 mt-3">
+
+            <input className="searchInput" type="text" name="" placeholder="Search"
+            value={wordEntered}
+            onChange={handleFilter}
+            />
+            <button className="searchButton flex justify-center items-center" href="#">
+                <i className="material-icons">
+                    search
+                </i>
+            </button>
+            {filteredData.length != 0 && (
+              <div className="Result basis-full rounded">
+                {filteredData.slice(0, 15).map((value, key) => {
+                  return (
+                    
+                      <HashLink className='Item font bold' onClick={handleSelect}  smooth to={value.goto}>{value.title}</HashLink>
+                      
+                    
+                  );
+                })}
+              </div>
+            )}
+        </div>
         </div>
         
       </div>

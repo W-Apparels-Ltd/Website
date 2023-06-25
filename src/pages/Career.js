@@ -18,13 +18,13 @@ const Career = () => {
             <div className="flex gap-x-4">
               
               <div className="min-w-0 flex-auto mb-2">
-                <p className="text-xl font-bold leading-6 text-gray-900">Junior Software Developer</p>
-                <p className="mt-1  truncate text-sm font-bold leading-5 text-gray-500">Vacancy: 01</p>
-                <p className="text-sm font-bold leading-6 text-gray-900">Company: W. apparels Ltd.</p>
+                <p className="text-xl font-bold leading-6 text-gray-900">Junior Software Developer <span className='text-[green]'>(On-site)</span></p>
+                <p className="text-sm font-bold leading-6 text-gray-900">Company: Quality Group Ltd.</p>
+                <p className="mt-1  truncate text-sm font-bold leading-5 text-gray-500">Rayer Bazar, Tali office Rd, Dhaka, Bangladesh</p>
               </div>
             </div>
             <div className="sm:flex sm:flex-col sm:items-end">
-              <Link to='/careerForm'><button className=' btn btn-primary text-white'>Apply</button></Link>
+              <Link to='/careerForm'><button className=' btn btn-primary text-white'>Details</button></Link>
               
             </div>
           </li>
@@ -32,13 +32,13 @@ const Career = () => {
             <div className="flex gap-x-4">
               
               <div className="min-w-0 flex-auto mb-2">
-                <p className="text-xl font-bold leading-6 text-gray-900">Junior Software Developer</p>
-                <p className="mt-1  truncate text-sm font-bold leading-5 text-gray-500">Vacancy: 01</p>
+                <p className="text-xl font-bold leading-6 text-gray-900">Junior Software Developer <span className='text-[green]'>(Remote)</span></p>
                 <p className="text-sm font-bold leading-6 text-gray-900">Company: Quality Group Ltd.</p>
+                <p className="mt-1  truncate text-sm font-bold leading-5 text-gray-500">Rayer Bazar, Tali office Rd, Dhaka, Bangladesh</p>
               </div>
             </div>
             <div className=" sm:flex sm:flex-col sm:items-end">
-              <Link to='/careerForm'><button className=' btn btn-primary text-white'>Apply</button></Link>
+              <Link to='/careerForm'><button className=' btn btn-primary text-white'>Details</button></Link>
               
             </div>
           </li>
@@ -46,13 +46,13 @@ const Career = () => {
             <div className="flex gap-x-4">
               
               <div className="min-w-0 flex-auto mb-2">
-                <p className="text-xl font-bold leading-6 text-gray-900">Junior Software Developer</p>
-                <p className="mt-1  truncate text-sm font-bold leading-5 text-gray-500">Vacancy: 01</p>
-                <p className="text-sm font-bold leading-6 text-gray-900">Company: W. apparels Ltd.</p>
+                <p className="text-xl font-bold leading-6 text-gray-900">Junior Software Developer <span className='text-[green]'>(Remote)</span></p>
+                <p className="text-sm font-bold leading-6 text-gray-900">Company: Quality Group Ltd.</p>
+                <p className="mt-1  truncate text-sm font-bold leading-5 text-gray-500">Rayer Bazar, Tali office Rd, Dhaka, Bangladesh</p>
               </div>
             </div>
             <div className=" sm:flex sm:flex-col sm:items-end">
-            <Link to='/careerForm'><button className=' btn btn-primary text-white'>Apply</button></Link>
+            <Link to='/careerForm'><button className=' btn btn-primary text-white'>Details</button></Link>
               
               
             </div>
