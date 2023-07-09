@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../images/factory_purpose/4444.jpg'
+import img from '../images/factory_purpose/building.jpg'
 import img1 from '../images/factory_purpose/888888.jpg'
 import img2 from '../images/factory_purpose/333333-1.jpg'
 import { Link } from 'react-router-dom';
@@ -24,7 +24,6 @@ const BuildingsandOccupants = () => {
             </p>
             <div className='mx-10 my-5 text-center lg:text-left'>
               <Link to='/building' className='arrow'>    
-              
                   <span></span>
                   <span></span>
                   <span></span>

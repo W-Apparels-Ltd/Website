@@ -54,8 +54,6 @@ const Nav = () => {
       title:'Our Profile',
       goto:'https://wapparels.com/WApparelsNewProfile.pdf'
     },
-    
-
   ]
   return (
     <div className='sticky z-10  -mb-[75px]'  style={{
@@ -88,8 +86,7 @@ const Nav = () => {
             <li className='hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)] rounded-xl'><HashLink smooth to='/#facilities'>Facilities</HashLink></li>
             <li className='hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)]  rounded-xl'><HashLink smooth to='/#ourclients'>Our Clients</HashLink></li>
             <Link to='/meettheteam'><li className='hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)] rounded-xl'><a>Our Team</a></li></Link>
-            <Link to='/career'><li className='hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)] rounded-xl'><a>Careers</a></li></Link>
-        
+            <Link to='/career'><li className='hover:text-[#b8b8b8] hover:bg-[rgba(1,1,1,0.7)] rounded-xl'><a>Careers</a></li></Link>   
           </ul>
         </div>
         <div className="navbar-end ">
