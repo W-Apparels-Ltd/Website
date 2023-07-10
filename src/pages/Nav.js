@@ -106,7 +106,7 @@ const Nav = () => {
                 {filteredData.slice(0, 15).map((value, key) => {
                   return (
                     
-                      <HashLink className='Item font bold' onClick={handleSelect}  smooth to={value.goto}>{value.title}</HashLink>
+                      <HashLink className='Item ps-5' onClick={handleSelect}  smooth to={value.goto}>{value.title}</HashLink>
                       
                     
                   );

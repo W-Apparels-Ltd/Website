@@ -18,7 +18,7 @@ const PrintFast = () => {
                 <td>Malcolm Lockyer</td>
                 <td>1961</td>
               </tr>
-              <tr>
+               <tr>
                 <td>Witchy Woman</td>
                 <td>The Eagles</td>
                 <td>1972</td>

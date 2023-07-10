@@ -72,6 +72,7 @@ color : #2f3640;
   display: flex;
   align-items: center;
   color: black;
+  text-align: center;
 }
 .Item p {
   margin-left: 10px;
