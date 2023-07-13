@@ -90,23 +90,24 @@ const Nav = () => {
           </ul>
         </div>
         <div className="navbar-end ">
-        <div class="searchBox flex justify-center items-center flex-wrap	 mt-3">
+        <div class="searchBox1 flex justify-center items-center flex-wrap	 mt-3">
 
-            <input className="searchInput" type="text" name="" placeholder="Search"
+            <input className="searchInput1" type="text" name="" placeholder="Search"
             value={wordEntered}
             onChange={handleFilter}
             />
-            <button className="searchButton flex justify-center items-center" href="#">
+            <button className="searchButton1 flex justify-center items-center">
                 <i className="material-icons">
                     search
                 </i>
             </button>
+            
             {filteredData.length != 0 && (
-              <div className="Result basis-full rounded">
+              <div className="Result1 basis-full rounded">
                 {filteredData.slice(0, 15).map((value, key) => {
                   return (
                     
-                      <HashLink className='Item ps-5' onClick={handleSelect}  smooth to={value.goto}>{value.title}</HashLink>
+                      <HashLink className='Item1 ps-5' onClick={handleSelect}  smooth to={value.goto}>{value.title}</HashLink>
                       
                     
                   );

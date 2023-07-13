@@ -8,7 +8,7 @@ import logo from '../images/wapparels_logo.jpeg'
 import ReactToPrint, { useReactToPrint } from 'react-to-print';
 
 const FinalcostingForm = () => {
-    const [title,settitle]=useState([]);
+  const [title,settitle]=useState([]);
   const [success,setsuccess]=useState(false);
   const[list,setlist]=useState([]);
   const [CM,setCM]=useState('0');

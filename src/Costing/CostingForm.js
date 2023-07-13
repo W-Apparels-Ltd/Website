@@ -418,7 +418,7 @@ const CostingForm = () => {
           <div className='flex justify-center'><img className='w-20 rounded-full' src={logo}></img></div>
           <div className='text-center text-2xl font-bold'>W.Apparels Ltd.</div>
           <div className='text-center text-xl font-bold m-5 '>--Fast Costing--</div>
-          <table className='w-full table border-2 border-black'>
+          <table className='w-full table table-auto border-2 border-black'>
             <tbody>
               <tr>
                 <th >BuyerName</th>

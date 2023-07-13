@@ -13,36 +13,24 @@ const FireAndSafety = () => {
       <div className='p-10'>
         <div className=' grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>
           <div className="card w-50 bg-base-100 shadow-xl">
-            <figure><img src={pic1} alt="Shoes" /></figure>
-            <div className="card-body">
-              <h2 className="card-title">Fire 1</h2>
-              <p>Aftabunnesa Garments Ltd. is 9 storied 100% export oriented factory initiating its activities since September, 2019.....</p>
-              <div className="card-actions justify-end">
-                
-              </div>
-            </div>
+            <figure className='rounded'><img src={pic1} alt="Shoes" /></figure>
+            
           </div>
           <div className="card w-50 bg-base-100 shadow-xl">
-            <figure><img src={pic2} alt="Shoes" /></figure>
-            <div className="card-body">
-              <h2 className="card-title">Fire 2</h2>
-              <p>Aftabunnesa Garments Ltd. is 9 storied 100% export oriented factory initiating its activities since September, 2019.....</p>
-              <div className="card-actions justify-end">
-                
-              </div>
-            </div>
+            <figure className='rounded'><img src={pic2} alt="Shoes" /></figure>
+            
           </div>
           <div className="card w-50 bg-base-100 shadow-xl">
-            <figure><img src={pic3} alt="Shoes" /></figure>
-            <div className="card-body">
-              <h2 className="card-title">Fire 3</h2>
-              <p>The Industry has a yearly production capacity of 28,00,000 lakh pieces (2.8 million pieces) of woven-wear.....</p>
-              <div className="card-actions justify-end">
-                
-              </div>
-            </div>
+            <figure className='rounded'><img src={pic3} alt="Shoes" /></figure>
+            
           </div>
 
+        </div>
+        <div>
+          <p className='text-md pt-5 text-justify'>
+          Fire safety is a critical aspect of protecting lives, property, and the environment. It encompasses a set of practices and precautions designed to prevent fires, mitigate their impact, and ensure the safety of individuals in the event of a fire. W. apparels ltd. trying the best to understand fire behavior, implement preventive measures, and design effective emergency response plans what are the key components of fire safety. 
+          <br/>W. Apparels Ltd. Properly maintains fire equipment. Because we know it is crucial for safeguarding lives and property, ensuring rapid response and effective fire control. We are trying the best to ensure the fire and safety issues.
+          </p>
         </div>
       </div>
     </div>
