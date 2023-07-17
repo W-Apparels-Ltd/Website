@@ -5,7 +5,10 @@ import D1 from '../images/personnel/team-2.png'
 import D2 from '../images/personnel/team-3-removebg-preview.jpg'
 import D3 from '../images/personnel/team-4.jpg'
 import NS from '../images/OIP.jpg'
-import CS from '../images/personnel/IMG_2447(1) (1).jpg'
+import CS1 from '../images/personnel/IMG_2447(1) (1)-min.jpg'
+import CS2 from '../images/personnel/IMG_2437(2) (1)-min.jpg'
+import CS6 from '../images/personnel/liton1.jpg'
+import CS7 from '../images/personnel/Ashraf.jpg'
 import Chair from '../images/personnel/ChairAvater.jpg'
 
 
@@ -70,7 +73,7 @@ const MeetTheTeam = () => {
                   </div>
                   <div className='my-4'>
                     <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold">MD Zahirul Islam</h1>
-                    <p className="text-xl">we never compromise in quality and deadlines.</p>
+                    <p className="text-xl text-gray-700">we never compromise in quality and deadlines.</p>
                   </div>
                 </div>
                 <div className='text-center m-5'>
@@ -80,7 +83,7 @@ const MeetTheTeam = () => {
                   </div>
                   <div className='my-4'>
                     <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold">Naushin Adnin</h1>
-                    <p className="text-xl">we never compromise in quality and deadlines.</p>
+                    <p className="text-xl text-gray-700">we never compromise in quality and deadlines.</p>
                   </div>
                 </div>
                 <div className='text-center m-5'>
@@ -90,7 +93,7 @@ const MeetTheTeam = () => {
                   </div>
                   <div className='my-4'>
                     <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold">Sharif Raihan Hemon</h1>
-                    <p className="text-xl">Vivamus motestues phasellus enim sed orci eu pharetra.</p>
+                    <p className="text-xl text-gray-700">Vivamus motestues phasellus enim sed orci eu pharetra.</p>
                   </div>
                 </div>
               </div>
@@ -103,17 +106,18 @@ const MeetTheTeam = () => {
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
-                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={CS} alt="" />
+                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={CS1} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="text-xl lg:text-3xl  font-bold">Name</h1>
-                    <p className="text-xl">Designation</p>
+                    <h1 className="text-xl lg:text-3xl  font-bold">Anwar Hossain Dipu</h1>
+                    <p className="text-xl font-bold text-gray-700">GM-HR-Admin</p>
+                    <p className="text-xl">Compliance & Commercial</p>
                   </div>
                 </div>
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
-                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={CS2} alt="" />
                   </div>
                   <div className='my-4'>
                     <h1 className="text-xl lg:text-3xl font-bold">Md. Fakhrul Islam</h1>
@@ -128,8 +132,9 @@ const MeetTheTeam = () => {
                       <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="text-xl lg:text-3xl font-bold">Name</h1>
-                    <p className="text-xl">Designation</p>
+                    <h1 className="text-xl lg:text-3xl font-bold">Al-amin</h1>
+                    <p className="text-xl font-bold text-gray-700">Manager</p>
+                    <p className="text-xl">Merchandising</p>
                   </div>
                 </div>
                 <div className='text-center m-5'>
@@ -156,18 +161,18 @@ const MeetTheTeam = () => {
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
-                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={CS6} alt="" />
                   </div>
                   <div className='my-4'>
                     <h1 className="text-xl lg:text-3xl font-bold">Md. Nurul Islam (Liton)</h1>
                     <p className="text-xl font-bold text-gray-700">Sr. Commercial Officer</p>
-                    <p className="text-xl">Department of Commerce</p>
+                    <p className="text-xl">Department of Commercial</p>
                   </div>
                 </div>
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
-                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={CS7} alt="" />
                   </div>
                   <div className='my-4'>
                     <h1 className="text-xl lg:text-3xl font-bold">Ashraful Islam</h1>

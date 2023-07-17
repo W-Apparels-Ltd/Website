@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import career from '../images/career.jpg'
 import { Link } from 'react-router-dom';
 
 const Career = () => {
+  const [active,setactive]=useState(false);
   return (
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${career})`,
     }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg font-Nunito">  
       <div>
-          <div className='p-20 text-center'><h1 className='text-5xl text-white font-bold mt-5'>View Current Openings</h1></div>
+          <div className='p-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>View Current Openings</h1></div>
           
       </div>
-      <div className='mt-20  bg-base-100'>
+      {
+        active ? 
+        <div className='mt-20  bg-base-100'>
         <ul role="list" className="divide-y divide-gray-300">
         
           <li className="flex flex-col lg:flex-row justify-between gap-x-6 py-5 px-20">
@@ -60,6 +63,12 @@ const Career = () => {
       
       </ul>
       </div>
+      :
+      <div className='mt-20  bg-base-100'>
+        <div className='text-center p-20'><p className="text-xl font-bold leading-6 text-gray-900"><span className='text-[green]'>Sorry</span>, No Current Openings</p>
+        </div>
+      </div>
+      }
     </div>
   );
 };

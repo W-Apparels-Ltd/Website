@@ -9,7 +9,7 @@ import { Button } from '@material-tailwind/react';
 const BuildingsandOccupants = () => {
   return (
     <div>
-      <div  className="hero min-h-screen lg:px-20 px-5 mx-auto w-full bg-base-100 font-Nunito">
+      <div  className="hero min-h-screen py-5 lg:py-0 lg:px-20 px-5 mx-auto w-full bg-base-100 font-Nunito">
         <div className="flex flex-col lg:items-end lg:flex-row-reverse lg:justify-between lg:items-center  text-primary">
           
           <div className='flex flex-col items-center'>

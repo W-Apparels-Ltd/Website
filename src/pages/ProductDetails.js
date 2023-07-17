@@ -57,7 +57,7 @@ const ProductDetails = () => {
     }}  
     className="relative  mx-auto w-full bg-cover font-Nunito ">
       <div className='absulate text-white bg-black/75'>
-      <div className='text-center pt-5 lg:py-5'>
+      <div className='text-center pt-10 lg:py-5'>
         <h1 className="text-3xl font-bold mt-8">Product Details</h1>
       </div>
       <div className='flex flex-col lg:flex-row lg:justify-around lg:items-start'>

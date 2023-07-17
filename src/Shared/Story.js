@@ -24,7 +24,7 @@ const Story = () => {
     <div id='aboutus'>
       <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic})`,
-    }}  className="hero min-h-screen lg:px-20 px-5 mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat">
+    }}  className="hero min-h-screen lg:py-0 py-5 lg:px-20 px-5 mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center  text-white font-Nunito">
           
           <div className='flex flex-col items-center'>
