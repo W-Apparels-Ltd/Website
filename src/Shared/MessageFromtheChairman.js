@@ -3,7 +3,7 @@ import React from 'react';
 const MessageFromtheChairman = () => {
   return (
     <div>
-      <div className="hero bg-base-100 lg:p-20 p-5">
+      <div className="hero bg-base-100 lg:p-20 p-5 font-Nunito">
         
           <div className=' text-center'>
             <h1 className="lg:text-5xl text-2xl md:text-3xl text-primary font-bold">Message from the Chairman</h1>

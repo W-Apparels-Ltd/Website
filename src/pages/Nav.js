@@ -28,38 +28,45 @@ const Nav = () => {
   const data=[
     {
       title:'About Us',
-      goto:'/#aboutus'
+      goto:'/#aboutus',
+      target:''
     },
     {
       title:'Products',
-      goto: '/#products'
+      goto: '/#products',
+      target:''
     },
     {
       title:'Facilities',
-      goto:'/#facilities'
+      goto:'/#facilities',
+      target:''
     },
     {
       title:'Our Clients',
-      goto:'/#ourclients'
+      goto:'/#ourclients',
+      target:''
     },
     {
       title:'Our Team',
-      goto:'/meettheteam'
+      goto:'/meettheteam',
+      target:''
     },
     {
       title:'Careers',
-      goto:'/career'
+      goto:'/career',
+      target:''
     },
     {
       title:'Our Profile',
-      goto:'https://wapparels.com/WApparelsNewProfile.pdf'
+      goto:'https://wapparels.com/WApparelsNewProfile.pdf',
+      target:'_blank'
     },
   ]
   return (
     <div className='sticky z-10  -mb-[75px]'  style={{
       'background-color':'linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73))'
     }} >
-      <div className="navbar ">
+      <div className="navbar font-Nunito">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost text-white lg:hidden">
@@ -107,7 +114,7 @@ const Nav = () => {
                 {filteredData.slice(0, 15).map((value, key) => {
                   return (
                     
-                      <HashLink className='Item1 ps-5' onClick={handleSelect}  smooth to={value.goto}>{value.title}</HashLink>
+                      <HashLink className='Item1 ps-5' onClick={handleSelect}  smooth to={value.goto} target={value.target}>{value.title}</HashLink>
                       
                     
                   );

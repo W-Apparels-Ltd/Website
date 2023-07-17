@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Thankyoumodal from '../modal/Thankyoumodal';
 import bg from '../images/factory_purpose/1.jpg'
 import { Flip } from 'react-awesome-reveal';
+import Nav2 from './Nav2';
 
 const ProductDetails = () => {
   const {_id,label,fabrictype,size,img}= useLoaderData();
@@ -48,14 +49,16 @@ const ProductDetails = () => {
 
   }
   return (
+    <>
+    <Nav2></Nav2>
     <div
     style={{
       backgroundImage:` url(${bg})`,
     }}  
-    className="relative  mx-auto w-full bg-cover  ">
+    className="relative  mx-auto w-full bg-cover font-Nunito ">
       <div className='absulate text-white bg-black/75'>
-      <div className='text-center pt-10 lg:py-20'>
-        <h1 className="text-4xl font-bold mt-8">Product Details</h1>
+      <div className='text-center pt-5 lg:py-5'>
+        <h1 className="text-3xl font-bold mt-8">Product Details</h1>
       </div>
       <div className='flex flex-col lg:flex-row lg:justify-around lg:items-start'>
           <div>
@@ -84,12 +87,31 @@ const ProductDetails = () => {
           <div className="card flex-shrink-0 lg:w-1/2 w-full max-w-xl shadow-2xl bg-base-100 text-black">
             
             <form onSubmit={handleSubmit}  className='card-body'>
-            
-            <input type="text" name='fabrictype' defaultValue={fabrictype} disabled placeholder="Full Name" className="input w-full m-3" />
-            <input type="text" name='name' placeholder="Name" className="input input-bordered  w-full m-3" />
-            <input type="text" name='email' placeholder="email" className="input input-bordered  w-full m-3" />
-            <textarea type="textarea" name='message' placeholder="Message" className="textarea textarea-bordered  w-full m-3" />
-            <input htmlFor="my_modal_6"  className="w-full btn" type='submit' value='InQUIRE'/>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-bold">Fabrictype</span>
+              </label>
+              <input type="text" name='fabrictype' defaultValue={fabrictype} disabled placeholder="Full Name" className="input input-bordered" />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-bold">Name</span>
+              </label>
+              <input type="text" name='name'  className="input input-bordered" />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-bold">Email</span>
+              </label>
+              <input type="text" name='email' className="input input-bordered" />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-bold">Message</span>
+              </label>
+              <textarea type="textarea" name='message' className="textarea textarea-bordered" />
+            </div>
+            <input htmlFor="my_modal_6"  className="w-full btn btn-primary" type='submit' value='InQUIRE'/>
             
             
             </form>
@@ -100,6 +122,7 @@ const ProductDetails = () => {
       </div>
       
     </div>
+    </>
   );
 };
 

@@ -3,14 +3,29 @@ import img from '../images/factory_purpose/ourstory-300x225-1.jpg'
 import pic from '../images/factory_purpose/1.jpg'
 import o2 from '../images/Our1 (1).jpg'
 import o3 from '../images/our2 (1).jpg'
+import arrow from '../images/Untitled__1_-removebg-preview.png'
+import { Link } from 'react-router-dom';
 
 const Story = () => {
+  const downloadPdf = () => {
+    fetch('WapparelsPDF.pdf').then(response => {
+        response.blob().then(blob => {
+            // Creating new object of PDF file
+            const fileURL = window.URL.createObjectURL(blob);
+            // Setting various property values
+            let alink = document.createElement('a');
+            alink.href = fileURL;
+            alink.download = 'WapparelsPDF.pdf';
+            alink.click();
+        })
+    })
+}
   return (
     <div id='aboutus'>
       <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic})`,
     }}  className="hero min-h-screen lg:px-20 px-5 mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center  text-white">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center  text-white font-Nunito">
           
           <div className='flex flex-col items-center'>
 
@@ -21,7 +36,22 @@ const Story = () => {
 
           <div className='lg:w-3/5'>
             <h1 className="lg:text-5xl text-2xl md:text-3xl font-bold">Our Story</h1>
-            <p className="py-6 lg:text-xl text-md">Starting as W. Apparels in 1992 and further expanding into W. Apparels Limited in 2019, we are a garments based company maintaining a consistent contribution in readymade garments export. Our team comprises of well experienced promoters, quality control agents, machinists, commercial supervisors and production labor. Our goals are to maintain better foreign relations and establish a research intensive environment for garments products, maintaining consistent customer satisfaction and using updated machinery. Under the alliance of Bangladesh Garments Manufacturers and Exporters’ Association (BGMEA), we envision a sustainable future of RMG products using technology and a smooth international market.</p>
+            <p className="py-6 lg:text-xl text-md text-justify">Starting as W. Apparels in 1992 and further expanding into W. Apparels Limited in 2019, we are a garments based company maintaining a consistent contribution in readymade garments export. Our team comprises of well experienced promoters, quality control agents, machinists, commercial supervisors and production labor. Our goals are to maintain better foreign relations and establish a research intensive environment for garments products, maintaining consistent customer satisfaction and using updated machinery. Under the alliance of Bangladesh Garments Manufacturers and Exporters’ Association (BGMEA), we envision a sustainable future of RMG products using technology and a smooth international market.</p>
+            
+            <div className='flex justify-end'>
+          
+            <button onClick={downloadPdf}
+              class="group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-gradient-to-tr from-light-blue-600 to-light-blue-400 py-2 px-5 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg hover:shadow-light-blue-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              type="button"
+              data-ripple-light="true"
+            >
+              View Corporate Profile
+              <span className="absolute right-0 grid h-full w-12 place-items-center bg-light-blue-600 transition-colors group-hover:bg-light-blue-700">
+                <img src={arrow}></img>
+              </span>
+            </button>
+            
+            </div>
           </div>
         </div>
       </div>

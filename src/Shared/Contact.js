@@ -52,7 +52,7 @@ const Contact = () => {
   }
   return (
 
-    <div id='contactus' className=" bg-base-200 lg:p-20">
+    <div id='contactus' className=" bg-base-200 lg:p-20 font-Nunito">
       <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-start">
         <div className="p-5 lg:p-0 lg:text-left">
           <h1 className="lg:text-5xl text-2xl md:text-3xl font-bold text-primary">Contact Us</h1>
@@ -64,26 +64,24 @@ const Contact = () => {
           <div className='flex flex-row my-4 '>
 
             <Link to='https://www.linkedin.com/company/w-apparels-ltd/'>
-            <div className='me-3'>
+            <div className='mx-3'>
               <div className='flex justify-center'>
-                <img className='w-15 h-5 ' src={li} alt="" />
+                <div><i className='fa fa-brands fa-linkedin bg-gray-700 text-white py-1 px-[5px] rounded'/></div>
               </div>
-              <h1 className='font-bold'>Linkedin</h1>
+              
             </div >
             </Link>
             <Link to='https://www.facebook.com/profile.php?id=100063651540871'><div className='me-3'>
               <div className='flex justify-center'>
-                <img className='w-15 h-5 ' src={fb} alt="" />
+                <div><i className='fa fa-brands fa-facebook bg-gray-700 text-white py-1 px-[8px] rounded'/></div>
               </div>
-              <h1 className='font-bold'>facebook</h1>
             </div>
             </Link>
             <Link>
             <div className='me-3'>
               <div className='flex justify-center'>
-                <img className='w-15 h-5 ' src={ins} alt="" />
+                <div><i className='fa fa-brands fa-instagram bg-gray-700 text-white py-1 px-[6px] rounded'/></div>
               </div>
-              <h1 className='font-bold'>Instagram</h1>
             </div>
             </Link>
 
@@ -102,26 +100,26 @@ const Contact = () => {
               <label className="label">
                 <span className="label-text font-bold">Name</span>
               </label>
-              <input name='name' type="text" placeholder="name" className="input input-bordered" />
+              <input name='name' type="text" className="input input-bordered" />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Email</span>
               </label>
-              <input name='email' type="text" placeholder="email" className="input input-bordered" />
+              <input name='email' type="text"  className="input input-bordered" />
 
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Subject</span>
               </label>
-              <input name='subject' type="text" placeholder="subject" className="input input-bordered" />
+              <input name='subject' type="text" className="input input-bordered" />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Message</span>
               </label>
-              <textarea name='message' className="textarea textarea-bordered" placeholder="message"></textarea>
+              <textarea name='message' className="textarea textarea-bordered"></textarea>
             </div>
             <div className="form-control mt-6">
               <input type='submit' value='Send Message' className="btn btn-primary"></input>

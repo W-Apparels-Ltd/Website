@@ -4,7 +4,7 @@ import Dr from '../images/personnel/team-1.png'
 import D1 from '../images/personnel/team-2.png'
 import D2 from '../images/personnel/team-3-removebg-preview.jpg'
 import D3 from '../images/personnel/team-4.jpg'
-import NS from '../images/personnel/NS.jpeg'
+import NS from '../images/OIP.jpg'
 import CS from '../images/personnel/IMG_2447(1) (1).jpg'
 import Chair from '../images/personnel/ChairAvater.jpg'
 
@@ -13,9 +13,9 @@ const MeetTheTeam = () => {
   return (
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic})`,
-    }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg">  
+    }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg font-Nunito">  
       <div>
-          <div className='p-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>The Team of W Apparels Ltd.</h1></div>
+          <div className='pb-10 pt-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>Meet Our Leaders</h1></div>
           
       </div>
       <div className='lg:mt-20 mt-10 rounded-xl'>
@@ -116,10 +116,12 @@ const MeetTheTeam = () => {
                       <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="text-xl lg:text-3xl font-bold">Name</h1>
-                    <p className="text-xl">Designation</p>
+                    <h1 className="text-xl lg:text-3xl font-bold">Md. Fakhrul Islam</h1>
+                    <p className="text-xl font-bold text-gray-700">Adviser</p>
+                    <p className="text-xl">Commercial, Banking, Finance & Training</p>
                   </div>
                 </div>
+              
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
@@ -130,14 +132,25 @@ const MeetTheTeam = () => {
                     <p className="text-xl">Designation</p>
                   </div>
                 </div>
+                <div className='text-center m-5'>
+                  
+                  <div className='grid justify-items-center mt-10'>
+                        <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                    </div>
+                    <div className='my-4'>
+                      <h1 className="text-xl lg:text-3xl font-bold">Sujan Mahmud</h1>
+                      <p className="text-xl font-bold text-gray-700">Manager</p>
+                      <p className="text-xl">Merchandising</p>
+                    </div>
+                  </div>
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
                       <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="text-xl lg:text-3xl font-bold">Name</h1>
-                    <p className="text-xl">Designation</p>
+                    <h1 className="text-xl lg:text-3xl font-bold">Muhammad Abdullah</h1>
+                    <p className="text-xl font-bold text-gray-700">Sr. Commercial Officer</p>
                   </div>
                 </div>
               <div className='text-center m-5'>
@@ -146,8 +159,9 @@ const MeetTheTeam = () => {
                       <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="text-xl lg:text-3xl font-bold">Name</h1>
-                    <p className="text-xl">Designation</p>
+                    <h1 className="text-xl lg:text-3xl font-bold">Md. Nurul Islam (Liton)</h1>
+                    <p className="text-xl font-bold text-gray-700">Sr. Commercial Officer</p>
+                    <p className="text-xl">Department of Commerce</p>
                   </div>
                 </div>
               <div className='text-center m-5'>
@@ -156,18 +170,8 @@ const MeetTheTeam = () => {
                       <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="text-xl lg:text-3xl font-bold">Name</h1>
-                    <p className="text-xl">Designation</p>
-                  </div>
-                </div>
-              <div className='text-center m-5'>
-                  
-                <div className='grid justify-items-center mt-10'>
-                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
-                  </div>
-                  <div className='my-4'>
-                    <h1 className="text-xl lg:text-3xl font-bold">Name</h1>
-                    <p className="text-xl">Designation</p>
+                    <h1 className="text-xl lg:text-3xl font-bold">Ashraful Islam</h1>
+                    <p className="text-xl font-bold text-gray-700">Sr. Commercial Officer</p>
                   </div>
                 </div>
               <div className='text-center m-5'>
@@ -176,8 +180,8 @@ const MeetTheTeam = () => {
                       <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="text-xl lg:text-3xl font-bold">Name</h1>
-                    <p className="text-xl">Designation</p>
+                    <h1 className="text-xl lg:text-3xl font-bold">Mahmud Ibne Bashar</h1>
+                    <p className="text-xl font-bold text-gray-700">Sr. Accounts Officer (A&F)</p>
                   </div>
                 </div>
               <div className='text-center m-5'>

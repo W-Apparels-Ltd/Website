@@ -25,7 +25,7 @@ const Banner = () => {
                   <Typography
                     variant="h1"
                     color="white"
-                    className= "hidden lg:block mb-4 text-xl md:text-3xl lg:text-4xl"
+                    className= "hidden lg:block mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
                   >
                   
                   <Slide direction='left'>Quality over Mediocrity</Slide>
@@ -34,7 +34,7 @@ const Banner = () => {
                   <Typography
                     variant="h1"
                     color="white"
-                    className= "lg:hidden mb-4 text-xl md:text-3xl lg:text-4xl"
+                    className= "lg:hidden mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
                   >
                   
                   Quality over Mediocrity
@@ -43,14 +43,14 @@ const Banner = () => {
                   <Typography
                     variant="lead"
                     color="white"
-                    className="hidden lg:block  mb-12 opacity-80 text-md"
+                    className="hidden lg:block  mb-12 opacity-80 font-Nunito text-5md"
                   >
                     <Slide direction='right'>In an industry driven by mass production, our commitment to quality sets us apart. We believe in prioritizing excellence over mediocrity, setting higher standards that redefine the RMG sector.</Slide>
                   </Typography>
                   <Typography
                     variant="lead"
                     color="white"
-                    className="lg:hidden mb-12 opacity-80 text-md"
+                    className="lg:hidden mb-12 opacity-80 font-Nunito text-5md"
                   >
                     In an industry driven by mass production, our commitment to quality sets us apart. We believe in prioritizing excellence over mediocrity, setting higher standards that redefine the RMG sector.
                   </Typography>
@@ -69,28 +69,28 @@ const Banner = () => {
             <Typography
               variant="h1"
               color="white"
-              className="hidden lg:block  mb-2 mt-20  text-xl md:text-3xl lg:text-4xl"
+              className="hidden lg:block  mb-2 mt-36  text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
               <Slide direction='left'>Unlocking Potential: Creating Boundless Employment Opportunities</Slide>
             </Typography>
             <Typography
               variant="h1"
               color="white"
-              className="lg:hidden mb-2 mt-20  text-xl md:text-3xl lg:text-4xl"
+              className="lg:hidden mb-2 mt-20  text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
               Unlocking Potential: Creating Boundless Employment Opportunities
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="hidden lg:block  mb-12 opacity-80 text-md"
+              className="hidden lg:block  mb-12 opacity-80 font-Nunito text-5md"
             >
               <Slide direction='right'>We are dedicated to empowering lives by providing meaningful employment opportunities. We understand the transformative power of work and believe in fostering an inclusive environment that embraces growth and development.</Slide>
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="lg:hidden mb-12 opacity-80 text-md"
+              className="lg:hidden mb-12 opacity-80 font-Nunito text-5md"
             >
               We are dedicated to empowering lives by providing meaningful employment opportunities. We understand the transformative power of work and believe in fostering an inclusive environment that embraces growth and development.
             </Typography>
@@ -115,28 +115,28 @@ const Banner = () => {
             <Typography
               variant="h1"
               color="white"
-              className="hidden lg:block lg:mb-4 text-xl md:text-3xl lg:text-4xl"
+              className="hidden lg:block lg:mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
             <Fade cascade damping={0.01}>Empowering Local Businesses for a Thriving Community</Fade>
             </Typography>
             <Typography
               variant="h1"
               color="white"
-              className="lg:hidden lg:mb-4 text-xl md:text-3xl lg:text-4xl"
+              className="lg:hidden lg:mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
           Empowering Local Businesses for a Thriving Community
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="hidden lg:block  mb-12 opacity-80 text-sm p-5"
+              className="hidden lg:block  mb-12 opacity-80 font-Nunito text-5md p-5"
             >
              <Slide direction='right'>We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem. </Slide>
                  </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="lg:hidden mb-12 opacity-80 text-sm p-5"
+              className="lg:hidden mb-12 opacity-80 font-Nunito text-5md p-5"
             >
              We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem.
                  </Typography>
@@ -155,28 +155,28 @@ const Banner = () => {
             <Typography
               variant="h1"
               color="white"
-              className="hidden lg:block lg:mb-4 text-xl md:text-3xl lg:text-4xl"
+              className="hidden lg:block lg:mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
             <Fade cascade damping={0.01}>Empowering Local Businesses for a Thriving Community</Fade>
             </Typography>
             <Typography
               variant="h1"
               color="white"
-              className="lg:hidden lg:mb-4 text-xl md:text-3xl lg:text-4xl"
+              className="lg:hidden lg:mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
           Empowering Local Businesses for a Thriving Community
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="hidden lg:block opacity-80 text-sm p-5"
+              className="hidden lg:block opacity-80 font-Nunito text-5md p-5"
             >
              <Slide direction='right'>We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem. </Slide>
                  </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="lg:hidden opacity-80 text-sm p-5"
+              className="lg:hidden opacity-80 font-Nunito text-5md p-5"
             >
              We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem.
                  </Typography>

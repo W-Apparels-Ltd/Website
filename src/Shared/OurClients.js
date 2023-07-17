@@ -86,10 +86,10 @@ const OurClients = () => {
     }
   };
   return (
-    <div id='ourclients' className=' bg-base-100 '>
+    <div id='ourclients' className=' bg-base-100 font-Nunito lg:mb-24 mb-10'>
       <div>
-        <div className='lg:p-15 text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Our clients</h1></div>
-        <div className='my-10'>
+        <div className='text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Our clients</h1></div>
+        <div className='my-5'>
             <Carousel responsive={responsive} 
             additionalTransfrom={0}
             arrows={false}

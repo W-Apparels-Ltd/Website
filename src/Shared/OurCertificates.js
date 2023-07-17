@@ -58,7 +58,7 @@ const OurCertificates = () => {
       }
     };
     return (
-      <div id='ourcertificates' className=' bg-base-100 py-10'>
+      <div id='ourcertificates' className=' bg-base-100 py-20 font-Nunito'>
         <div>
           <div className='lg:p-15 text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Our Certificates</h1></div>
           <div className='my-10'>

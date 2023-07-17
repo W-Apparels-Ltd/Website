@@ -38,11 +38,7 @@ function App() {
         path:'/addproduct',
         element:<AddProduct></AddProduct>
       },
-      {
-        path:'/:id',
-        element:<ProductDetails></ProductDetails>,
-        loader: ({params})=> fetch(`https://wapparels-server.vercel.app/products/${params.id}`)
-      },
+      
       {
         path:'/building',
         element:<Building></Building>
@@ -70,7 +66,13 @@ function App() {
       
 
     ],
-  }])
+  },
+  {
+    path:'/:id',
+    element:<ProductDetails></ProductDetails>,
+    loader: ({params})=> fetch(`https://wapparels-server.vercel.app/products/${params.id}`)
+  },
+])
   return (
     <div className='	mx-auto'>
       <RouterProvider router={router}></RouterProvider>

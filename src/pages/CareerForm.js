@@ -1,14 +1,13 @@
 import React from 'react';
 import career from '../images/career.jpg'
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
-
 const CareerForm = () => {
   return (
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${career})`,
-    }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg">  
+    }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg font-Nunito">  
       <div>
-          <div className='p-20 text-center'><h1 className='text-5xl text-white font-bold mt-5'>Career</h1></div>
+          <div className='p-20 text-center'><h1 className='text-5xl text-white font-bold mt-5'>View Current Openings</h1></div>
           
       </div>
       <div className='mt-20  bg-base-100 lg:p-20 p-10'>
