@@ -3,8 +3,10 @@ import costing from '../images/costing.jpg'
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import SearchBar from './SearchBar';
 import { v4 as uuidv4, v5 as uuidv5 } from 'uuid';
-import logo from '../images/wapparels_logo.jpeg'
-import ReactToPrint, { useReactToPrint } from 'react-to-print';
+import logo from '../images/wapparels_logo.jpeg';
+import ReactToPrint from 'react-to-print';
+import Select from 'react-select';
+
 
 
 
@@ -23,6 +25,10 @@ const CostingForm = () => {
   const [SizeNo,setSizeNo]=useState('');
   const [Quantity,setQuantity]=useState('');
   const [FD,setFD]=useState('');
+
+  const [selectedOptions, setSelectedOptions] = useState('');
+  const [fabricview,setfabricview]=useState(true);
+  const [fabriccost,setfabriccost]=useState('');
  
   
   const handleCalculate=event=>{
@@ -100,7 +106,12 @@ const CostingForm = () => {
     }
     
   }
-  const handledelete=(id,total)=>{
+  const handledelete=(id,total,name)=>{
+    
+    if(selectedOptions.label===name){
+      setfabricview(true);
+      
+    }
     if(sum===""){
       sum=0;
     }
@@ -154,6 +165,42 @@ const CostingForm = () => {
     },
 
   ]
+
+  const optionList = [
+    { value: "red", label: "Red" },
+    { value: "green", label: "Green" },
+    { value: "yellow", label: "Yellow" },
+    { value: "blue", label: "Blue" },
+    { value: "white", label: "White" }
+  ];
+
+  // Function triggered on selection
+  function handleSelect(data) {
+    setSelectedOptions(data);
+  }
+  const handleFabric=event=>{
+    event.preventDefault();
+    const form = event.target;
+    const quantity='--';
+    let price=form.price.value;
+    let total = parseFloat(price);
+    setfabriccost(total);
+    price='--';
+    console.log(total);
+    let totalsum=parseFloat(sum)+ parseFloat(total);
+    setSum(totalsum);
+    const newList = list.concat({id:uuidv4(),quantity,price,total,name:selectedOptions.label});
+    setlist(newList);
+    if(CM===""){
+      CM=0;
+    }
+    const result= (totalsum+parseFloat(CM))/12;
+
+    setfob(result.toFixed(2));
+    setfabricview(false);
+
+  }
+  
   
   
   return (
@@ -269,10 +316,37 @@ const CostingForm = () => {
         </div>
 
         <div className="border-b border-gray-900/10 pb-12">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">Item's Description with Consumption</h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">Please input details carefully.</p>
-          <SearchBar setsuccess={setsuccess} settitle={settitle} data={data} placeholder="Enter An Accessory Name..."  ></SearchBar>
-          
+          <h2 className="text-center font-semibold leading-7 text-[green]">Item's Details</h2>
+          <p className="mt-1 text-center text-sm leading-6 text-gray-600">Please input details carefully.</p>
+
+         <div className='flex flex-col lg:flex-row justify-between '>
+         <SearchBar setsuccess={setsuccess} settitle={settitle} data={data} placeholder="Enter An Accessory Name..."  ></SearchBar>
+          {fabricview &&
+            <div>
+            <Select className='w-56 mt-8'
+            options={optionList}
+            placeholder="Select a Fabric"
+            value={selectedOptions}
+            onChange={handleSelect}
+            isSearchable={true}
+            
+            />
+            <form onSubmit={handleFabric}>
+              <input
+              type="number"
+              name="price"
+              id="quantity"
+              step="any"
+              placeholder="Enter the Price of Fabric"
+              autoComplete="address-level2"
+              className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 md:text-md md:leading-6 mt-1"
+              required
+              />
+              <input type='submit' value='ADD'  className=' btn btn-primary btn-sm mt-1 w-full'/>
+            </form>
+            </div>
+          }
+         </div>
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 ">
 
@@ -360,7 +434,7 @@ const CostingForm = () => {
                   <td>{item.quantity}</td>
                   <td>US ${item.price}</td>
                   <td>US ${item.total.toFixed(2)}</td>
-                  <td><button onClick={()=>handledelete(item.id,item.total)} className='btn btn-sm btn-primary'>delete</button></td>
+                  <td><button onClick={()=>handledelete(item.id,item.total,item.name)} className='btn btn-sm btn-primary'>delete</button></td>
                   </tr>
                 ))}
                 
@@ -445,7 +519,7 @@ const CostingForm = () => {
             <tbody>
               <tr className='border-2 border-black '>
                 <th>Fabric Cost</th>
-                <td>US $----</td>
+                <td>US ${fabriccost}</td>
               </tr>
               <tr className='border-2 border-black '>
                 <th>Accessory Cost</th>
