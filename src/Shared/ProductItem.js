@@ -10,7 +10,7 @@ const ProductItem = ({item}) => {
                     <p className='mb-2'>Size: {item.size}</p>
                     <div>
                       <Link to={`/${item._id}`}>
-                        <button className="btn btn-primary ">Inquire Now</button>
+                        <button className="btn btn-primary btn-sm">Inquire Now</button>
                       </Link>
                     </div>
                   </div>

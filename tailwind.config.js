@@ -28,9 +28,13 @@ daisyui: {
   ],
 },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Nunito':['Nunito Sans', 'sans-serif']
+      },
+    },
   },
-  plugins: [require("daisyui",'tailwindcss-animated')],
+  plugins: [require("daisyui",'tailwindcss-animated','@tailwindcss/forms')],
   
 });
 

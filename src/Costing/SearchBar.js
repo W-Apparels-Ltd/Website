@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import '../Costing/SearchBar.css'
+import '../Costing/SearchBar.css';
 
 
 const SearchBar = ({placeholder,data,settitle,setsuccess}) => {
@@ -54,6 +54,7 @@ const SearchBar = ({placeholder,data,settitle,setsuccess}) => {
             return (
               <a className="dataItem" onClick={()=>handleSelect(value)}  target="_blank">
                 <p>{value.title} </p>
+                
               </a>
             );
           })}

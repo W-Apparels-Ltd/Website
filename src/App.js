@@ -13,6 +13,8 @@ import Career from './pages/Career';
 import CareerForm from './pages/CareerForm';
 import Costing from './Shared/Costing';
 import CostingForm from './Costing/CostingForm';
+import PrintFast from './Costing/PrintFast';
+import ProductGallary from './pages/ProductGallary';
 
 
 function App() {
@@ -36,11 +38,7 @@ function App() {
         path:'/addproduct',
         element:<AddProduct></AddProduct>
       },
-      {
-        path:'/:id',
-        element:<ProductDetails></ProductDetails>,
-        loader: ({params})=> fetch(`https://wapparels-server.vercel.app/products/${params.id}`)
-      },
+      
       {
         path:'/building',
         element:<Building></Building>
@@ -61,9 +59,20 @@ function App() {
         path:'/costing',
         element:<CostingForm></CostingForm>
       },
+      {
+        path:'/productgallery',
+        element:<ProductGallary></ProductGallary>
+      },
+      
 
-    ]
-  }])
+    ],
+  },
+  {
+    path:'/:id',
+    element:<ProductDetails></ProductDetails>,
+    loader: ({params})=> fetch(`https://wapparels-server.vercel.app/products/${params.id}`)
+  },
+])
   return (
     <div className='	mx-auto'>
       <RouterProvider router={router}></RouterProvider>

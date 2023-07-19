@@ -2,8 +2,8 @@ import React from 'react';
 
 const OurclientsPic = ({item}) => {
   return (
-    <div className='mx-20'>
-      <img  src={item.img} alt="" />
+    <div className='flex justify-center'>
+      <img src={item.img} alt="" />
     </div>
   );
 };

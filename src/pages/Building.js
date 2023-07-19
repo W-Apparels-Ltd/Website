@@ -11,16 +11,16 @@ const Building = () => {
     }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg">
       
       <div>
-          <div className='p-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>Sister Concern</h1></div>
+          <div className='p-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>Buildings and Occupants</h1></div>
           
       </div>
       <div className=' bg-base-100 lg:px-20'>
       <div className='p-10'>
         <div className=' grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>
           <div className="card w-50 bg-base-100 shadow-xl">
-            <figure><img src={sis1} alt="Shoes" /></figure>
+            <figure><img src={building} alt="Shoes" /></figure>
             <div className="card-body">
-              <h2 className="card-title">Quality apparels ltd.</h2>
+              <h2 className="card-title">W. apparels ltd.</h2>
               <p>Aftabunnesa Garments Ltd. is 9 storied 100% export oriented factory initiating its activities since September, 2019.....</p>
               <div className="card-actions justify-end">
                 
@@ -28,9 +28,9 @@ const Building = () => {
             </div>
           </div>
           <div className="card w-50 bg-base-100 shadow-xl">
-            <figure><img src={sis2} alt="Shoes" /></figure>
+            <figure><img src={sis1} alt="Shoes" /></figure>
             <div className="card-body">
-              <h2 className="card-title">Aftabunessa Garments</h2>
+              <h2 className="card-title">Quality apparels ltd.</h2>
               <p>Aftabunnesa Garments Ltd. is 9 storied 100% export oriented factory initiating its activities since September, 2019.....</p>
               <div className="card-actions justify-end">
                 
