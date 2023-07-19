@@ -157,22 +157,21 @@ const Banner = () => {
               color="white"
               className="hidden lg:block lg:mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
-            <Fade cascade damping={0.01}>Empowering Local Businesses for a Thriving Community</Fade>
+            UNVEILING VERSATILITY: ELEVATE YOUR WARDROBE WITH OUR DIVERSE THREADS - TOPS, BOTTOMS, SWEATERS AND BEYOND!
             </Typography>
             <Typography
               variant="h1"
               color="white"
               className="lg:hidden lg:mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
-          Empowering Local Businesses for a Thriving Community
+          UNVEILING VERSATILITY: ELEVATE YOUR WARDROBE WITH OUR DIVERSE THREADS - TOPS, BOTTOMS, SWEATERS AND BEYOND!
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="hidden lg:block opacity-80 font-Nunito text-5md p-5"
             >
-             <Slide direction='right'>We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem. </Slide>
-                 </Typography>
+            We take pride in crafting a diverse collection that caters to every facet of your style. With a keen eye for detail and a passion for fashion, we offer a range of exquisite tops, bottoms, and quality garment that effortlessly complement your individuality. From chic and casual to sophisticated and trendy, our designs are tailored to make you stand out in any crowd                 </Typography>
             <Typography
               variant="lead"
               color="white"

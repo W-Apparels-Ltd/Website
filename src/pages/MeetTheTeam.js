@@ -9,6 +9,8 @@ import CS1 from '../images/personnel/IMG_2447(1) (1)-min.jpg'
 import CS2 from '../images/personnel/IMG_2437(2) (1)-min.jpg'
 import CS6 from '../images/personnel/liton1.jpg'
 import CS7 from '../images/personnel/Ashraf.jpg'
+import CS8 from '../images/personnel/last.jpg'
+import CS9 from '../images/knn.jpg'
 import Chair from '../images/personnel/ChairAvater.jpg'
 
 
@@ -161,11 +163,11 @@ const MeetTheTeam = () => {
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
-                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={CS6} alt="" />
+                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={CS9} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="text-xl lg:text-3xl font-bold">Md. Nurul Islam (Liton)</h1>
-                    <p className="text-xl font-bold text-gray-700">Sr. Commercial Officer</p>
+                    <h1 className="text-xl lg:text-3xl font-bold">Md.Kanon Mazumder</h1>
+                    <p className="text-xl font-bold text-gray-700">Sr.Commercial officer ( Import In-Charge)</p>
                     <p className="text-xl">Department of Commercial</p>
                   </div>
                 </div>
@@ -192,7 +194,7 @@ const MeetTheTeam = () => {
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10 '>
-                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={CS8} alt="" />
                   </div>
                   <div className='my-4'>
                     <h1 className="text-xl lg:text-3xl font-bold">Name</h1>

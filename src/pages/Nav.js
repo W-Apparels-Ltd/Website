@@ -58,7 +58,7 @@ const Nav = () => {
     },
     {
       title:'Our Profile',
-      goto:'https://wapparels.com/WApparelsNewProfile.pdf',
+      goto:'https://drive.google.com/file/d/1Ci1X5Eu-uYRvd9n_zryD5InZXo9YcLWE/edit',
       target:'_blank'
     },
   ]
