@@ -15,6 +15,12 @@ import Costing from './Shared/Costing';
 import CostingForm from './Costing/CostingForm';
 import PrintFast from './Costing/PrintFast';
 import ProductGallary from './pages/ProductGallary';
+import SafetyMeasures from './pages/SafetyMeasures';
+import MedicalFacilities from './pages/MedicalFacilities';
+import ChildCare from './pages/ChildCare';
+import FireTraining from './pages/FireTraining';
+import FirstAidTraining from './pages/FirstAidTraining';
+import FoodFacilities from './pages/FoodFacilities';
 
 
 function App() {
@@ -62,6 +68,30 @@ function App() {
       {
         path:'/productgallery',
         element:<ProductGallary></ProductGallary>
+      },
+      {
+        path:'/safetymeasures',
+        element:<SafetyMeasures></SafetyMeasures>
+      },
+      {
+        path:'/medicalfacilities',
+        element:<MedicalFacilities></MedicalFacilities>
+      },
+      {
+        path:'/childcare',
+        element:<ChildCare></ChildCare>
+      },
+      {
+        path:'/firetraining',
+        element:<FireTraining></FireTraining>
+      },
+      {
+        path:'/fireaidtraining',
+        element:<FirstAidTraining></FirstAidTraining>
+      },
+      {
+        path:'/foodfacilities',
+        element:<FoodFacilities></FoodFacilities>
       },
       
 

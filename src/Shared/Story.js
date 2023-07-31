@@ -31,8 +31,8 @@ const Story = () => {
 
             <img src={img} className="w-44 h-44 lg:w-60 lg:h-60 object-cover relative lg:-right-[130px] lg:-bottom-[40px] mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300" />
             <div className='flex lg:hidden'>
-            <img src={o3} className="w-44 h-44 lg:w-60 lg:h-60 object-cover relative -top-[30px] -left-[15px] mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300" />
-            <img src={o2} className="w-44 h-44 lg:w-60 lg:h-60 object-cover relative -top-[30px]  mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300" />
+            <img src={o3} className="w-40 h-40 md:w-48 md:h-48  lg:w-60 lg:h-60 object-cover relative -top-[30px] -left-[15px] mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300" />
+            <img src={o2} className="w-40 h-40 md:w-48 md:h-48  lg:w-60 lg:h-60 object-cover relative -top-[30px] -right-[15px]  mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300" />
             </div>
             <div className='hidden lg:block'>
             <img src={o3} className="w-44 h-44 lg:w-60 lg:h-60 object-cover mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300" />

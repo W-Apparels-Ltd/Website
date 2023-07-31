@@ -4,6 +4,7 @@ import Thankyoumodal from '../modal/Thankyoumodal';
 import bg from '../images/factory_purpose/1.jpg'
 import { Flip } from 'react-awesome-reveal';
 import Nav2 from './Nav2';
+import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 
 const ProductDetails = () => {
   const {_id,label,fabrictype,size,img}= useLoaderData();
@@ -60,10 +61,15 @@ const ProductDetails = () => {
       <div className='text-center pt-10 lg:py-5'>
         <h1 className="text-3xl font-bold mt-8">Product Details</h1>
       </div>
-      <div className='flex flex-col lg:flex-row lg:justify-around lg:items-start'>
+      <div className='flex flex-col items-center lg:flex-row lg:justify-around lg:items-start'>
           <div>
               <div className='flex justify-center'>
-                <Flip><img className='w-80' src={img} alt="" /></Flip>
+              <TransformWrapper>
+                <TransformComponent>
+                <img className='h-80' src={img} alt="" />
+                </TransformComponent>
+              </TransformWrapper>
+                
               </div>
               <div className='flex justify-center'>
                 
@@ -75,7 +81,7 @@ const ProductDetails = () => {
               <div className='flex justify-center'>
              
                   <div class="card-body">
-                    <h2 >LABLE: {label}</h2>
+                    
                     <h2 >FABRIC: {fabrictype}</h2>
                     <h2 >Size: {size}</h2>   
                   </div>
@@ -84,14 +90,24 @@ const ProductDetails = () => {
               
           </div>
       
-          <div className="card flex-shrink-0 lg:w-1/2 w-full max-w-xl shadow-2xl bg-base-100 text-black">
+          <div className="card flex-shrink-0 lg:w-1/2 w-[90%] max-w-xl shadow-2xl bg-base-100 text-black mb-5 lg:mb-0">
             
             <form onSubmit={handleSubmit}  className='card-body'>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Fabrictype</span>
               </label>
-              <input type="text" name='fabrictype' defaultValue={fabrictype} disabled placeholder="Full Name" className="input input-bordered" />
+              <select className="select select-bordered">
+                <option disabled selected>Select One</option>
+                <option>100 % Viscose, 125 gsm</option>
+                <option>100% Cotton, Thin Twill</option>
+                <option>100 % Cotton , 4.5 oz</option>
+                <option>100 % Cotton</option>
+                <option>70% Cotton, 29% Polyester, 1% Elastane, denim</option>
+                <option>100 % Viscose</option>
+                <option>100 % Cotton, twill</option>
+                
+              </select>
             </div>
             <div className="form-control">
               <label className="label">
@@ -111,7 +127,7 @@ const ProductDetails = () => {
               </label>
               <textarea type="textarea" name='message' className="textarea textarea-bordered" />
             </div>
-            <input htmlFor="my_modal_6"  className="w-full btn btn-primary" type='submit' value='InQUIRE'/>
+            <input htmlFor="my_modal_6"  className="w-full btn btn-primary" type='submit' value='SEND INQUIRY'/>
             
             
             </form>

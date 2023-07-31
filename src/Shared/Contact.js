@@ -88,13 +88,13 @@ const Contact = () => {
           </div>
           <div className='lg:me-12 '>
             <iframe className='
-            w-[250px] h-[100px]
+            w-full h-[100px]
             lg:w-[550px] lg:h-[300px] mb-5' id="gmap_canvas" src="https://maps.google.com/maps?q=W apparels&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
           </div>
 
 
         </div>
-        <div className="card flex-shrink-0 lg:w-1/2 w-full max-w-xl shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 lg:w-1/2 w-[90%] max-w-xl shadow-2xl bg-base-100 mb-5">
           <form onSubmit={handleSubmit} className="card-body">
             <div className="form-control">
               <label className="label">

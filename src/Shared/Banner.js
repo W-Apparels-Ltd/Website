@@ -16,7 +16,7 @@ const Banner = () => {
         <img
           src={img}
           alt="image 2"
-          className="h-[650px] w-full object-cover"
+          className="h-[750px] lg:h-[650px] w-full object-cover"
           
         />
         <div className="absolute inset-0 grid h-full w-full place-content-end place-items-end bg-black/75">
@@ -62,7 +62,7 @@ const Banner = () => {
         <img
           src={img2}
           alt="image 2"
-          className="h-[650px] w-full object-cover"
+          className="h-[750px] lg:h-[650px] w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full lg:place-items-start place-items-end  lg:ps-20 p-5 bg-black/75">
           <div className="md:w-2/4 lg:w-2/4 ">
@@ -108,7 +108,7 @@ const Banner = () => {
         <img
           src={img3}
           alt="image 2"
-          className="h-[650px] w-full object-cover"
+          className="h-[750px] lg:h-[650px] w-full object-cover"
         />
         <div className=" absolute inset-0 grid h-full w-full md:place-items-center lg:place-items-center place-items-end bg-black/75">
           <div className=" md:w-3/4 text-center">
@@ -148,7 +148,7 @@ const Banner = () => {
         <img
           src={img4}
           alt="image 2"
-          className="h-[650px] w-full object-cover"
+          className="h-[750px] lg:h-[650px] w-full object-cover"
         />
         <div className=" absolute inset-0 grid h-full w-full md:place-items-center lg:place-items-center place-items-end bg-black/75">
           <div className=" md:w-3/4 text-center">
@@ -162,7 +162,7 @@ const Banner = () => {
             <Typography
               variant="h1"
               color="white"
-              className="lg:hidden lg:mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
+              className="lg:hidden mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
           UNVEILING VERSATILITY: ELEVATE YOUR WARDROBE WITH OUR DIVERSE THREADS - TOPS, BOTTOMS, SWEATERS AND BEYOND!
             </Typography>
