@@ -11,7 +11,8 @@ import CS7 from '../images/personnel/Ashraf.jpg'
 import CS8 from '../images/personnel/last.jpg'
 import CS9 from '../images/knn.jpg'
 import CS10 from '../images/personnel/bashar.jpg'
-import Chair from '../images/personnel/ChairAvater.jpg'
+import AM from '../images/personnel/AM.jpg'
+import Sujan from '../images/personnel/Sujan.jpg'
 
 
 const MeetTheTeam = () => {
@@ -32,11 +33,9 @@ const MeetTheTeam = () => {
             <div className='grid  grid-cols justify-items-center justify-center  m-5'>
               <div className='text-center'>
                   
-                  <div className='grid justify-items-center mt-10'>
-                      <img className='w-52 h-52 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={Chair} alt="" />
-                  </div>
+                  
                   <div className='my-4'>
-                    <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold">Nigher Sultana</h1>
+                    <h1 className="lg:text-4xl text-2xl md:text-3xl italic text-gray-700 font-bold">Nigher Sultana</h1>
                     <p className="text-xl">At last but not the least we wish a friendly global business relationship in days to come.</p>
                   </div>
                 
@@ -63,19 +62,19 @@ const MeetTheTeam = () => {
                 </div>
             </div>
           </div>
-          <div className="bg-base-200 px-10 pt-10">
+          <div className="bg-base-200  pt-10">
               <div className='text-center'>
               <h1 className="text-4xl font-bold">Directors</h1>
               </div>
-              <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols justify-items-center justify-center  lg:ms-10'>
+              <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols justify-items-center justify-center'>
                 <div className='text-center m-5'>
                   
                   <div className='grid justify-items-center mt-10'>
                       <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={D1} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold">MD Zahirul Islam</h1>
-                    <p className="text-xl text-gray-700">we never compromise in quality and deadlines.</p>
+                    <h1 className="lg:text-3xl text-2xl md:text-3xl font-bold">MD Zahirul Islam</h1>
+                    <p className="text-xl text-gray-700 font-bold">Operation & Admin</p>
                   </div>
                 </div>
                 <div className='text-center m-5'>
@@ -84,8 +83,8 @@ const MeetTheTeam = () => {
                       <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={D2} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold">Naushin Adnin</h1>
-                    <p className="text-xl text-gray-700">we never compromise in quality and deadlines.</p>
+                    <h1 className="lg:text-3xl text-2xl md:text-3xl font-bold">Naushin Adnin</h1>
+                    <p className="text-xl text-gray-700 font-bold">Administration & Marketing</p>
                   </div>
                 </div>
                 <div className='text-center m-5'>
@@ -94,17 +93,17 @@ const MeetTheTeam = () => {
                       <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={D3} alt="" />
                   </div>
                   <div className='my-4'>
-                    <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold">Sharif Raihan Hemon</h1>
-                    <p className="text-xl text-gray-700">Vivamus motestues phasellus enim sed orci eu pharetra.</p>
+                    <h1 className="lg:text-3xl text-2xl md:text-3xl font-bold">Sharif Rayhan Hemon</h1>
+                    <p className="text-xl text-gray-700 font-bold">Sourcing, Planning & Merchandising</p>
                   </div>
                 </div>
               </div>
           </div>
-          <div className="bg-base-200 px-10 pt-10">
+          <div className="bg-base-200 pt-10">
               <div className='text-center'>
               <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold">Corporate Staff</h1>
               </div>
-              <div className='grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 justify-items-center justify-center lg:ms-10'>
+              <div className='grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 justify-items-center justify-center'>
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
@@ -142,7 +141,7 @@ const MeetTheTeam = () => {
                 <div className='text-center m-5'>
                   
                   <div className='grid justify-items-center mt-10'>
-                        <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                        <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={Sujan} alt="" />
                     </div>
                     <div className='my-4'>
                       <h1 className="text-xl lg:text-3xl font-bold">Sujan Mahmud</h1>
@@ -153,7 +152,7 @@ const MeetTheTeam = () => {
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
-                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={AM} alt="" />
                   </div>
                   <div className='my-4'>
                     <h1 className="text-xl lg:text-3xl font-bold">Muhammad Abdullah</h1>

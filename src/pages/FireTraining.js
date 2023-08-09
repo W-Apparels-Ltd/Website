@@ -1,5 +1,5 @@
 import React from 'react';
-import pic from '../images/factory_purpose/1.jpg'
+import pic from '../images/FireAndSafety/fire2.jpg'
 
 
 const FireTraining = () => {

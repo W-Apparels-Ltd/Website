@@ -1,12 +1,20 @@
 import React from 'react';
-import fb from '../images/584ac2d03ac3a570f94a666d.png'
-import li from '../images/inss-removebg-preview.png'
-import ins from '../images/Insss-removebg-preview.png'
-import { toast } from 'react-toastify';
+import { useState } from 'react';
+
 import { Link } from 'react-router-dom';
+import Thankyoumodal from '../modal/Thankyoumodal';
+import ErrorModal from '../modal/ErrorModal';
 
 
 const Contact = () => {
+  const [open,setOpen]=useState(false);
+  const [openError,setOpenError]=useState(false);
+  const handleClick=()=>{
+    setOpen(false);
+  }
+  const handleClickError=()=>{
+    setOpenError(false);
+  }
   const handleSubmit=event=>{
     event.preventDefault();
     const form = event.target;
@@ -36,15 +44,11 @@ const Contact = () => {
       console.log(data);
       if(data.status===201){
         console.log('mail sent');
-        toast.success('Successfully Sent!', {
-          position: toast.POSITION.TOP_RIGHT
-      });
+        setOpen(!open);
       }
       else{
         console.log('error');
-        toast.error('Please try again!', {
-          position: toast.POSITION.TOP_RIGHT
-      });
+        setOpenError(!openError);
       }
       
     })
@@ -127,6 +131,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <Thankyoumodal open={open} handleClick={handleClick}/>
+      <ErrorModal openError={openError} handleClickError={handleClickError}/>
     </div>
 
 
