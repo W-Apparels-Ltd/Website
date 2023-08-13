@@ -1,12 +1,20 @@
 import React from 'react';
-import fb from '../images/584ac2d03ac3a570f94a666d.png'
-import li from '../images/inss-removebg-preview.png'
-import ins from '../images/Insss-removebg-preview.png'
-import { toast } from 'react-toastify';
+import { useState } from 'react';
+
 import { Link } from 'react-router-dom';
+import Thankyoumodal from '../modal/Thankyoumodal';
+import ErrorModal from '../modal/ErrorModal';
 
 
 const Contact = () => {
+  const [open,setOpen]=useState(false);
+  const [openError,setOpenError]=useState(false);
+  const handleClick=()=>{
+    setOpen(false);
+  }
+  const handleClickError=()=>{
+    setOpenError(false);
+  }
   const handleSubmit=event=>{
     event.preventDefault();
     const form = event.target;
@@ -36,15 +44,11 @@ const Contact = () => {
       console.log(data);
       if(data.status===201){
         console.log('mail sent');
-        toast.success('Successfully Sent!', {
-          position: toast.POSITION.TOP_RIGHT
-      });
+        setOpen(!open);
       }
       else{
         console.log('error');
-        toast.error('Please try again!', {
-          position: toast.POSITION.TOP_RIGHT
-      });
+        setOpenError(!openError);
       }
       
     })
@@ -88,13 +92,13 @@ const Contact = () => {
           </div>
           <div className='lg:me-12 '>
             <iframe className='
-            w-[250px] h-[100px]
+            w-full h-[100px]
             lg:w-[550px] lg:h-[300px] mb-5' id="gmap_canvas" src="https://maps.google.com/maps?q=W apparels&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
           </div>
 
 
         </div>
-        <div className="card flex-shrink-0 lg:w-1/2 w-full max-w-xl shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 lg:w-1/2 w-[90%] max-w-xl shadow-2xl bg-base-100 mb-5">
           <form onSubmit={handleSubmit} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -127,6 +131,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <Thankyoumodal open={open} handleClick={handleClick}/>
+      <ErrorModal openError={openError} handleClickError={handleClickError}/>
     </div>
 
 
