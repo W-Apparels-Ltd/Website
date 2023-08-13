@@ -12,8 +12,9 @@ const AddProduct = () => {
     const label= form.label.value;
     const fabrictype=form.fabrictype.value;
     const size=form.size.value;
-    let images=[];
-    for (let img = 0; img < form.pic.files.length; img++) {
+    let images=[],c=0;
+
+    for (let img = 0; img < 2; img++) {
       const image=form.pic.files[img];
       const formData=new FormData();
       formData.append('image',image);
@@ -28,10 +29,12 @@ const AddProduct = () => {
         let link=imgData.data.url;
         images[img]=link;
         console.log(images);
-        if(img === (form.pic.files.length-1)){
+        c++;
+        if(c===2){
           const item={
             label,
             fabrictype,
+            
             size,
             img:images
           };
@@ -44,13 +47,15 @@ const AddProduct = () => {
             body:JSON.stringify(item)
           })
           .then(res=>res.json())
-          .then(result=>{console.log(result)
+          .then(result=>{console.log(result);
             form.reset();
+            toast.success('Successfully Added!', {
+              position: toast.POSITION.TOP_RIGHT
+            });
+            c=0;
           }
           );
-          toast.success('Successfully Added!', {
-            position: toast.POSITION.TOP_RIGHT
-          });
+          
         }
         
       })

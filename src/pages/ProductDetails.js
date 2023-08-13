@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Thankyoumodal from '../modal/Thankyoumodal';
 import bg from '../images/factory_purpose/1.jpg'
-import { Flip } from 'react-awesome-reveal';
 import Nav2 from './Nav2';
 import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
-import ProductDetailsImgs from './ProductDetailsImgs';
-import { Button, Dialog, DialogBody, DialogFooter, DialogHeader } from '@material-tailwind/react';
 import ErrorModal from '../modal/ErrorModal';
 
 const ProductDetails = () => {
@@ -80,12 +77,12 @@ const ProductDetails = () => {
       </div>
       <div className='flex flex-col items-center lg:flex-row lg:justify-around lg:items-start'>
           <div>
-              <div className='flex justify-center'>
+              <div className='flex lg:flex-row flex-col justify-center'>
                 
-                  <div>
+                  <div className='flex lg:flex-col flex-row'>
 
-                      <img className='h-12 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[0])} src={img[0]}/>
-                      <img className='h-12 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[1])} src={img[1]}/>
+                      <img className='mr-2 lg:mr-0 h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[0])} src={img[0]}/>
+                      <img className='h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[1])} src={img[1]}/>
                   </div>
                 
               <TransformWrapper>
