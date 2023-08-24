@@ -36,10 +36,7 @@ function App() {
         path: '/login',
         element: <Login></Login>
       },
-      {
-        path:'/meettheteam',
-        element:<MeetTheTeam></MeetTheTeam>
-      },
+      
       {
         path:'/addproduct',
         element:<AddProduct></AddProduct>
@@ -101,6 +98,10 @@ function App() {
     path:'/:id',
     element:<ProductDetails></ProductDetails>,
     loader: ({params})=> fetch(`https://wapparels-server.vercel.app/products/${params.id}`)
+  },
+  {
+    path:'/meettheteam',
+    element:<MeetTheTeam></MeetTheTeam>
   },
 ])
   return (

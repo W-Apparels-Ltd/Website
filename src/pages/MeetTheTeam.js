@@ -13,6 +13,7 @@ import CS9 from '../images/knn.jpg'
 import CS10 from '../images/personnel/bashar.jpg'
 import AM from '../images/personnel/AM.jpg'
 import Sujan from '../images/personnel/Sujan.jpg'
+import Nav2 from './Nav2';
 
 
 const MeetTheTeam = () => {
@@ -20,6 +21,7 @@ const MeetTheTeam = () => {
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic})`,
     }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg font-Nunito">  
+      <Nav2></Nav2>
       <div>
           <div className='pb-10 pt-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>Meet Our Leaders</h1></div>
           

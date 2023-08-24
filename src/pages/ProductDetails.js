@@ -39,7 +39,7 @@ const ProductDetails = () => {
     console.log(emaildata);
     
     console.log(emaildata);
-    fetch('https://wapparels-server.vercel.app/contactus',{
+    fetch('https://wapparels-server.vercel.app/inquiry',{
       method:'POST',
       headers:{
         'content-type':'application/json'
@@ -92,14 +92,14 @@ const ProductDetails = () => {
               </TransformWrapper>
                 
               </div>
-              <div className='flex justify-center'>
+              <div className='text-center lg:ms-12'>
                 
                   
                   <div><h1 className='text-3xl font-bold'>{label}</h1></div>
               </div>
 
               
-              <div className='flex justify-center'>
+              <div className='flex justify-center lg:ms-5'>
              
                   <div class="card-body">
                     

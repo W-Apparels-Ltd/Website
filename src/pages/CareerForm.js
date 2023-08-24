@@ -1,7 +1,60 @@
 import React from 'react';
 import career from '../images/career.jpg'
+
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 const CareerForm = () => {
+  const API_KEY = "tonmoy.debnath@northsouth.edu_e7d6a4d1aa5841f4056fab4b323bbaf3ae2213f43607f5f7fa389abdabb9e9a96bd3302d";
+  const handleSubmit=event=>{
+    event.preventDefault();
+    const form = event.target;
+    const cover=form.coverletter.value;
+    const pdf = form.cv.files[0];
+    const firstname=form.firstname.value;
+    const lastname =form.lastname.value; 
+    const email=form.email.value;
+    const streetaddress=form.streetaddress.value;
+    const city=form.city.value;
+    const region=form.region.value;
+    const postalcode=form.postalcode.value;
+    
+    const formData=new FormData();
+    formData.append('pdf',pdf);
+    const careerForm={
+      cover,
+      pdf,
+      firstname,
+      lastname,
+      email,
+      streetaddress,
+      city,
+      region,
+      postalcode
+    }
+    console.log(careerForm);
+    
+    console.log(careerForm);
+    fetch('https://wapparels-server.vercel.app/career',{
+      method:'POST',
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(careerForm)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data);
+      if(data.status===201){
+        console.log('mail sent');
+        //setOpen(!open);
+      }
+      else{
+        console.log('error');
+        //setOpenError(!openError);
+      }
+      
+    })
+    form.reset();
+  }
   return (
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${career})`,
@@ -12,22 +65,138 @@ const CareerForm = () => {
       </div>
       <div className='mt-20  bg-base-100 lg:p-20 p-10'>
          <div>
-            <div className='text-center lg:pt-10 pt-5 mb-2'><h1 className='lg:text-3xl text-xl font-bold leading-6 text-gray-900'>Junior Software Engineer</h1></div>
+            <div className='text-center lg:pt-10 pt-5 mb-2'><h1 className='lg:text-3xl text-xl font-bold leading-6 text-gray-900'>Senior Accounts Officer</h1></div>
             <div >
               <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Job Description:</h1>
-              <p className='mb-2 p-4'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci nemo eligendi voluptates inventore! Magnam, aliquam culpa voluptate corporis nemo, minus cumque quos laborum officiis voluptas cum, quia tempore sint voluptatem.</p>
+              <p className='mb-2 p-4'>Seeking an experienced Senior Accounts Officer who is capable for all kinds of Accounts & Financial related activities.</p>
               <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Requirements:</h1>
-              <p className='p-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore autem blanditiis praesentium atque voluptatum mollitia sequi rerum, accusantium nisi saepe, vel sunt qui? Aspernatur repudiandae officiis, natus eos eveniet eligendi.</p>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Analyze financial data and prepare reports to management.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Ensure compliance with taxation laws and regulations.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Monitor cash flow & prepare cash flow forecast.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Provide advice and guidance to management on financial matters.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Perform ad-hoc financial analysis and other duties as required.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Prepare annual income tax return (with all supporting vouchers) in coordination with the external auditors and lawyers and submit the return to the relevant income tax circle within due time.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Maintain continuous liaison with relevant officials related to VAT, Income Tax and Lawyers etc.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Keep the management up-to-date with all relevant changes in VAT and Income Tax regulations and their potential impact on the organization.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Coordinate with the management to assign the external auditor for the annual audit and support the auditors to conduct the audit.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Review the Accounts based on the auditors' report and prepare the final audited accounts and submit to management for approval.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Prepare VAT Reconciliation Statement between VAT record and accounting record.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Prepare monthly VAT return with required supporting and submission to VAT authorities on time.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Maintain inventory registers as per government rules.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Ensure VAT Challans for every delivery of products.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Prepare reports in Quarterly/yearly basis and confirm VAT rebates with coordination of VAT process.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Capable to handle all kinds of VAT and Custom related audit.</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Ensure audit is conducted by NBR, VAT commissioner audit, vat intelligence audit, customs valuation audit, and another govt. Agencies audit.</p>
+                </div>
+              </div>
             </div>
+            <h1 className='text-md font-bold leading-6 text-gray-900 mb-1 mt-8'>Experience Requirements:</h1>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md mb-8'>At least 5 years in the relevant area.</p>
+                </div>
+              </div>
+            <h1 className='text-md font-bold leading-6 text-gray-900 mb-1 '>Salary- Negotiable</h1>
+            <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Educational Requirements:</h1>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md mb-8'>M.Com in Accounting from any reputed University / Institution. The Candidate having certification course on VAT & Tax shall get preference.</p>
+                </div>
+              </div>
             <div>
-            <form>
+            <form onSubmit={handleSubmit}>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Profile</h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">
             This information will be displayed publicly so be careful what you share.
           </p>
-
+          
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
            
 
@@ -37,51 +206,23 @@ const CareerForm = () => {
               </label>
               <div className="mt-2">
                 <textarea
-                  id="about"
-                  name="about"
+                  id="coverletter"
+                  name="coverletter"
                   rows={3}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   defaultValue={''}
                 />
               </div>
               <p className="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about yourself.</p>
             </div>
 
-            <div className="col-span-full">
-              <label htmlFor="photo" className="block text-sm font-medium leading-6 text-gray-900">
-                Photo
-              </label>
-              <div className="mt-2 flex items-center gap-x-3">
-                <UserCircleIcon className="h-12 w-12 text-gray-300" aria-hidden="true" />
-                <button
-                  type="button"
-                  className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                >
-                  Change
-                </button>
-              </div>
-            </div>
 
             <div className="col-span-full">
               <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
                 Upload your CV
               </label>
-              <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
-                <div className="text-center">
-                  <PhotoIcon className="mx-auto h-12 w-12 text-gray-300" aria-hidden="true" />
-                  <div className="mt-4 flex text-sm leading-6 text-gray-600">
-                    <label
-                      htmlFor="file-upload"
-                      className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
-                    >
-                      <span>Upload your CV</span>
-                      <input id="file-upload" name="file-upload" type="file" className="sr-only" />
-                    </label>
-                    <p className="pl-1">or drag and drop</p>
-                  </div>
-                  <p className="text-xs leading-5 text-gray-600">PDF up to 10MB</p>
-                </div>
-              </div>
+                <input type="file" name='cv' className="mt-5 file-input file-input-primary file-input-bordered w-full max-w-xs" />
+
             </div>
           </div>
         </div>
@@ -98,10 +239,10 @@ const CareerForm = () => {
               <div className="mt-2">
                 <input
                   type="text"
-                  name="first-name"
+                  name="firstname"
                   id="first-name"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -113,10 +254,10 @@ const CareerForm = () => {
               <div className="mt-2">
                 <input
                   type="text"
-                  name="last-name"
+                  name="lastname"
                   id="last-name"
                   autoComplete="family-name"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -131,28 +272,12 @@ const CareerForm = () => {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
 
-            <div className="sm:col-span-3">
-              <label htmlFor="country" className="block text-sm font-medium leading-6 text-gray-900">
-                Country
-              </label>
-              <div className="mt-2">
-                <select
-                  id="country"
-                  name="country"
-                  autoComplete="country-name"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                >
-                  <option>United States</option>
-                  <option>Canada</option>
-                  <option>Mexico</option>
-                </select>
-              </div>
-            </div>
+           
 
             <div className="col-span-full">
               <label htmlFor="street-address" className="block text-sm font-medium leading-6 text-gray-900">
@@ -161,10 +286,10 @@ const CareerForm = () => {
               <div className="mt-2">
                 <input
                   type="text"
-                  name="street-address"
+                  name="streetaddress"
                   id="street-address"
                   autoComplete="street-address"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -179,7 +304,7 @@ const CareerForm = () => {
                   name="city"
                   id="city"
                   autoComplete="address-level2"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -194,7 +319,7 @@ const CareerForm = () => {
                   name="region"
                   id="region"
                   autoComplete="address-level1"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -206,10 +331,10 @@ const CareerForm = () => {
               <div className="mt-2">
                 <input
                   type="text"
-                  name="postal-code"
+                  name="postalcode"
                   id="postal-code"
                   autoComplete="postal-code"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
