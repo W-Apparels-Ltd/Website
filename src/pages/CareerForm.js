@@ -1,14 +1,14 @@
 import React from 'react';
 import career from '../images/career.jpg'
 
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 const CareerForm = () => {
-  const API_KEY = "tonmoy.debnath@northsouth.edu_e7d6a4d1aa5841f4056fab4b323bbaf3ae2213f43607f5f7fa389abdabb9e9a96bd3302d";
+  const imgHostingKey="4794569fcdf3e451d22d531799f0d429";
   const handleSubmit=event=>{
     event.preventDefault();
     const form = event.target;
     const cover=form.coverletter.value;
-    const pdf = form.cv.files[0];
+    const cv = form.cv.files[0];
+    console.log(cv)
     const firstname=form.firstname.value;
     const lastname =form.lastname.value; 
     const email=form.email.value;
@@ -18,42 +18,33 @@ const CareerForm = () => {
     const postalcode=form.postalcode.value;
     
     const formData=new FormData();
-    formData.append('pdf',pdf);
-    const careerForm={
-      cover,
-      pdf,
-      firstname,
-      lastname,
-      email,
-      streetaddress,
-      city,
-      region,
-      postalcode
-    }
-    console.log(careerForm);
+    formData.append('pdff',cv);
     
-    console.log(careerForm);
-    fetch('https://wapparels-server.vercel.app/career',{
-      method:'POST',
-      headers:{
-        'content-type':'application/json'
-      },
-      body:JSON.stringify(careerForm)
-    })
-    .then(res=>res.json())
-    .then(data=>{
-      console.log(data);
-      if(data.status===201){
-        console.log('mail sent');
-        //setOpen(!open);
-      }
-      else{
-        console.log('error');
-        //setOpenError(!openError);
-      }
-      
-    })
-    form.reset();
+    const url=`https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
+      fetch(url,{
+        method:'POST',
+        body: formData
+      })
+      .then(res=>res.json())
+      .then(imgData=>{
+        console.log(imgData);
+        const link=imgData;
+        const careerForm={
+          cover,
+          cv:link,
+          firstname,
+          lastname,
+          email,
+          streetaddress,
+          city,
+          region,
+          postalcode
+        }
+        console.log(careerForm);
+        
+        })
+    
+    
   }
   return (
     <div style={{
@@ -221,7 +212,7 @@ const CareerForm = () => {
               <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
                 Upload your CV
               </label>
-                <input type="file" name='cv' className="mt-5 file-input file-input-primary file-input-bordered w-full max-w-xs" />
+                <input type="file" name='cv' class="mt-5 file-input file-input-primary file-input-bordered w-full max-w-xs" />
 
             </div>
           </div>
