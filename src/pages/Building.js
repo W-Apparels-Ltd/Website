@@ -20,8 +20,17 @@ const Building = () => {
           <div className="card w-50 bg-base-100 shadow-xl">
             <figure><img src={building} alt="Shoes" /></figure>
             <div className="card-body">
-              <h2 className="card-title">W. apparels ltd.</h2>
-              <p>Aftabunnesa Garments Ltd. is 9 storied 100% export oriented factory initiating its activities since September, 2019.....</p>
+              <h2 className="card-title ">W. apparels ltd.</h2>
+              <p className='text-justify'>W. Apparels Ltd is among one of the most successful garment
+                manufacturers in Bangladesh; a country with great potential in the field of
+                garment-manufacturing. It started its journey in the year 1992. W. Apparels
+                Ltd has passed over 17 successful years of accomplishment, aiming to
+                lead the competitive knit/Woven/Non-Woven wear-organizations of
+                Bangladesh. It has arduously reengineered each step of its value-chain to
+                match the dynamism of the fashion market. W. Apparels Ltd has expanded
+                its capacity, developed a skilled workforce and introduced integrated
+                technologies, to remain globally up-to-date. It is truly an organization with a
+                glorious past and a bright future.</p>
               <div className="card-actions justify-end">
                 
               </div>
@@ -31,7 +40,10 @@ const Building = () => {
             <figure><img src={sis1} alt="Shoes" /></figure>
             <div className="card-body">
               <h2 className="card-title">Quality apparels ltd.</h2>
-              <p>Aftabunnesa Garments Ltd. is 9 storied 100% export oriented factory initiating its activities since September, 2019.....</p>
+              <p className='text-justify'>Quality Apparels Ltd. stands tall as a 9-story, 100% export-oriented factory that
+              commenced its operations in September 2019. Situated in Bangladesh, it has
+              swiftly established itself as a compliant manufacturer of woven and knitwear
+              garments.</p>
               <div className="card-actions justify-end">
                 
               </div>
@@ -41,7 +53,12 @@ const Building = () => {
             <figure><img src={sis3} alt="Shoes" /></figure>
             <div className="card-body">
               <h2 className="card-title">3NA Fashion</h2>
-              <p>The Industry has a yearly production capacity of 28,00,000 lakh pieces (2.8 million pieces) of woven-wear.....</p>
+              <p className='text-justify'>The industry boasts an impressive annual production capacity, churning
+              out 2.8 million pieces of woven garments and 2.6 million pieces of
+              knitwear. This substantial output underscores the factory&#39;s
+              commitment to meeting market demands. Furthermore, the facility is
+              outfitted with advanced and state-of-the-art equipment, ensuring
+              efficiency and quality throughout the manufacturing process.</p>
               <div className="card-actions justify-end">
                 
               </div>

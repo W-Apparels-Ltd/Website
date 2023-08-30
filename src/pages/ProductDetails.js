@@ -79,7 +79,7 @@ const ProductDetails = () => {
           <div>
               <div className='flex lg:flex-row flex-col justify-center'>
                 
-                  <div className='flex lg:flex-col flex-row'>
+                  <div className='flex lg:flex-col flex-row my-5 lg:my-0'>
 
                       <img className='mr-2 lg:mr-0 h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[0])} src={img[0]}/>
                       <img className='h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[1])} src={img[1]}/>

@@ -27,7 +27,24 @@ const BuildingsandOccupants = () => {
 
           <div className='lg:w-3/5'>
             <h1 className="lg:text-5xl text-2xl md:text-3xl font-bold">Buildings and Occupants</h1>
-            <p className="py-6 lg:text-xl text-md">W.Apparels New Generation Apparels is a compliant Woven/knitwear manufacturer based in Bangladesh and is a project of W.Apparels. The company was set up in 1992 to provide one stop manufacturing service to the fashion industry ensuring quality, reliability, sustainability and social responsibility. The founder is A.M Akhter Hossain who is a prominent business man in the country known for his ethical business practices. The industry has an yearly production capacity of 48,00,000 lac pice (4.8 million pieces) of knitwear and 36,00,000 lac pice (3.6 million pieces). The factory is well equipped with latest manufacturing.
+            <p className="py-6 lg:text-xl text-md ">W.Apparels is a new generation apparel company
+                      standing as a reputable woven and knitwear
+                      manufacturer located in Bangladesh, operating under the
+                      umbrella of W Apparels Ltd. Established in 1992, our
+                      primary objective has been to offer a comprehensive
+                      manufacturing solution to the fashion industry,
+                      characterized by unwavering commitment to quality,
+                      dependability, sustainability, and social responsibility.
+                      A.M. Akhter Hossain, the visionary founder of the
+                      company, is a distinguished figure renowned for his
+                      principled and ethical business acumen within the
+                      country. <br/>
+                      With an impressive annual production capacity, we
+                      consistently craft 4.8 million pieces of knitwear and 3.6
+                      million pieces of woven garments. Our advanced factory
+                      is outfitted with state-of-the-art manufacturing
+                      technology, enabling us to stay at the forefront of
+                      innovation and efficiency.
             </p>
             <Link to='/building'>
             <button

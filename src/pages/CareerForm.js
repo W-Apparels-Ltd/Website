@@ -1,38 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import career from '../images/career.jpg'
+import ErrorModal from '../modal/ErrorModal';
+import SubmitModal from '../modal/SubmitModal';
 
 const CareerForm = () => {
-  const imgHostingKey="4794569fcdf3e451d22d531799f0d429";
+  const [open,setOpen]=useState(false);
+  const [openError,setOpenError]=useState(false);
+  const handleClick=()=>{
+    setOpen(false);
+  }
+  const handleClickError=()=>{
+    setOpenError(false);
+  }
   const handleSubmit=event=>{
     event.preventDefault();
     const form = event.target;
     const cover=form.coverletter.value;
-    const cv = form.cv.files[0];
-    console.log(cv)
+    const image = form.cv.files[0];
+    console.log(image)
     const firstname=form.firstname.value;
     const lastname =form.lastname.value; 
     const email=form.email.value;
+    const phone=form.phone.value;
     const streetaddress=form.streetaddress.value;
     const city=form.city.value;
     const region=form.region.value;
     const postalcode=form.postalcode.value;
     
     const formData=new FormData();
-    formData.append('pdff',cv);
-    
-    const url=`https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
-      fetch(url,{
-        method:'POST',
-        body: formData
-      })
-      .then(res=>res.json())
-      .then(imgData=>{
-        console.log(imgData);
-        const link=imgData;
+      formData.append('image',image);
+      
         const careerForm={
           cover,
-          cv:link,
           firstname,
+          phone,
           lastname,
           email,
           streetaddress,
@@ -41,8 +42,31 @@ const CareerForm = () => {
           postalcode
         }
         console.log(careerForm);
-        
+        fetch('https://wapparels-server.vercel.app/career',{
+          
+          method:'POST',
+          headers:{
+            'content-type':'application/json'
+          },
+          body:JSON.stringify(careerForm)
+          
         })
+        .then(res=>res.json())
+        .then(data=>{
+          console.log(data);
+          if(data.status===201){
+            console.log('mail sent');
+            setOpen(!open);
+          }
+          else{
+            console.log('error');
+            setOpenError(!openError);
+          }
+          
+        })
+        form.reset();
+        
+        
     
     
   }
@@ -267,6 +291,20 @@ const CareerForm = () => {
                 />
               </div>
             </div>
+            <div className="sm:col-span-4">
+              <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                Phone Number
+              </label>
+              <div className="mt-2">
+                <input
+                  id="phone"
+                  name="phone"
+                  type="phone"
+                  autoComplete="phone"
+                  className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
 
            
 
@@ -349,6 +387,8 @@ const CareerForm = () => {
             </div>
          </div>  
       </div>
+      <SubmitModal open={open} handleClick={handleClick}/>
+      <ErrorModal openError={openError} handleClickError={handleClickError}/>
       
     </div>
   );

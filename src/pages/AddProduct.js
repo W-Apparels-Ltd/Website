@@ -16,6 +16,7 @@ const AddProduct = () => {
 
     for (let img = 0; img < 2; img++) {
       const image=form.pic.files[img];
+      console.log(image);
       const formData=new FormData();
       formData.append('image',image);
       const url=`https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
