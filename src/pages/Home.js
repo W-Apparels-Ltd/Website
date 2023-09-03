@@ -26,9 +26,9 @@ const Home = () => {
       <SisterConcern></SisterConcern>
       <ManagingDirectorMessage></ManagingDirectorMessage>
       <OurClients></OurClients>
-      <OurCertificates></OurCertificates>
+     
       <Facilities></Facilities>
-      
+      <OurCertificates></OurCertificates>
       <Contact></Contact>
       
       <ToastContainer/>
