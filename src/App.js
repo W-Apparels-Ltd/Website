@@ -43,10 +43,6 @@ function App() {
       },
       
       {
-        path:'/building',
-        element:<Building></Building>
-      },
-      {
         path:'/teams',
         element:<Teams></Teams>
       },
@@ -102,6 +98,10 @@ function App() {
   {
     path:'/meettheteam',
     element:<MeetTheTeam></MeetTheTeam>
+  },
+  {
+    path:'/building',
+    element:<Building></Building>
   },
 ])
   return (
