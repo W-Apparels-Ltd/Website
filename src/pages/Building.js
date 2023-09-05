@@ -4,6 +4,7 @@ import sis2 from '../images/factory_purpose/aftab-1.jpg'
 import sis3 from '../images/factory_purpose/333333-1.jpg'
 import building from '../images/factory_purpose/building.jpg'
 import Nav2 from './Nav2';
+import Footer from './Footer';
 
 const Building = () => {
   return (
@@ -67,7 +68,7 @@ const Building = () => {
             </div>
     </div>
     </div>
-    
+    <Footer></Footer>
     </>
   );
 };
