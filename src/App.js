@@ -58,10 +58,7 @@ function App() {
         path:'/costing',
         element:<CostingForm></CostingForm>
       },
-      {
-        path:'/productgallery',
-        element:<ProductGallary></ProductGallary>
-      },
+      
       {
         path:'/safetymeasures',
         element:<SafetyMeasures></SafetyMeasures>
@@ -102,6 +99,10 @@ function App() {
   {
     path:'/building',
     element:<Building></Building>
+  },
+  {
+    path:'/productgallery',
+    element:<ProductGallary></ProductGallary>
   },
 ])
   return (

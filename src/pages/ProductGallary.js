@@ -3,6 +3,8 @@ import bg from '../images/factory_purpose/1.jpg'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import ProductItem from '../Shared/ProductItem';
+import Nav2 from './Nav2';
+import Footer from './Footer';
 
 const ProductGallary = () => {
   const [product, setProduct]=useState([]);
@@ -12,6 +14,8 @@ const ProductGallary = () => {
     .then(data=> setProduct(data))
   },[])
   return (
+    <>
+    <Nav2></Nav2>
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${bg})`,
     }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg">  
@@ -35,6 +39,8 @@ const ProductGallary = () => {
       </div>
       </div>
     </div>
+    <Footer></Footer>
+    </>
   );
 };
 
