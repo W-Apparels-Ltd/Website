@@ -277,7 +277,7 @@ const CareerForm = () => {
               </div>
             </div>
 
-            <div className="sm:col-span-4">
+            <div className="sm:col-span-3">
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                 Email address
               </label>
@@ -291,7 +291,7 @@ const CareerForm = () => {
                 />
               </div>
             </div>
-            <div className="sm:col-span-4">
+            <div className="sm:col-span-3">
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                 Phone Number
               </label>
