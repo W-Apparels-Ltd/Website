@@ -53,7 +53,7 @@ const Contact = () => {
       
     })
     form.reset();
-  }
+  } 
   return (
 
     <div id='contactus' className=" bg-base-200 lg:p-20 font-Nunito">
@@ -72,7 +72,6 @@ const Contact = () => {
               <div className='flex justify-center'>
                 <div><i className='fa fa-brands fa-linkedin bg-gray-700 text-white py-1 px-[5px] rounded'/></div>
               </div>
-              
             </div >
             </Link>
             <Link to='https://www.facebook.com/profile.php?id=100063651540871'><div className='me-3'>

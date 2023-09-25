@@ -13,6 +13,7 @@ import CS9 from '../images/knn.jpg'
 import CS10 from '../images/personnel/bashar.jpg'
 import AM from '../images/personnel/AM.jpg'
 import Sujan from '../images/personnel/Sujan.jpg'
+import alamin from '../images/personnel/Al-ameen.jpg'
 import Nav2 from './Nav2';
 
 
@@ -132,7 +133,7 @@ const MeetTheTeam = () => {
               <div className='text-center m-5'>
                   
                 <div className='grid justify-items-center mt-10'>
-                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={NS} alt="" />
+                      <img className='w-44 h-44 object-cover rounded-full ring ring-primary ring-offset-base-100 ring-offset-2' src={alamin} alt="" />
                   </div>
                   <div className='my-4'>
                     <h1 className="text-xl lg:text-3xl font-bold">Al-amin</h1>

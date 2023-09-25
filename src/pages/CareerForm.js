@@ -2,10 +2,31 @@ import React, { useState } from 'react';
 import career from '../images/career.jpg'
 import ErrorModal from '../modal/ErrorModal';
 import SubmitModal from '../modal/SubmitModal';
+import axios from "axios";
 
 const CareerForm = () => {
   const [open,setOpen]=useState(false);
   const [openError,setOpenError]=useState(false);
+  const [file, setFile] = useState();
+  const [fileName, setFileName] = useState("");
+  const saveFile = (e) => {
+    setFile(e.target.files[0]);
+    setFileName(e.target.files[0].name);
+  };
+  const uploadFile = async (e) => {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("fileName", fileName);
+    try {
+      const res = await axios.post(
+        "https://wapp-server.onrender.com/upload",
+        formData
+      );
+      console.log(res);
+    } catch (ex) {
+      console.log(ex);
+    }
+  };
   const handleClick=()=>{
     setOpen(false);
   }
@@ -16,8 +37,7 @@ const CareerForm = () => {
     event.preventDefault();
     const form = event.target;
     const cover=form.coverletter.value;
-    const image = form.cv.files[0];
-    console.log(image)
+  
     const firstname=form.firstname.value;
     const lastname =form.lastname.value; 
     const email=form.email.value;
@@ -27,8 +47,7 @@ const CareerForm = () => {
     const region=form.region.value;
     const postalcode=form.postalcode.value;
     
-    const formData=new FormData();
-      formData.append('image',image);
+  
       
         const careerForm={
           cover,
@@ -42,7 +61,7 @@ const CareerForm = () => {
           postalcode
         }
         console.log(careerForm);
-        fetch('https://wapparels-server.vercel.app/career',{
+        fetch('https://wapp-server.onrender.com/career',{
           
           method:'POST',
           headers:{
@@ -356,7 +375,7 @@ const CareerForm = () => {
                   defaultValue={''}
                 />
               </div>
-              <p className="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about yourself.</p>
+              <p className="mt-3 text-sm leading-6 text-gray-600">Write only body part of your cover letter.</p>
             </div>
 
 
@@ -364,7 +383,7 @@ const CareerForm = () => {
               <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
                 Upload your CV
               </label>
-                <input type="file" name='cv' class="mt-5 file-input file-input-primary file-input-bordered w-full max-w-xs" />
+                <input type="file"  onChange={saveFile} class="mt-5 file-input file-input-primary file-input-bordered w-full max-w-xs" />
 
             </div>
           </div>
@@ -374,7 +393,7 @@ const CareerForm = () => {
         <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
           Cancel
         </button>
-        <button
+        <button onClick={uploadFile}
           type="submit"
           className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >

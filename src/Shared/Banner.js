@@ -16,9 +16,10 @@ const Banner = () => {
         <img
           src={img}
           alt="image 2"
-          className="h-[750px] lg:h-[650px] w-full object-cover"
+          className="h-screen w-full object-cover"
           
         />
+        
         <div className="absolute inset-0 grid h-full w-full place-content-end place-items-end bg-black/75">
           <div className=" md:w-2/4 text-right m-5 lg:m-20">
           
@@ -62,7 +63,7 @@ const Banner = () => {
         <img
           src={img2}
           alt="image 2"
-          className="h-[750px] lg:h-[650px] w-full object-cover"
+          className="h-screen w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full lg:place-items-start place-items-end  lg:ps-20 p-5 bg-black/75">
           <div className="md:w-2/4 lg:w-2/4 ">
@@ -108,7 +109,7 @@ const Banner = () => {
         <img
           src={img3}
           alt="image 2"
-          className="h-[750px] lg:h-[650px] w-full object-cover"
+          className="h-screen w-full object-cover"
         />
         <div className=" absolute inset-0 grid h-full w-full md:place-items-center lg:place-items-center place-items-end bg-black/75">
           <div className=" md:w-3/4 text-center">
@@ -148,7 +149,7 @@ const Banner = () => {
         <img
           src={img4}
           alt="image 2"
-          className="h-[750px] lg:h-[650px] w-full object-cover"
+          className="h-screen w-full object-cover"
         />
         <div className=" absolute inset-0 grid h-full w-full md:place-items-center lg:place-items-center place-items-end bg-black/75">
           <div className=" md:w-3/4 text-center">
