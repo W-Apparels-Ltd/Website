@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const {_id,label,fabrictype,size,img}= useLoaderData();
   const [open,setOpen]=useState(false);
   const [openError,setOpenError]=useState(false);
-  const [pic,setPic]=useState(img[0]);
+  const [pic,setPic]=useState(img[1]);
   const handleClick=()=>{
     setOpen(false);
   }
@@ -81,8 +81,8 @@ const ProductDetails = () => {
                 
                   <div className='flex lg:flex-col flex-row my-5 lg:my-0'>
 
-                      <img className='mr-2 lg:mr-0 h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[0])} src={img[0]}/>
-                      <img className='h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[1])} src={img[1]}/>
+                      <img className='mr-2 lg:mr-0 h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[1])} src={img[1]}/>
+                      <img className='h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[0])} src={img[0]}/>
                   </div>
                 
               <TransformWrapper>
