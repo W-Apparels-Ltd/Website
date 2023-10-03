@@ -69,9 +69,9 @@ const ProductDetails = () => {
     style={{
       backgroundImage:` url(${bg})`,
     }}  
-    className="relative  mx-auto w-full bg-cover font-Nunito ">
-      <div className='absulate text-white bg-black/75'>
-        
+    className="relative w-full bg-cover font-Nunito ">
+      <div className='absulate text-white bg-black/75 pb-4'>
+        <div className='h-screen'>
       <div className='text-center pt-10 lg:py-5'>
         <h1 className="text-3xl font-bold mt-8">Product Details</h1>
       </div>
@@ -118,7 +118,7 @@ const ProductDetails = () => {
               <label className="label">
                 <span className="label-text font-bold">Fabrictype</span>
               </label>
-              <select className="select select-bordered" required>
+              <select className="select select-bordered " required>
                 <option disabled selected>Select One</option>
                 <option>100 % Viscose, 125 gsm</option>
                 <option>100% Cotton, Thin Twill</option>
@@ -134,13 +134,13 @@ const ProductDetails = () => {
               <label className="label">
                 <span className="label-text font-bold">Name</span>
               </label>
-              <input type="text" name='name'  className="input input-bordered"  required/>
+              <input type="text" name='name'  className="input input-bordered input-sm"  required/>
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Email</span>
               </label>
-              <input type="text" name='email' className="input input-bordered" required/>
+              <input type="text" name='email' className="input input-bordered input-sm" required/>
             </div>
             <div className="form-control">
               <label className="label">
@@ -161,7 +161,7 @@ const ProductDetails = () => {
           <ErrorModal openError={openError} handleClickError={handleClickError}/>
         
       </div>
-      
+      </div>
     </div>
     </>
   );
