@@ -88,7 +88,7 @@ const OurClients = () => {
   return (
     <div id='ourclients' className=' bg-base-100 pt-20 pb-20  font-Nunito'>
       <div>
-        <div className='text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Our clients</h1></div>
+        <div className='text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Our Clients</h1></div>
         <div className='my-5'>
             <Carousel responsive={responsive} 
             additionalTransfrom={0}

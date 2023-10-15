@@ -1,8 +1,8 @@
 import React from 'react';
 import img from '../images/factory_purpose/1.jpg'
 import img2 from '../images/factory_purpose/ourstory-300x225-1.jpg'
-import img3 from '../images/factory_purpose/333333-1.jpg'
-import img4 from '../images/inventory/products.jpg'
+import img4 from '../images/IMG_3291.JPG'
+import img3 from '../images/IMG_3306.JPG'
 
 import { Button, Carousel, Typography } from '@material-tailwind/react';
 import { Fade, Slide } from 'react-awesome-reveal';
@@ -111,7 +111,7 @@ const Banner = () => {
           alt="image 2"
           className="h-screen w-full object-cover"
         />
-        <div className=" absolute inset-0 grid h-full w-full md:place-items-center lg:place-items-center place-items-end bg-black/75">
+        <div className=" absolute inset-0 grid h-full w-full md:place-items-center lg:place-items-center place-items-end bg-black/60">
           <div className=" md:w-3/4 text-center">
             <Typography
               variant="h1"
@@ -151,7 +151,7 @@ const Banner = () => {
           alt="image 2"
           className="h-screen w-full object-cover"
         />
-        <div className=" absolute inset-0 grid h-full w-full md:place-items-center lg:place-items-center place-items-end bg-black/75">
+        <div className=" absolute inset-0 grid h-full w-full md:place-items-center lg:place-items-center place-items-end bg-black/70">
           <div className=" md:w-3/4 text-center">
             <Typography
               variant="h1"
