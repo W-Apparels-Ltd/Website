@@ -1,5 +1,5 @@
 import React from 'react';
-import pic from '../images/factory_purpose/1.jpg'
+import pic from '../images/IMG_.JPG'
 import Dr from '../images/personnel/team-1.png'
 import D1 from '../images/personnel/team-2.png'
 import D2 from '../images/personnel/team-3-removebg-preview.jpg'
@@ -21,7 +21,7 @@ const MeetTheTeam = () => {
   return (
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic})`,
-    }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg font-Nunito">  
+    }}  className= "  mx-auto w-full bg-cover bg-fixed bg-bottom bg-no-repeat shadow-lg font-Nunito">  
       <Nav2></Nav2>
       <div>
           <div className='pb-10 pt-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>Meet Our Leaders</h1></div>
