@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
   
   return (
-    <Carousel autoplay='true' loop='true' prevArrow={false} nextArrow={false}>
+    <Carousel autoplayDelay={7000} autoplay='true' loop='true' prevArrow={false} nextArrow={false}>
 
       <div className="relative w-full overflow-hidden" >
         <img

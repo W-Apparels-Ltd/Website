@@ -76,7 +76,7 @@ function App() {
         element:<FireTraining></FireTraining>
       },
       {
-        path:'/fireaidtraining',
+        path:'/firstaidtraining',
         element:<FirstAidTraining></FirstAidTraining>
       },
       {
