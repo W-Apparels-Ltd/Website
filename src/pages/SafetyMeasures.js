@@ -17,6 +17,7 @@ const SafetyMeasures = () => {
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src={pic} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
+                
                 <div>
                   <h1 className="lg:text-5xl text-3xl  font-bold">Safety Measures</h1>
                   <p className="py-6 text-justify">In the latter half of 2021, W Apparels Ltd significantly bolstered its safety measures to effectively

@@ -46,10 +46,7 @@ function App() {
         path:'/teams',
         element:<Teams></Teams>
       },
-      {
-        path:'/career',
-        element:<Career></Career>
-      },
+      
       {
         path:'/careerForm',
         element:<CareerForm></CareerForm>
@@ -103,6 +100,10 @@ function App() {
   {
     path:'/productgallery',
     element:<ProductGallary></ProductGallary>
+  },
+  {
+    path:'/career',
+    element:<Career></Career>
   },
 ])
   return (

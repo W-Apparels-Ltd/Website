@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import career from '../images/career.jpg'
 import { Link } from 'react-router-dom';
+import Nav2 from './Nav2';
 
 const Career = () => {
   const [active,setactive]=useState(true);
   return (
+    <>
+    <Nav2></Nav2>
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${career})`,
     }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg font-Nunito">  
@@ -39,6 +42,7 @@ const Career = () => {
       </div>
       }
     </div>
+    </>
   );
 };
 
