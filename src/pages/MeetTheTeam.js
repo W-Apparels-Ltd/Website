@@ -24,12 +24,12 @@ const MeetTheTeam = () => {
     }}  className= "  mx-auto w-full bg-cover bg-fixed bg-bottom bg-no-repeat shadow-lg font-Nunito">  
       <Nav2></Nav2>
       <div>
-          <div className='pb-20 pt-20 text-center bg-black/50'><h1 className='lg:text-5xl text-3xl text-white font-bold mb-20'>Meet Our Leaders</h1></div>
+          <div className='pb-24 pt-20 text-center bg-black/50'><h1 className='lg:text-5xl text-3xl text-white font-bold mb-20'>Meet Our Leaders</h1></div>
           
       </div>
       <div className=' rounded-xl'>
           <div className='bg-base-200 '>
-          <div className=" bg-base-200 px-10 pt-20">
+          <div className=" bg-base-200 px-10 pt-10">
             <div className='text-center'>
               <h1 className="lg:text-4xl text-3xl font-bold">Chairman</h1>
             </div>
@@ -37,7 +37,7 @@ const MeetTheTeam = () => {
               <div className='text-center'>
                   
                   
-                  <div className='my-4'>
+                  <div className='my-2'>
                     <h1 className="lg:text-4xl text-2xl md:text-3xl italic text-gray-700 font-bold">Nigher Sultana</h1>
                     <p className="text-xl">At last but not the least we wish a friendly global business relationship in days to come.</p>
                   </div>
@@ -46,7 +46,7 @@ const MeetTheTeam = () => {
               
             </div>
           </div>
-          <div className=" bg-base-200 px-10 pt-10">
+          <div className=" bg-base-200 px-10 pt-5">
             <div className='text-center'>
               <h1 className="lg:text-4xl text-3xl font-bold">Managing Director</h1>
             </div>
