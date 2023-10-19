@@ -47,10 +47,7 @@ function App() {
         element:<Teams></Teams>
       },
       
-      {
-        path:'/careerForm',
-        element:<CareerForm></CareerForm>
-      },
+      
       {
         path:'/costing',
         element:<CostingForm></CostingForm>
@@ -81,6 +78,7 @@ function App() {
         element:<FoodFacilities></FoodFacilities>
       },
       
+      
 
     ],
   },
@@ -104,6 +102,10 @@ function App() {
   {
     path:'/career',
     element:<Career></Career>
+  },
+  {
+    path:'/careerForm',
+    element:<CareerForm></CareerForm>
   },
 ])
   return (
