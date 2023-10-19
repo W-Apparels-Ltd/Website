@@ -97,7 +97,7 @@ const CareerForm = () => {
           <div className='p-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>View Current Openings</h1></div>
           
       </div>
-      <div className='mt-20  bg-base-100 lg:p-20 p-10'>
+      <div className='mt-20  bg-base-200 lg:p-20 p-10'>
          <div>
             <div className='text-center lg:pt-10 pt-5 mb-2'><h1 className='lg:text-3xl text-xl font-bold leading-6 text-gray-900'>Senior Accounts Officer</h1></div>
             <div >
