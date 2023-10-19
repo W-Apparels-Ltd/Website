@@ -3,6 +3,7 @@ import img from '../images/factory_purpose/1.jpg'
 import img2 from '../images/factory_purpose/ourstory-300x225-1.jpg'
 import img4 from '../images/IMG_3291.JPG'
 import img3 from '../images/IMG_3306.JPG'
+import arrow from '../images/Untitled__1_-removebg-preview.png'
 
 import { Button, Carousel, Typography } from '@material-tailwind/react';
 import { Fade, Slide } from 'react-awesome-reveal';
@@ -91,10 +92,17 @@ const Banner = () => {
             <Typography
               variant="lead"
               color="white"
-              className="lg:hidden mb-12 opacity-80 font-Nunito text-5md"
+              className="lg:hidden opacity-80 font-Nunito text-5md"
             >
               We are dedicated to empowering lives by providing meaningful employment opportunities. We understand the transformative power of work and believe in fostering an inclusive environment that embraces growth and development.
             </Typography>
+            <Link className='mb-10' to='/career'>
+            <button className='btn btn-ghost text-white lg:me-5 md:me-5'>Career
+                  <span className=" w-12 transition-colors group-hover:bg-[#000066]">
+                  <img src={arrow}></img>
+                  </span>
+            </button>
+            </Link>  
             </div>
             
         </div>
@@ -180,7 +188,13 @@ const Banner = () => {
             >
              We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem.
                  </Typography>
-            <Link className='btn btn-primary mb-12 lg:mb-0' to='/productgallery'>Product Gallery</Link>
+            <Link className=' ' to='/productgallery'>
+            <button className='btn btn-ghost mb-12 lg:mb-0 text-white lg:me-5 md:me-5'>Product Gallery
+                  <span className=" w-12 transition-colors group-hover:bg-[#000066]">
+                  <img src={arrow}></img>
+                  </span>
+            </button> 
+            </Link>
             
           </div>
         </div>
