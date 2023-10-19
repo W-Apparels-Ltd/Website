@@ -362,6 +362,23 @@ const CareerForm = () => {
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
            
 
+            
+
+
+            <div className="col-span-3">
+              <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
+                Upload your CV
+              </label>
+                <input type="file"  onChange={saveFile} class="mt-5 file-input file-input-primary file-input-bordered w-full max-w-xs" />
+
+            </div>
+            <div className="col-span-3">
+              <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
+                Upload your Cover letter
+              </label>
+                <input type="file"  onChange={saveFile} class="mt-5 file-input file-input-primary file-input-bordered w-full max-w-xs" />
+
+            </div>
             <div className="col-span-full">
               <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">
                 Cover Letter
@@ -376,15 +393,6 @@ const CareerForm = () => {
                 />
               </div>
               <p className="mt-3 text-sm leading-6 text-gray-600">Write only body part of your cover letter.</p>
-            </div>
-
-
-            <div className="col-span-full">
-              <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">
-                Upload your CV
-              </label>
-                <input type="file"  onChange={saveFile} class="mt-5 file-input file-input-primary file-input-bordered w-full max-w-xs" />
-
             </div>
           </div>
         </div>
