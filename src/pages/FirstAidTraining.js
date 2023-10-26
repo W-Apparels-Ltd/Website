@@ -15,8 +15,11 @@ const FirstAidTraining = () => {
             <div className=' bg-base-100'>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
+              <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <div>
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold">First Aid Training</h1>
                   <p className="py-6 text-justify">Ever since the inception of our garments industry, we have prioritized the well-being of our employees
 by establishing comprehensive first aid facilities. These facilities have been integral to our safety
@@ -29,8 +32,11 @@ when needed.</p>
             </div>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
-                <img src={pic1} className="lg:max-w-lg w-full rounded-lg shadow-2xl" />
-                <div className='lg:ps-5'>
+              <div>
+                <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='lg:ps-5 w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">To further enhance our medical response capabilities, we have also entered into separate agreements
 with medical college hospitals. These collaborations enable us to provide specialized care in acute
@@ -42,8 +48,11 @@ necessary.</p>
             </div>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <div>
+              <div>
+                <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">Central to our safety measures is the implementation of first aid training for our staff. This training
 equips our everyday workers with the knowledge and skills required to respond effectively to a medical
@@ -56,8 +65,11 @@ perform basic emergency medical care.</p>
             </div>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
-                <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <div>
+              <div>
+                <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">Some of the key aspects of first aid training include the ability to assess a situation quickly and calmly,
 ensuring the safety of both the casualty and the responder. This includes understanding whether the
@@ -72,8 +84,11 @@ handle a variety of emergency situations.</p>
             </div>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
+              <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <div>
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">In summary, our commitment to first aid facilities and training within our garments industry is a
 testament to our dedication to the safety and well-being of our employees. These measures, including

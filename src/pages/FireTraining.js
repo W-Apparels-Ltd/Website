@@ -17,8 +17,11 @@ const FireTraining = () => {
             <div className=' bg-base-100'>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={pic} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <div>
+              <div>
+                <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold">Fire Training</h1>
                   <p className="py-6 text-justify">In our garments industry, fire safety is a paramount concern, and we take proactive measures to
 ensure the well-being of our employees. Central to our safety strategy is the organization of regular fire
@@ -31,8 +34,11 @@ effectively in the event of a fire emergency.</p>
             </div>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
-                <img src={pic1} className="lg:max-w-lg w-full rounded-lg shadow-2xl" />
-                <div className='lg:ps-5'>
+              <div>
+                <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='lg:ps-5 w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">Our comprehensive fire training program covers a spectrum of essential topics. First and
 foremost, employees are thoroughly trained on the proper usage of fire extinguishers, equipping them
@@ -44,8 +50,11 @@ essential safety procedures to follow during a fire emergency, instilling a cult
             </div>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <div>
+              <div>
+                <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">To provide early warnings of fire hazards, we have strategically installed smoke alarms in key
 areas of our facility. Understanding the critical importance of knowing evacuation routes and
@@ -57,8 +66,11 @@ safety in the event of a fire.</p>
             </div>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
+              <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <div>
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">Customer input was valued, and safety concerns and recommendations from customers were integrated
 into the safety measures to ensure alignment with their expectations.</p>
@@ -68,8 +80,11 @@ into the safety measures to ensure alignment with their expectations.</p>
             </div>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <div>
+              <div>
+                <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">To further minimize fire risks, we&#39;ve implemented a strict no-smoking policy within our industry,
 thus preventing potential fire hazards related to smoking materials. Our dedication to safety extends to
@@ -80,8 +95,11 @@ the correct usage of portable air conditioners, which is included in our fire sa
             </div>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
+              <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <div>
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">In addition to these measures, our employees are trained to identify potential fire hazards,
 evaluate the associated risks, and implement measures to either reduce, remove, or protect against
@@ -92,8 +110,11 @@ these risks. This holistic approach to fire safety encompasses both prevention a
             </div>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <div>
+              <div>
+                <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
+                <h1 className='text-center text-gray-700'>image caption</h1>
+                </div>
+                <div className='w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">To ensure that our safety measures remain effective, we conduct regular reviews and ongoing
 monitoring. We are committed to maintaining a secure and hazard-free working environment for our
