@@ -89,6 +89,7 @@ const MeetTheTeam = () => {
                   <div className='my-4'>
                     <h1 className="lg:text-3xl text-2xl md:text-3xl font-bold">Naushin Adnin</h1>
                     <p className="text-xl text-gray-700 font-bold">Administration & Marketing</p>
+                    <p>adnin@wapparels.com</p>
                   </div>
                 </div>
                 <div className='text-center m-5'>
@@ -99,6 +100,7 @@ const MeetTheTeam = () => {
                   <div className='my-4'>
                     <h1 className="lg:text-3xl text-2xl md:text-3xl font-bold">Sharif Rayhan Hemon</h1>
                     <p className="text-xl text-gray-700 font-bold">Sourcing, Planning & Merchandising</p>
+                    <p>hemon@qualityapparels.com</p>
                   </div>
                 </div>
               </div>
@@ -117,6 +119,7 @@ const MeetTheTeam = () => {
                     <h1 className="text-xl lg:text-3xl  font-bold">Anwar Hossain Dipu</h1>
                     <p className="text-xl font-bold text-gray-700">GM-HR-Admin</p>
                     <p className="text-xl">Compliance & Commercial</p>
+                    <p>dipu@qualityapparels.com</p>
                   </div>
                 </div>
               <div className='text-center m-5'>
@@ -128,6 +131,7 @@ const MeetTheTeam = () => {
                     <h1 className="text-xl lg:text-3xl font-bold">Md. Fakhrul Islam</h1>
                     <p className="text-xl font-bold text-gray-700">Adviser</p>
                     <p className="text-xl">Commercial, Banking, Finance & Training</p>
+                    <p>mfislam@wapparels.com</p>
                   </div>
                 </div>
               
@@ -140,6 +144,7 @@ const MeetTheTeam = () => {
                     <h1 className="text-xl lg:text-3xl font-bold">Al-amin</h1>
                     <p className="text-xl font-bold text-gray-700">Manager</p>
                     <p className="text-xl">Merchandising</p>
+                    <p>al-amin@qualityapparels.com</p>
                   </div>
                 </div>
                 <div className='text-center m-5'>
@@ -151,6 +156,7 @@ const MeetTheTeam = () => {
                       <h1 className="text-xl lg:text-3xl font-bold">Sujan Mahmud</h1>
                       <p className="text-xl font-bold text-gray-700">Manager</p>
                       <p className="text-xl">Merchandising</p>
+                      <p>sujan@wapparels.com</p>
                     </div>
                   </div>
               <div className='text-center m-5'>
@@ -161,6 +167,7 @@ const MeetTheTeam = () => {
                   <div className='my-4'>
                     <h1 className="text-xl lg:text-3xl font-bold">Muhammad Abdullah</h1>
                     <p className="text-xl font-bold text-gray-700">Sr. Commercial Officer</p>
+                    <p>abdullah@wapparels.com</p>
                   </div>
                 </div>
               <div className='text-center m-5'>
@@ -172,6 +179,7 @@ const MeetTheTeam = () => {
                     <h1 className="text-xl lg:text-3xl font-bold">Md.Kanon Mazumder</h1>
                     <p className="text-xl font-bold text-gray-700">Sr.Commercial officer (Import)</p>
                     <p className="text-xl">Department of Commercial</p>
+                    <p></p>
                   </div>
                 </div>
               <div className='text-center m-5'>
