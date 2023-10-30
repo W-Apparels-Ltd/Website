@@ -6,6 +6,9 @@ import client2 from '../images/Certificates/2.jpg'
 import client3 from '../images/Certificates/3.jpg'
 import client4 from '../images/Certificates/4.jpg'
 import client5 from '../images/Certificates/5.jpg'
+import client6 from '../images/Certificates/newacc200x190.png'
+import client7 from '../images/Certificates/newacc2200x190.png'
+import client8 from '../images/Certificates/newacc3200x190.png'
 import OurCertificatesPic from './OurCertificatesPic';
 
 const OurCertificates = () => {
@@ -16,7 +19,7 @@ const OurCertificates = () => {
         img:client1
       },
       {
-        _id:1,
+        _id:2,
         img:client2
       },
       
@@ -31,6 +34,18 @@ const OurCertificates = () => {
       {
         _id:5,
         img:client5
+      },
+      {
+        _id:6,
+        img:client6
+      },
+      {
+        _id:7,
+        img:client7
+      },
+      {
+        _id:8,
+        img:client8
       },
      
     ]

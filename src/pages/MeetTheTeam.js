@@ -78,6 +78,7 @@ const MeetTheTeam = () => {
                   <div className='my-4'>
                     <h1 className="lg:text-3xl text-2xl md:text-3xl font-bold">MD Zahirul Islam</h1>
                     <p className="text-xl text-gray-700 font-bold">Operation & Admin</p>
+                    <p>zahir@wapparels.com</p>
                   </div>
                 </div>
                 <div className='text-center m-5'>

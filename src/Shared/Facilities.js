@@ -3,7 +3,7 @@ import product1 from '../images/factory_purpose/trainnig.jpg'
 import product2 from '../images/factory_purpose/medical (1).jpg'
 import product3 from '../images/factory_purpose/cc.jpg'
 import product4 from '../images/factory_purpose/66666-1.png'
-import product5 from '../images/factory_purpose/333.jpg'
+import product5 from '../images/factory_purpose/777777.jpg'
 import product6 from '../images/factory_purpose/medical (2).jpg'
 import { Link } from 'react-router-dom';
 

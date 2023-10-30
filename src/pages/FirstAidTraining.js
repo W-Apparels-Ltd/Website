@@ -1,7 +1,8 @@
 import React from 'react';
 import pic from '../images/FireAndSafety/fire1.jpg'
-import pic1 from '../images/FireAndSafety/fire1.jpg'
-import pic2 from '../images/FireAndSafety/fire3.jpg'
+import pic1 from '../images/factory_purpose/a1.jpg'
+import pic2 from '../images/factory_purpose/a2.jpg'
+
 const FirstAidTraining = () => {
     return (
         <div style={{
@@ -10,7 +11,7 @@ const FirstAidTraining = () => {
             
             <div>
                 <div className='p-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>First Aid Training</h1></div>
-                
+                 
             </div>
             <div className=' bg-base-100'>
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
@@ -99,7 +100,6 @@ safer and more secure working environment..</p>
                 </div>
               </div>
             </div>
-            
             
           </div>
           </div>

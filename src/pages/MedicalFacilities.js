@@ -1,7 +1,7 @@
 import React from 'react';
 import pic from '../images/factory_purpose/1.jpg'
-import pic1 from '../images/FireAndSafety/fire1.jpg'
-import pic2 from '../images/FireAndSafety/fire3.jpg'
+import pic1 from '../images/factory_purpose/a1.jpg'
+import pic2 from '../images/factory_purpose/a2.jpg'
 
 const MedicalFacilities = () => {
     return (
