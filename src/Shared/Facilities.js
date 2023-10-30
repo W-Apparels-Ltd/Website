@@ -30,7 +30,7 @@ const Facilities = () => {
                   </div>
             </div>
           </Link>
-          <Link to='/firetraining'>
+          <Link to='/childcare'>
             <div className="card w-50 bg-base-100 shadow-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300">
               <figure><img className='w-full' src={product3} alt="Shoes" /></figure>
                 <div className='my-3'>
