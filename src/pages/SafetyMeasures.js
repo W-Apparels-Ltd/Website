@@ -21,7 +21,7 @@ const SafetyMeasures = () => {
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
               
-                <div className='w-1/2'>
+                <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold">Safety Measures</h1>
                   <p className="py-6 text-justify">In the latter half of 2021, W Apparels Ltd significantly bolstered its safety measures to effectively
 address potential risks and reduce the impact of fire-related incidents. These measures were designed
@@ -38,7 +38,7 @@ precautions within the garments industry.</p>
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
                 
-                <div className='lg:ps-5 w-1/2'>
+                <div className='lg:ps-5 lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">First and foremost, emergency preparedness received a high priority. To ensure quick responses to any
 crisis, first aid boxes, fire extinguishers, and emergency lights were strategically positioned throughout
@@ -56,7 +56,7 @@ doors open during factory operations.</p>
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
 
-                <div className='w-1/2'>
+                <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">Personnel awareness and training were essential components of the safety strategy. Employees were
 consistently reminded to remain vigilant, wear appropriate attire, use the right tools for their tasks, and
@@ -74,7 +74,7 @@ instructions on their usage.</p>
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
 
-                <div className='w-1/2'>
+                <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">Customer input was valued, and safety concerns and recommendations from customers were integrated
 into the safety measures to ensure alignment with their expectations.</p>
@@ -89,7 +89,7 @@ into the safety measures to ensure alignment with their expectations.</p>
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
 
-                <div className='w-1/2'>
+                <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">This comprehensive approach to safety, encompassing fire safety, first aid, emergency preparedness,
 and thorough employee training, underscores the commitment of W Apparels Ltd to foster a secure

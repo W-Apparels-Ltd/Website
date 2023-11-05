@@ -5,7 +5,6 @@ import pic from '../images/factory_purpose/1.jpg'
 const AddProduct = () => {
   const imgHostingKey="61ae2968344a1e59d2019f4122660661";
   
-  
   const handleSubmit=event=>{
     event.preventDefault();
     const form = event.target;

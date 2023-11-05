@@ -20,7 +20,7 @@ const MedicalFacilities = () => {
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
-                <div className='w-1/2'>
+                <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold">Medical Facilities</h1>
                   <p className="py-6 text-justify">At our company, the health and well-being of our employees are paramount. To ensure that our
 workforce has access to quality healthcare, we have engaged professional doctors who are readily
@@ -36,7 +36,7 @@ also on call, ensuring that our employees can receive medical attention when req
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
-                <div className='lg:ps-5 w-1/2' >
+                <div className='lg:ps-5 lg:w-1/2' >
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">First and foremost, emergency preparedness received a high priority. To ensure quick responses to any
 crisis, first aid boxes, fire extinguishers, and emergency lights were strategically positioned throughout
@@ -53,7 +53,7 @@ doors open during factory operations.</p>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
-                <div className="w-1/2">
+                <div className="lg:w-1/2">
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">In addition, we maintain a strong and consistent liaison with medical hospitals. This proactive approach
 means that, in times of need, our employees can access specialized medical care without delay. We
@@ -69,7 +69,7 @@ hospitals enable us to provide this for our employees.</p>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
-                <div className="w-1/2">
+                <div className="lg:w-1/2">
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">Recognizing that emergencies can occur at any time, our factory has established contractual
 relationships with local clinics. This arrangement ensures that our workers can receive prompt medical
@@ -84,7 +84,7 @@ attention in case of emergencies, further enhancing their safety and well-being.
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
-                <div className="w-1/2">
+                <div className="lg:w-1/2">
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">An important aspect of our healthcare provision is understanding the unique needs of our workforce.
 With approximately 80% of our employees being female, we have taken specific steps to cater to their
@@ -100,7 +100,7 @@ enhancing the comfort and quality of healthcare services offered.</p>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
-                <div className="w-1/2">
+                <div className="lg:w-1/2">
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">Furthermore, our commitment to healthcare extends to those who may not have the financial means to
 afford treatment. We believe in reaching out to every worker and ensuring that they have access to
@@ -117,7 +117,7 @@ supportive and secure working environment.</p>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
-                <div className="w-1/2">
+                <div className="lg:w-1/2">
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
                   <p className="py-6 text-justify">In summary, our company is dedicated to providing comprehensive healthcare services, including on-call
 and chamber-based professional doctors, hospital partnerships, emergency care through local clinics,
