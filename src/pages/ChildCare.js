@@ -1,6 +1,6 @@
 import React from 'react';
-import pic from '../images/factory_purpose/1.jpg'
-import pic1 from '../images/FireAndSafety/fire1.jpg'
+import pic from '../images/Childcare/IMG_3405-removebg-preview.png'
+import pic1 from '../images/Childcare/IMG_3405-removebg-preview.png'
 import pic2 from '../images/FireAndSafety/fire3.jpg'
 
 const ChildCare = () => {

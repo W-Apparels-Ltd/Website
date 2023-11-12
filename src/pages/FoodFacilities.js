@@ -1,7 +1,8 @@
 import React from 'react';
 import pic from '../images/factory_purpose/1.jpg'
-import pic1 from '../images/FireAndSafety/fire1.jpg'
-import pic2 from '../images/FireAndSafety/fire3.jpg'
+import pic1 from '../images/Canteen/IMG_3377.jpg'
+import pic2 from '../images/Canteen/IMG_3382.jpg'
+import pic3 from '../images/Canteen/IMG_3385.jpg'
 const FoodFacilities = () => {
     return (
         <div style={{
@@ -65,7 +66,7 @@ of quality.
             <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
-                <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
+                <img src={pic3} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>image caption</h1>
                 </div>
                 <div className='lg:w-1/2'>
