@@ -167,6 +167,7 @@ const MeetTheTeam = () => {
                   <div className='my-4'>
                     <h1 className="text-xl lg:text-3xl font-bold">Muhammad Abdullah</h1>
                     <p className="text-xl font-bold text-gray-700">Sr. Commercial Officer</p>
+                    <p className="text-xl">Department of Commercial</p>
                     <p>abdullah@wapparels.com</p>
                   </div>
                 </div>
@@ -190,6 +191,7 @@ const MeetTheTeam = () => {
                   <div className='my-4'>
                     <h1 className="text-xl lg:text-3xl font-bold">Ashraful Islam</h1>
                     <p className="text-xl font-bold text-gray-700">Sr. Commercial Officer</p>
+                    <p className="text-xl">Department of Commercial</p>
                     <p>import@wapparels.com</p>
                   </div>
                 </div>

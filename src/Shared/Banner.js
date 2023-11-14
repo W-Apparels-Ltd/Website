@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
   
   return (
-    <Carousel autoplayDelay={7000} autoplay='true' loop='true' prevArrow={false} nextArrow={false}>
+    <Carousel autoplayDelay={8000} autoplay='true' loop='true' prevArrow={false} nextArrow={false}>
 
       <div className="relative w-full overflow-hidden" >
         <img
@@ -21,7 +21,7 @@ const Banner = () => {
           
         />
         
-        <div className="absolute inset-0 grid h-full w-full place-content-end place-items-end bg-black/75">
+        <div className="absolute inset-0 grid h-full w-full place-content-end place-items-end bg-black/70">
           <div className=" md:w-2/4 text-right m-5 lg:m-20">
           
                   <Typography

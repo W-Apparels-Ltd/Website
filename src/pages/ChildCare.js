@@ -1,13 +1,13 @@
 import React from 'react';
-import pic from '../images/Childcare/IMG_3405-removebg-preview.png'
+import pic from '../images/Childcare/IMG_3395.jpg'
 import pic1 from '../images/Childcare/IMG_3405-removebg-preview.png'
-import pic2 from '../images/FireAndSafety/fire3.jpg'
+import pic2 from '../images/Childcare/IMG_3395.jpg'
 
 const ChildCare = () => {
     return (
         <div style={{
-            backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic}})`,
-          }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg">
+          backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic})`,
+        }}  className= "  mx-auto w-full bg-cover bg-fixed bg-bottom bg-no-repeat shadow-lg">
             
             <div>
                 <div className='p-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>Child Care</h1></div>
