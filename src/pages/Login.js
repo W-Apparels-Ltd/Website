@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import gif from '../images/Login.gif'
 const Login = () => {
   return (
     <div className='h-[600px] flex justify-evenly items-center'>
       <div>
-        <img src={gif} alt="" />
       </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-200">
       <form  className="card-body">

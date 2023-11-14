@@ -1,9 +1,12 @@
 import React from 'react';
-import pic from '../images/factory_purpose/1.jpg'
 import pic1 from '../images/Canteen/IMG_3377.jpg'
 import pic2 from '../images/Canteen/IMG_3382.jpg'
 import pic3 from '../images/Canteen/IMG_3385.jpg'
+import { useEffect } from 'react';
 const FoodFacilities = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
     return (
         <div style={{
             backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic2})`,

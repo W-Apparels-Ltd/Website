@@ -4,7 +4,6 @@ import Dr from '../images/personnel/team-1.png'
 import D1 from '../images/personnel/team-2.png'
 import D2 from '../images/personnel/team-3-removebg-preview.jpg'
 import D3 from '../images/personnel/team-4.jpg'
-import NS from '../images/OIP.jpg'
 import CS1 from '../images/personnel/IMG_2447(1) (1)-min.jpg'
 import CS2 from '../images/personnel/IMG_2437(2) (1)-min.jpg'
 import CS7 from '../images/personnel/Ashraf.jpg'
@@ -15,9 +14,13 @@ import AM from '../images/personnel/AM.jpg'
 import Sujan from '../images/personnel/Sujan.jpg'
 import alamin from '../images/personnel/Al-ameen.jpg'
 import Nav2 from './Nav2';
+import { useEffect } from 'react';
 
 
 const MeetTheTeam = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div style={{
       backgroundImage:` url(${pic})`,

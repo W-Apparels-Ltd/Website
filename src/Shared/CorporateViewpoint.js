@@ -1,5 +1,4 @@
 import React from 'react';
-import img from '../images/factory_purpose/333333.jpg'
 import grp from '../images/personnel/GroupPic.jpg'
 import arrow from '../images/Untitled__1_-removebg-preview.png'
 import { Link } from 'react-router-dom';
