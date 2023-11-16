@@ -1,6 +1,6 @@
 import React from 'react';
 import pic from '../images/Childcare/IMG_3395.jpg'
-import pic1 from '../images/Childcare/IMG_3405-removebg-preview.png'
+import pic1 from '../images/Childcare/IMG_3405-removebg-preview.jpg'
 import pic2 from '../images/Childcare/IMG_3395.jpg'
 import { useEffect } from 'react';
 
@@ -22,7 +22,7 @@ const ChildCare = () => {
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Kids at Heart: Child Care Moments.</h1>
                 </div>
                 <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold">Child Care</h1>
@@ -43,7 +43,7 @@ experience to manage the facility, creating a secure and nurturing environment f
               <div className="hero-content flex-col lg:flex-row">
               <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Little Joys: W. Apparels Ltd.'s Child Care.</h1>
                 </div>
                 <div className='lg:ps-5 lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
@@ -65,7 +65,7 @@ employees and their children.</p>
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Growing Together: Tiny Tales at W. Apparels Ltd.</h1>
                 </div>
                 <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>

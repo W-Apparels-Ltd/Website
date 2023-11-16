@@ -1,5 +1,5 @@
 import React from 'react';
-import pic1 from '../images/Canteen/IMG_3377.jpg'
+import pic1 from '../images/Canteen/WhatsApp Image 2023-11-16 at 10.49.01_448d4d39.jpg'
 import pic2 from '../images/Canteen/IMG_3382.jpg'
 import pic3 from '../images/Canteen/IMG_3385.jpg'
 import { useEffect } from 'react';
@@ -20,7 +20,7 @@ const FoodFacilities = () => {
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Epicenter of Style and Sustenance: Inside W. Apparels Ltd. Canteen</h1>
                 </div>
                 <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold">Food Facilities</h1>
@@ -45,7 +45,7 @@ employees.
               <div className="hero-content flex-col lg:flex-row">
               <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Gastronomic Delight: Relishing Every Bite at W. Apparels Ltd.</h1>
                 </div>
                 <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
@@ -70,7 +70,7 @@ of quality.
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic3} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Savoring Every Bite: A Delicious Moment in W. Apparels Ltd.'s Canteen</h1>
                 </div>
                 <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>

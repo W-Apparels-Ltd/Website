@@ -22,7 +22,7 @@ const FirstAidTraining = () => {
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Healing Hands: First Aid Training Moments at W. Apparels Ltd.</h1>
                 </div>
                 <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold">First Aid Training</h1>
@@ -42,7 +42,7 @@ necessary. </p>
               <div className="hero-content flex-col lg:flex-row">
               <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Emergency Ready: First Aid Drills in Action.</h1>
                 </div>
                 <div className='lg:ps-5 lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
@@ -65,7 +65,7 @@ handle a variety of emergency situations.</p>
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Response Readiness: First Aid Training at W. Apparels Ltd.</h1>
                 </div>
                 <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>

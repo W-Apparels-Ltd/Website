@@ -1,7 +1,7 @@
 import React from 'react';
 import img from '../images/factory_purpose/building.jpg'
 import img1 from '../images/factory_purpose/888888.jpg'
-import img2 from '../images/factory_purpose/333333-1.jpg'
+import img2 from '../images/factory_purpose/WhatsApp Image 2023-11-16 at 11.35.58_7ac0f51f (1).jpg'
 import arrow from '../images/Untitled__1_-removebg-preview.png'
 import { Link } from 'react-router-dom';
 import { Button } from '@material-tailwind/react';

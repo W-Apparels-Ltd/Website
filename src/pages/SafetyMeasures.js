@@ -21,7 +21,7 @@ const SafetyMeasures = () => {
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <div>
                 < img src={pic} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Safe Threads: W. Apparels Ltd.'s Commitment.</h1>
                 </div>
               
                 <div className='lg:w-1/2'>
@@ -42,7 +42,7 @@ doors open during factory operations.</p>
               <div className="hero-content flex-col lg:flex-row">
                 <div>
                 <img src={pic1} className="lg:max-w-lg w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Stitching Safety: A Snapshot in Three Frames.</h1>
                 </div>
                 
                 <div className='lg:ps-5 lg:w-1/2'>
@@ -61,7 +61,7 @@ into the safety measures to ensure alignment with their expectations</p>
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Safety Snapshots: Where Style Meets Security.</h1>
                 </div>
 
                 <div className='lg:w-1/2'>

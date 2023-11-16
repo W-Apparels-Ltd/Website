@@ -1,7 +1,7 @@
 import React from 'react';
-import img from '../images/factory_purpose/ourstory-300x225-1.jpg'
+import img from '../images/personnel/WhatsApp Image 2023-11-16 at 10.44.02_6e0b97c7 (1).jpg'
 import pic from '../images/factory_purpose/1.jpg'
-import o2 from '../images/Our1 (1).jpg'
+import o2 from '../images/WhatsApp Image 2023-11-16 at 15.33.27_b1395d02.jpg'
 import o3 from '../images/our2 (1).jpg'
 import arrow from '../images/Untitled__1_-removebg-preview.png'
 import { Link } from 'react-router-dom';

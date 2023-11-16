@@ -22,7 +22,7 @@ const MedicalFacilities = () => {
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Wellness Hub: Nurturing Health at W. Apparels Ltd.</h1>
                 </div>
                 <div className='lg:w-1/2'>
                   <h1 className="lg:text-5xl text-3xl  font-bold">Medical Facilities</h1>
@@ -42,7 +42,7 @@ doors open during factory operations.</p>
               <div className="hero-content flex-col lg:flex-row">
                 <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Stitching Health: Inside W. Apparels Ltd.'s Medical Facilities.</h1>
                 </div>
                 <div className='lg:ps-5 lg:w-1/2' >
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
@@ -63,7 +63,7 @@ enhancing the comfort and quality of healthcare services offered.</p>
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
-                <h1 className='text-center text-gray-700'>image caption</h1>
+                <h1 className='text-center text-gray-700'>Medical Oasis: Caring for our Team's Well-being.</h1>
                 </div>
                 <div className="lg:w-1/2">
                   <h1 className="lg:text-5xl text-3xl  font-bold"></h1>
