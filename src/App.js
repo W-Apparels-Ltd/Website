@@ -53,30 +53,6 @@ function App() {
         element:<CostingForm></CostingForm>
       },
       
-      {
-        path:'/safetymeasures',
-        element:<SafetyMeasures></SafetyMeasures>
-      },
-      {
-        path:'/medicalfacilities',
-        element:<MedicalFacilities></MedicalFacilities>
-      },
-      {
-        path:'/childcare',
-        element:<ChildCare></ChildCare>
-      },
-      {
-        path:'/firetraining',
-        element:<FireTraining></FireTraining>
-      },
-      {
-        path:'/firstaidtraining',
-        element:<FirstAidTraining></FirstAidTraining>
-      },
-      {
-        path:'/foodfacilities',
-        element:<FoodFacilities></FoodFacilities>
-      },
       
       
 
@@ -106,6 +82,30 @@ function App() {
   {
     path:'/careerForm',
     element:<CareerForm></CareerForm>
+  },
+  {
+    path:'/safetymeasures',
+    element:<SafetyMeasures></SafetyMeasures>
+  },
+  {
+    path:'/medicalfacilities',
+    element:<MedicalFacilities></MedicalFacilities>
+  },
+  {
+    path:'/childcare',
+    element:<ChildCare></ChildCare>
+  },
+  {
+    path:'/firetraining',
+    element:<FireTraining></FireTraining>
+  },
+  {
+    path:'/firstaidtraining',
+    element:<FirstAidTraining></FirstAidTraining>
+  },
+  {
+    path:'/foodfacilities',
+    element:<FoodFacilities></FoodFacilities>
   },
 ])
   return (

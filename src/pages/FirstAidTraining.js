@@ -3,12 +3,16 @@ import pic from '../images/FireAndSafety/fire1.jpg'
 import pic1 from '../images/factory_purpose/a1.jpg'
 import pic2 from '../images/factory_purpose/a2.jpg'
 import { useEffect } from 'react';
+import Nav2 from './Nav2';
+import Footer from './Footer';
 
 const FirstAidTraining = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
     return (
+      <>
+      <Nav2></Nav2>
         <div style={{
             backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.60)), url(${pic})`,
           }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg">
@@ -83,6 +87,8 @@ safer and more secure working environment.</p>
             
           </div>
           </div>
+          <Footer></Footer>
+          </>
     );
 };
 

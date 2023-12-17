@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import pic from '../images/FireAndSafety/fire2.jpg'
 import pic1 from '../images/FireAndSafety/fire1.jpg'
 import pic2 from '../images/FireAndSafety/fire3.jpg'
+import Nav2 from './Nav2';
+import Footer from './Footer';
 
 
 const FireTraining = () => {
@@ -9,6 +11,8 @@ const FireTraining = () => {
     window.scrollTo(0, 0)
   }, [])
     return (
+      <>
+      <Nav2></Nav2>
         <div style={{
             backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic})`,
           }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg">
@@ -82,6 +86,8 @@ fundamental part of our mission to provide a secure and supportive workplace for
            
           </div>
           </div>
+          <Footer></Footer>
+          </>
     );
 };
 

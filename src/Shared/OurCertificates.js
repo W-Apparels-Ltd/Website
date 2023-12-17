@@ -7,7 +7,7 @@ import client3 from '../images/Certificates/3.jpg'
 import client4 from '../images/Certificates/4.jpg'
 import client5 from '../images/Certificates/5.jpg'
 import client6 from '../images/Certificates/newacc200x190.png'
-import client7 from '../images/Certificates/gots200x190.png'
+import client7 from '../images/Certificates/Screenshot-20231217-101300200x190.png'
 import client8 from '../images/Certificates/newacc3200x190.png'
 import OurCertificatesPic from './OurCertificatesPic';
 
@@ -76,7 +76,7 @@ const OurCertificates = () => {
       <div id='ourcertificates' className='pt-5 pb-20 bg-base-100 font-Nunito'>
         <div>
           <div className='lg:p-15 text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Accreditation</h1></div>
-          <div className='my-10'>
+          <div>
               <Carousel responsive={responsive} 
               additionalTransfrom={0}
               arrows={false}

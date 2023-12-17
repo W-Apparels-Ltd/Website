@@ -3,12 +3,16 @@ import pic from '../images/Childcare/IMG_3395.jpg'
 import pic1 from '../images/Childcare/IMG_3405-removebg-preview.jpg'
 import pic2 from '../images/Childcare/IMG_3395.jpg'
 import { useEffect } from 'react';
+import Nav2 from './Nav2';
+import Footer from './Footer';
 
 const ChildCare = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
     return (
+      <>
+      <Nav2></Nav2>
         <div style={{
           backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic})`,
         }}  className= "  mx-auto w-full bg-cover bg-fixed bg-bottom bg-no-repeat shadow-lg">
@@ -84,6 +88,8 @@ employees and their children.</p>
             
           </div>
           </div>
+          <Footer></Footer>
+          </>
     );
 };
 

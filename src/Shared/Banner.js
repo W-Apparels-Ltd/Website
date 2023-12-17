@@ -22,7 +22,7 @@ const Banner = () => {
         />
         
         <div className="absolute inset-0 grid h-full w-full place-content-end place-items-end bg-black/70">
-          <div className=" md:w-2/4 text-right m-5 lg:m-20">
+          <div className=" md:w-2/4 text-right m-5 mb-20 lg:mb-10  lg:m-20">
           
                   <Typography
                     variant="h1"
@@ -67,7 +67,7 @@ const Banner = () => {
           className="h-screen w-full object-cover"
         />
         <div className=" absolute inset-0 grid h-full w-full md:place-items-center lg:place-items-center place-items-end bg-black/70">
-          <div className=" md:w-3/4 text-center">
+          <div className=" md:w-3/4 mb-10 lg:mb-0 text-center">
             <Typography
               variant="h1"
               color="white"
@@ -113,7 +113,7 @@ const Banner = () => {
           className="h-screen w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full lg:place-items-start place-items-end  lg:ps-20 p-5 bg-black/75">
-          <div className="md:w-2/4 lg:w-2/4 ">
+          <div className="md:w-2/4 mb-20 lg:mb-0 lg:w-2/4 ">
             <Typography
               variant="h1"
               color="white"
@@ -142,13 +142,15 @@ const Banner = () => {
             >
               We are dedicated to empowering lives by providing meaningful employment opportunities. We understand the transformative power of work and believe in fostering an inclusive environment that embraces growth and development.
             </Typography>
+            <div>
             <Link className='flex lg:justify-start justify-end' to='/career'>
-            <button className='btn btn-ghost text-white lg:me-5 md:me-5 p-0 lg:px-4'>Career
+            <button className='btn btn-ghost text-white lg:me-5 md:me-5 '>Career
                   <span className=" w-12 transition-colors group-hover:bg-[#000066]">
                   <img src={arrow}></img>
                   </span>
             </button>
-            </Link>  
+            </Link> 
+            </div> 
             </div>
             
         </div>
@@ -166,7 +168,7 @@ const Banner = () => {
           className="h-screen w-full object-cover"
         />
         <div className=" absolute inset-0 grid h-full w-full md:place-items-center lg:place-items-center place-items-end bg-black/60">
-          <div className=" md:w-3/4 text-center">
+          <div className=" md:w-3/4 mb-14 lg:mb-0 text-center">
             <Typography
               variant="h1"
               color="white"
