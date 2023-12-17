@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../images/button/Web_Photo_Editor.jpg'
+import logo from '../images/button/backBtn.png'
 
 const Nav2 = () => {
   const navigate = useNavigate();

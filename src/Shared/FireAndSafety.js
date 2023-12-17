@@ -1,7 +1,7 @@
 import React from 'react';
-import pic1 from '../images/FireAndSafety/IMG_7258.JPG'
-import pic2 from '../images/FireAndSafety/IMG_7269.JPG'
-import pic3 from '../images/FireAndSafety/IMG_7281.JPG'
+import pic1 from '../images/FireAndSafety/IMG_7258.jpg'
+import pic2 from '../images/FireAndSafety/IMG_7269.jpg'
+import pic3 from '../images/FireAndSafety/IMG_7281.jpg'
 
 const FireAndSafety = () => {
   return (

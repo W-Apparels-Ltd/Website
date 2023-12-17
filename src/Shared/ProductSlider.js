@@ -37,7 +37,7 @@ const ProductSlider = () => {
     }
   };
   return (
-    <div id='products' className=' min-h-screen  bg-[#e5e4e2] lg:px-20'>  
+    <div id='products' className=' lg:min-h-screen  bg-[#e5e4e2] lg:px-20'>  
       <div className='pb-20 font-Nunito'>
           <div className='p-10 text-center'><h1 className='lg:text-5xl text-2xl md:text-3xl text-primary font-bold'>Apparel Products</h1></div>
           <div>
@@ -75,7 +75,7 @@ const ProductSlider = () => {
           </div>
           <div className='flex justify-center mt-10'><Link to='/productgallery'>
           <button
-              class=" group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-[#000066] py-3 px-7 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg hover:shadow-light-blue-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              class="group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-[#000066] py-3 px-7 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-nonegroup relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-gradient-to-tr from-light-blue-900 to-sky-900 py-2 px-5 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-indigo-500/20 transition-all hover:shadow-lg hover:shadow-light-blue-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button"
               data-ripple-light="true"
             >

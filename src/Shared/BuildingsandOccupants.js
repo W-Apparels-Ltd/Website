@@ -1,7 +1,7 @@
 import React from 'react';
 import img from '../images/factory_purpose/building.jpg'
 import img1 from '../images/factory_purpose/888888.jpg'
-import img2 from '../images/factory_purpose/333333-1.jpg'
+import img2 from '../images/factory_purpose/WhatsApp Image 2023-11-16 at 11.35.58_7ac0f51f (1).jpg'
 import arrow from '../images/Untitled__1_-removebg-preview.png'
 import { Link } from 'react-router-dom';
 import { Button } from '@material-tailwind/react';
@@ -27,11 +27,28 @@ const BuildingsandOccupants = () => {
 
           <div className='lg:w-3/5'>
             <h1 className="lg:text-5xl text-2xl md:text-3xl font-bold">Buildings and Occupants</h1>
-            <p className="py-6 lg:text-xl text-md">W.Apparels New Generation Apparels is a compliant Woven/knitwear manufacturer based in Bangladesh and is a project of W.Apparels. The company was set up in 1992 to provide one stop manufacturing service to the fashion industry ensuring quality, reliability, sustainability and social responsibility. The founder is A.M Akhter Hossain who is a prominent business man in the country known for his ethical business practices. The industry has an yearly production capacity of 48,00,000 lac pice (4.8 million pieces) of knitwear and 36,00,000 lac pice (3.6 million pieces). The factory is well equipped with latest manufacturing.
+            <p className="py-6 lg:text-xl text-md ">W.Apparels is a new generation apparel company
+                      standing as a reputable woven and knitwear
+                      manufacturer located in Bangladesh, operating under the
+                      umbrella of W Apparels Ltd. Established in 1992, our
+                      primary objective has been to offer a comprehensive
+                      manufacturing solution to the fashion industry,
+                      characterized by unwavering commitment to quality,
+                      dependability, sustainability, and social responsibility.
+                      A.M. Akhter Hossain, the visionary founder of the
+                      company, is a distinguished figure renowned for his
+                      principled and ethical business acumen within the
+                      country. <br/>
+                      With an impressive annual production capacity, we
+                      consistently craft 4.8 million pieces of knitwear and 3.6
+                      million pieces of woven garments. Our advanced factory
+                      is outfitted with state-of-the-art manufacturing
+                      technology, enabling us to stay at the forefront of
+                      innovation and efficiency.
             </p>
             <Link to='/building'>
             <button
-              class="group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-[#000066] py-3 px-7 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg hover:shadow-light-blue-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              class="group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-[#000066] py-3 px-7 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-nonegroup relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-gradient-to-tr from-light-blue-900 to-sky-900 py-2 px-5 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-indigo-500/20 transition-all hover:shadow-lg hover:shadow-light-blue-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button"
               data-ripple-light="true"
             >

@@ -36,63 +36,24 @@ function App() {
         path: '/login',
         element: <Login></Login>
       },
-      {
-        path:'/meettheteam',
-        element:<MeetTheTeam></MeetTheTeam>
-      },
+      
       {
         path:'/addproduct',
         element:<AddProduct></AddProduct>
       },
       
       {
-        path:'/building',
-        element:<Building></Building>
-      },
-      {
         path:'/teams',
         element:<Teams></Teams>
       },
-      {
-        path:'/career',
-        element:<Career></Career>
-      },
-      {
-        path:'/careerForm',
-        element:<CareerForm></CareerForm>
-      },
+      
+      
       {
         path:'/costing',
         element:<CostingForm></CostingForm>
       },
-      {
-        path:'/productgallery',
-        element:<ProductGallary></ProductGallary>
-      },
-      {
-        path:'/safetymeasures',
-        element:<SafetyMeasures></SafetyMeasures>
-      },
-      {
-        path:'/medicalfacilities',
-        element:<MedicalFacilities></MedicalFacilities>
-      },
-      {
-        path:'/childcare',
-        element:<ChildCare></ChildCare>
-      },
-      {
-        path:'/firetraining',
-        element:<FireTraining></FireTraining>
-      },
-      {
-        path:'/fireaidtraining',
-        element:<FirstAidTraining></FirstAidTraining>
-      },
-      {
-        path:'/foodfacilities',
-        element:<FoodFacilities></FoodFacilities>
-      },
+      
+      
       
 
     ],
@@ -101,6 +62,50 @@ function App() {
     path:'/:id',
     element:<ProductDetails></ProductDetails>,
     loader: ({params})=> fetch(`https://wapparels-server.vercel.app/products/${params.id}`)
+  },
+  {
+    path:'/meettheteam',
+    element:<MeetTheTeam></MeetTheTeam>
+  },
+  {
+    path:'/building',
+    element:<Building></Building>
+  },
+  {
+    path:'/productgallery',
+    element:<ProductGallary></ProductGallary>
+  },
+  {
+    path:'/career',
+    element:<Career></Career>
+  },
+  {
+    path:'/careerForm',
+    element:<CareerForm></CareerForm>
+  },
+  {
+    path:'/safetymeasures',
+    element:<SafetyMeasures></SafetyMeasures>
+  },
+  {
+    path:'/medicalfacilities',
+    element:<MedicalFacilities></MedicalFacilities>
+  },
+  {
+    path:'/childcare',
+    element:<ChildCare></ChildCare>
+  },
+  {
+    path:'/firetraining',
+    element:<FireTraining></FireTraining>
+  },
+  {
+    path:'/firstaidtraining',
+    element:<FirstAidTraining></FirstAidTraining>
+  },
+  {
+    path:'/foodfacilities',
+    element:<FoodFacilities></FoodFacilities>
   },
 ])
   return (

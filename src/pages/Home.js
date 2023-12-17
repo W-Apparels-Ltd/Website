@@ -25,9 +25,10 @@ const Home = () => {
       <ProductSlider></ProductSlider>
       <SisterConcern></SisterConcern>
       <ManagingDirectorMessage></ManagingDirectorMessage>
-      <OurCertificates></OurCertificates>
-      <Facilities></Facilities>
       <OurClients></OurClients>
+     
+      <Facilities></Facilities>
+      <OurCertificates></OurCertificates>
       <Contact></Contact>
       
       <ToastContainer/>

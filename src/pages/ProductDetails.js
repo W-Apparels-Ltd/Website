@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const {_id,label,fabrictype,size,img}= useLoaderData();
   const [open,setOpen]=useState(false);
   const [openError,setOpenError]=useState(false);
-  const [pic,setPic]=useState(img[0]);
+  const [pic,setPic]=useState(img[1]);
   const handleClick=()=>{
     setOpen(false);
   }
@@ -39,7 +39,7 @@ const ProductDetails = () => {
     console.log(emaildata);
     
     console.log(emaildata);
-    fetch('https://wapparels-server.vercel.app/contactus',{
+    fetch('https://wapparels-server.vercel.app/inquiry',{
       method:'POST',
       headers:{
         'content-type':'application/json'
@@ -69,9 +69,9 @@ const ProductDetails = () => {
     style={{
       backgroundImage:` url(${bg})`,
     }}  
-    className="relative  mx-auto w-full bg-cover font-Nunito ">
-      <div className='absulate text-white bg-black/75'>
-        
+    className="relative w-full bg-cover font-Nunito ">
+      <div className='absulate text-white bg-black/75 pb-4'>
+        <div className='h-screen'>
       <div className='text-center pt-10 lg:py-5'>
         <h1 className="text-3xl font-bold mt-8">Product Details</h1>
       </div>
@@ -79,10 +79,10 @@ const ProductDetails = () => {
           <div>
               <div className='flex lg:flex-row flex-col justify-center'>
                 
-                  <div className='flex lg:flex-col flex-row'>
+                  <div className='flex lg:flex-col flex-row my-5 lg:my-0'>
 
-                      <img className='mr-2 lg:mr-0 h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[0])} src={img[0]}/>
-                      <img className='h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[1])} src={img[1]}/>
+                      <img className='mr-2 lg:mr-0 h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[1])} src={img[1]}/>
+                      <img className='h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[0])} src={img[0]}/>
                   </div>
                 
               <TransformWrapper>
@@ -92,14 +92,14 @@ const ProductDetails = () => {
               </TransformWrapper>
                 
               </div>
-              <div className='flex justify-center'>
+              <div className='text-center lg:ms-12'>
                 
                   
                   <div><h1 className='text-3xl font-bold'>{label}</h1></div>
               </div>
 
               
-              <div className='flex justify-center'>
+              <div className='flex justify-center lg:ms-5'>
              
                   <div class="card-body">
                     
@@ -118,7 +118,7 @@ const ProductDetails = () => {
               <label className="label">
                 <span className="label-text font-bold">Fabrictype</span>
               </label>
-              <select className="select select-bordered" required>
+              <select className="select select-bordered " required>
                 <option disabled selected>Select One</option>
                 <option>100 % Viscose, 125 gsm</option>
                 <option>100% Cotton, Thin Twill</option>
@@ -134,13 +134,13 @@ const ProductDetails = () => {
               <label className="label">
                 <span className="label-text font-bold">Name</span>
               </label>
-              <input type="text" name='name'  className="input input-bordered"  required/>
+              <input type="text" name='name'  className="input input-bordered input-sm"  required/>
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Email</span>
               </label>
-              <input type="text" name='email' className="input input-bordered" required/>
+              <input type="text" name='email' className="input input-bordered input-sm" required/>
             </div>
             <div className="form-control">
               <label className="label">
@@ -161,7 +161,7 @@ const ProductDetails = () => {
           <ErrorModal openError={openError} handleClickError={handleClickError}/>
         
       </div>
-      
+      </div>
     </div>
     </>
   );

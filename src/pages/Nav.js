@@ -82,7 +82,7 @@ const Nav = () => {
             </ul>
           </div>
 
-          <Link to='/' className="btn btn-ghost normal-case text-xl text-white"><img className='me-1 w-12 rounded-full' src={logo} alt="" />Wapparels Ltd.</Link>
+          <Link to='/' className="btn btn-ghost normal-case text-xl text-white"><img className='me-1 w-12 rounded-full' src={logo} alt="" />W. Apparels Ltd.</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-bold text-white">
