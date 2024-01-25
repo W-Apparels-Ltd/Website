@@ -102,129 +102,113 @@ const CareerForm = () => {
       </div>
       <div className='mt-20  bg-base-200 lg:p-20 p-10'>
          <div>
-            <div className='text-center lg:pt-10 pt-5 mb-2'><h1 className='lg:text-3xl text-xl font-bold leading-6 text-gray-900'>Senior Accounts Officer</h1></div>
+            <div className='text-center lg:pt-10 pt-5 mb-2'><h1 className='lg:text-3xl text-xl font-bold leading-6 text-gray-900'>Executive Director</h1></div>
             <div >
-              <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Job Description:</h1>
-              <p className='mb-2 p-4'>Seeking an experienced Senior Accounts Officer who is capable for all kinds of Accounts & Financial related activities.</p>
-              <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Requirements:</h1>
+              <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Responsibilities & Context:</h1>
+              <p className='mb-2 p-4'>The applicants should have experience in the following business area(s): Garments (Woven & Knit)
+              Outerwear will get advantage for smooth and timely Import , Production & Export operations.
+              Communication between the Buyers, Buying houses, Banks, Suppliers, Shipping lines, Forwarders, C&F
+              agencies, Customs, and Transportation is required.</p>
+              <h1 className='text-md font-bold leading-6 text-gray-900 mb-1 '>DEPARTMENT: TOP MANAGEMENT</h1>
+              <h1 className='text-md font-bold leading-6 text-gray-900 mb-1 '>Report to : Managing Director</h1>
+              <h1 className='text-md font-bold leading-6 text-gray-900 mb-1 '>Immediate subordinate: Directors & GM</h1>
+              <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Job Summary:</h1>
               <div className='flex items-start '>
                 <div className="badge badge-xs mx-5 my-1.5"></div>
                 <div>
-                  <p className='text-md'>Analyze financial data and prepare reports to management.</p>
+                  <p className='text-md'>Total planning of Import, Production & Export.</p>
                 </div>
               </div>
               <div className='flex items-start '>
                 <div className="badge badge-xs mx-5 my-1.5"></div>
                 <div>
-                  <p className='text-md'>Ensure compliance with taxation laws and regulations.</p>
+                  <p className='text-md'>Follow-up overall activities of the organization.</p>
                 </div>
               </div>
               <div className='flex items-start '>
                 <div className="badge badge-xs mx-5 my-1.5"></div>
                 <div>
-                  <p className='text-md'>Monitor cash flow & prepare cash flow forecast.</p>
+                  <p className='text-md'>To ensure co-ordination and discipline within the organization.</p>
                 </div>
               </div>
               <div className='flex items-start '>
                 <div className="badge badge-xs mx-5 my-1.5"></div>
                 <div>
-                  <p className='text-md'>Provide advice and guidance to management on financial matters.</p>
+                  <p className='text-md'>To maintain the liaison with buying houses and set the Q.C.</p>
                 </div>
               </div>
               <div className='flex items-start '>
                 <div className="badge badge-xs mx-5 my-1.5"></div>
                 <div>
-                  <p className='text-md'>Perform ad-hoc financial analysis and other duties as required.</p>
+                  <p className='text-md'>To help the Managing Director to do his job effectively.</p>
                 </div>
               </div>
               <div className='flex items-start '>
                 <div className="badge badge-xs mx-5 my-1.5"></div>
                 <div>
-                  <p className='text-md'>Prepare annual income tax return (with all supporting vouchers) in coordination with the external auditors and lawyers and submit the return to the relevant income tax circle within due time.</p>
+                  <p className='text-md'>To act as a leader of the organization.</p>
                 </div>
               </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Maintain continuous liaison with relevant officials related to VAT, Income Tax and Lawyers etc.</p>
-                </div>
-              </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Keep the management up-to-date with all relevant changes in VAT and Income Tax regulations and their potential impact on the organization.</p>
-                </div>
-              </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Coordinate with the management to assign the external auditor for the annual audit and support the auditors to conduct the audit.</p>
-                </div>
-              </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Review the Accounts based on the auditors' report and prepare the final audited accounts and submit to management for approval.</p>
-                </div>
-              </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Prepare VAT Reconciliation Statement between VAT record and accounting record.</p>
-                </div>
-              </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Prepare monthly VAT return with required supporting and submission to VAT authorities on time.</p>
-                </div>
-              </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Maintain inventory registers as per government rules.</p>
-                </div>
-              </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Ensure VAT Challans for every delivery of products.</p>
-                </div>
-              </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Prepare reports in Quarterly/yearly basis and confirm VAT rebates with coordination of VAT process.</p>
-                </div>
-              </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Capable to handle all kinds of VAT and Custom related audit.</p>
-                </div>
-              </div>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md'>Ensure audit is conducted by NBR, VAT commissioner audit, vat intelligence audit, customs valuation audit, and another govt. Agencies audit.</p>
-                </div>
-              </div>
+              
             </div>
-            <h1 className='text-md font-bold leading-6 text-gray-900 mb-1 mt-8'>Experience Requirements:</h1>
+            <p className='text-md mb-1 mt-8'><span className='text-md font-bold leading-6 text-gray-900'>Capability: </span>At least 5 years in the relevant area.</p>
+            <p className='text-md mb-1 '><span className='text-md font-bold leading-6 text-gray-900'>Other Skills: </span>Skilled in Computer Literacy. Good skill in English reading, writing & speaking.</p>
+            <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Additional Requirements:</h1>
               <div className='flex items-start '>
                 <div className="badge badge-xs mx-5 my-1.5"></div>
                 <div>
-                  <p className='text-md mb-8'>At least 5 years in the relevant area.</p>
+                  <p className='text-md'>Educational Qualification : M.A/MBA </p>
                 </div>
               </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Experience : More than 15 Years. </p>
+                </div>
+              </div>
+              <div className='flex items-start mb-8'>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Age: 45+ years.</p>
+                </div>
+              </div>
+              
+            <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Compensation & Other Benefits:</h1>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Mobile bill </p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Lunch</p>
+                </div>
+              </div>
+              <div className='flex items-start '>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Salary Review: Yearly </p>
+                </div>
+              </div>
+              <div className='flex items-start mb-8'>
+                <div className="badge badge-xs mx-5 my-1.5"></div>
+                <div>
+                  <p className='text-md'>Festival Bonus: 2 </p>
+                </div>
+              </div>
+              
             <h1 className='text-md font-bold leading-6 text-gray-900 mb-1 '>Salary- Negotiable</h1>
-            <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Educational Requirements:</h1>
-              <div className='flex items-start '>
-                <div className="badge badge-xs mx-5 my-1.5"></div>
-                <div>
-                  <p className='text-md mb-8'>M.Com in Accounting from any reputed University / Institution. The Candidate having certification course on VAT & Tax shall get preference.</p>
-                </div>
-              </div>
+            <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Employment Status:</h1>
+            <p className='text-md ms-4'>Full-time</p>
+            <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Gender:</h1>
+            <p className='text-md ms-4'>Only Male</p>
+            <h1 className='text-md font-bold leading-6 text-gray-900 mb-1'>Job Location:</h1>
+            <p className='text-md ms-4'>West Dhanmondi. Dhaka.</p>
+            <p className='text-md ms-4'>Mail to- <a href='mailto:moinrassel@gmail.com'>moinrassel@gmail.com</a> </p>
+            
+
             <div>
             <form onSubmit={handleSubmit}>
       <div className="space-y-12">

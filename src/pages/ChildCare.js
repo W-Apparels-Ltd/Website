@@ -22,14 +22,13 @@ const ChildCare = () => {
                 
             </div>
             <div className=' bg-base-100'>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>Kids at Heart: Child Care Moments.</h1>
                 </div>
                 <div className='lg:w-1/2'>
-                  <h1 className="lg:text-5xl text-3xl  font-bold">Child Care</h1>
                   <p className="py-6 text-justify">As a company, we recognize the significant benefits of establishing childcare facilities within our
 garment factories to enhance the well-being of our employees, especially those who are parents.
 To achieve this, we follow a structured approach. First and foremost, we take the initiative to gain a comprehensive understanding of the specific
@@ -43,7 +42,7 @@ experience to manage the facility, creating a secure and nurturing environment f
                 </div>
               </div>
             </div>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
               <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
@@ -65,7 +64,7 @@ employees and their children.</p>
                 </div>
               </div>
             </div>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />

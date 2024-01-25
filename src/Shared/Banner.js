@@ -1,9 +1,10 @@
 import React from 'react';
 import img from '../images/Certificates/s2.png'
-import img2 from '../images/IMG_7359.JPG'
+
 import img4 from '../images/IMG_3291.JPG'
 import img3 from '../images/IMG_3306.JPG'
 import arrow from '../images/Untitled__1_-removebg-preview.png'
+import banner3 from '../images/banner3.jpg'
 
 import { Button, Carousel, Typography } from '@material-tailwind/react';
 import { Fade, Slide } from 'react-awesome-reveal';
@@ -108,7 +109,7 @@ const Banner = () => {
       </div>
       <div className="relative w-full overflow-hidden">
         <img
-          src={img2}
+          src={banner3}
           alt="image 2"
           className="h-screen w-full object-cover"
         />

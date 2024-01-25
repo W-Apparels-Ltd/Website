@@ -22,14 +22,13 @@ const FirstAidTraining = () => {
                  
             </div>
             <div className=' bg-base-100'>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>Healing Hands: First Aid Training Moments at W. Apparels Ltd.</h1>
                 </div>
                 <div className='lg:w-1/2'>
-                  <h1 className="lg:text-5xl text-3xl  font-bold">First Aid Training</h1>
                   <p className="py-6 text-justify">Ever since the inception of our garments industry, we have prioritized the well-being of our employees
 by establishing comprehensive first aid facilities. These facilities have been integral to our safety
 protocols, with first aid boxes strategically placed on each floor, stocked with a variety of essential
@@ -42,7 +41,7 @@ necessary. </p>
                 </div>
               </div>
             </div>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
               <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
@@ -65,7 +64,7 @@ handle a variety of emergency situations.</p>
                 </div>
               </div>
             </div>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />

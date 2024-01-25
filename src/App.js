@@ -21,6 +21,8 @@ import ChildCare from './pages/ChildCare';
 import FireTraining from './pages/FireTraining';
 import FirstAidTraining from './pages/FirstAidTraining';
 import FoodFacilities from './pages/FoodFacilities';
+import CareerForm1 from './pages/CareerForm1';
+import CareerForm2 from './pages/CareerForm2';
 
 
 function App() {
@@ -82,6 +84,14 @@ function App() {
   {
     path:'/careerForm',
     element:<CareerForm></CareerForm>
+  },
+  {
+    path:'/careerForm1',
+    element:<CareerForm1></CareerForm1>
+  },
+  {
+    path:'/careerForm2',
+    element:<CareerForm2></CareerForm2>
   },
   {
     path:'/safetymeasures',

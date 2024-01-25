@@ -20,14 +20,13 @@ const FoodFacilities = () => {
                 <div className='p-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>Food Facilities</h1></div>
             </div>
             <div className=' bg-base-100'>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>Epicenter of Style and Sustenance: Inside W. Apparels Ltd. Canteen</h1>
                 </div>
                 <div className='lg:w-1/2'>
-                  <h1 className="lg:text-5xl text-3xl  font-bold">Food Facilities</h1>
                   <p className="py-6 text-justify">At our garment factories, we recognize the positive impact of establishing food facilities
 on employee satisfaction and productivity. We&#39;ve taken deliberate steps to ensure that our food
 facilities meet the diverse needs and preferences of our workforce.<br/>
@@ -45,7 +44,7 @@ employees.
             </div>
             
             
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
               <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
@@ -70,7 +69,7 @@ of quality.
             </div>
             
             
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic3} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />

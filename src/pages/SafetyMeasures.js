@@ -21,7 +21,7 @@ const SafetyMeasures = () => {
                 
             </div>
             <div className=' bg-base-100'>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <div>
                 < img src={pic} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
@@ -29,7 +29,6 @@ const SafetyMeasures = () => {
                 </div>
               
                 <div className='lg:w-1/2'>
-                  <h1 className="lg:text-5xl text-3xl  font-bold">Safety Measures</h1>
                   <p className="py-6 text-justify">In the latter half of 2021, W Apparels Ltd significantly bolstered its safety measures to effectively
 address potential risks and reduce the impact of fire-related incidents. These measures were designed
 to cover a spectrum of safety aspects, encompassing organizational, technical, and individual
@@ -42,7 +41,7 @@ doors open during factory operations.</p>
                 </div>
               </div>
             </div>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
                 <div>
                 <img src={pic1} className="lg:max-w-lg w-full rounded-lg shadow-2xl" />
@@ -61,7 +60,7 @@ into the safety measures to ensure alignment with their expectations</p>
                 </div>
               </div>
             </div>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />

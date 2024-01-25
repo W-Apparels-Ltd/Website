@@ -22,14 +22,13 @@ const FireTraining = () => {
                 
             </div>
             <div className=' bg-base-100'>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>Igniting Safety: Fire Training Drills at W. Apparels Ltd.</h1>
                 </div>
                 <div className='lg:w-1/2'>
-                  <h1 className="lg:text-5xl text-3xl  font-bold">Fire Training</h1>
                   <p className="py-6 text-justify">In our garments industry, fire safety is a paramount concern, and we take proactive measures to
 ensure the well-being of our employees. Central to our safety strategy is the organization of regular fire
 training sessions that occur throughout the year. These sessions are designed to not only raise
@@ -45,7 +44,7 @@ safety in the event of a fire.</p>
                 </div>
               </div>
             </div>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
               <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
@@ -63,7 +62,7 @@ these risks. This holistic approach to fire safety encompasses both prevention a
                 </div>
               </div>
             </div>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />

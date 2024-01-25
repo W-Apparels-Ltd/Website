@@ -22,14 +22,13 @@ const MedicalFacilities = () => {
                 
             </div>
             <div className=' bg-base-100'>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <h1 className='text-center text-gray-700'>Wellness Hub: Nurturing Health at W. Apparels Ltd.</h1>
                 </div>
                 <div className='lg:w-1/2'>
-                  <h1 className="lg:text-5xl text-3xl  font-bold">Medical Facilities</h1>
                   <p className="py-6 text-justify">At our company, the health and well-being of our employees are paramount. To ensure that our
 workforce has access to quality healthcare, we have engaged professional doctors who are readily
 available to address their medical needs. These doctors are not only based in their chambers but are
@@ -42,7 +41,7 @@ doors open during factory operations.</p>
                 </div>
               </div>
             </div>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row">
                 <div>
                 <img src={pic2} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
@@ -63,7 +62,7 @@ enhancing the comfort and quality of healthcare services offered.</p>
                 </div>
               </div>
             </div>
-            <div className="hero min-h-screen bg-base-200 lg:px-10 px-0">
+            <div className="hero py-10 bg-base-200 lg:px-10 px-0">
               <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <img src={pic1} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />

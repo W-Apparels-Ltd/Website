@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Nav2 from './Nav2';
 
 const Career = () => {
-  const [active,setactive]=useState(false);
+  const [active,setactive]=useState(true);
   return (
     <>
     <Nav2></Nav2>
@@ -21,13 +21,37 @@ const Career = () => {
           <li className="flex flex-col lg:flex-row justify-between gap-x-6 py-5 px-20">
             <div className="flex gap-x-4">
               <div className="min-w-0 flex-auto mb-2">
-                <p className="text-xl font-bold leading-6 text-gray-900">Senior Accounts Officer<span className='text-[green]'>(On-site)</span></p>
+                <p className="text-xl font-bold leading-6 text-gray-900">Executive Director<span className='text-[green]'>(On-site)</span></p>
                 <p className="text-sm font-bold leading-6 text-gray-900">Company: Quality Group Ltd.</p>
                 <p className="mt-1  truncate text-sm font-bold leading-5 text-gray-500">Rayer Bazar, Tali office Rd, Dhaka, Bangladesh</p>
               </div>
             </div>
             <div className="sm:flex sm:flex-col sm:items-end">
               <Link to='/careerForm'><button className=' btn btn-primary text-white'>Details</button></Link>  
+            </div>
+          </li>
+          <li className="flex flex-col lg:flex-row justify-between gap-x-6 py-5 px-20">
+            <div className="flex gap-x-4">
+              <div className="min-w-0 flex-auto mb-2">
+                <p className="text-xl font-bold leading-6 text-gray-900">Compliance Manager<span className='text-[green]'>(On-site)</span></p>
+                <p className="text-sm font-bold leading-6 text-gray-900">Company: Quality Group Ltd.</p>
+                <p className="mt-1  truncate text-sm font-bold leading-5 text-gray-500">Rayer Bazar, Tali office Rd, Dhaka, Bangladesh</p>
+              </div>
+            </div>
+            <div className="sm:flex sm:flex-col sm:items-end">
+              <Link to='/careerForm1'><button className=' btn btn-primary text-white'>Details</button></Link>  
+            </div>
+          </li>
+          <li className="flex flex-col lg:flex-row justify-between gap-x-6 py-5 px-20">
+            <div className="flex gap-x-4">
+              <div className="min-w-0 flex-auto mb-2">
+                <p className="text-xl font-bold leading-6 text-gray-900">Commercial Manager<span className='text-[green]'>(On-site)</span></p>
+                <p className="text-sm font-bold leading-6 text-gray-900">Company: Quality Group Ltd.</p>
+                <p className="mt-1  truncate text-sm font-bold leading-5 text-gray-500">Rayer Bazar, Tali office Rd, Dhaka, Bangladesh</p>
+              </div>
+            </div>
+            <div className="sm:flex sm:flex-col sm:items-end">
+              <Link to='/careerForm2'><button className=' btn btn-primary text-white'>Details</button></Link>  
             </div>
           </li>
           
