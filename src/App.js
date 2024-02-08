@@ -63,7 +63,7 @@ function App() {
   {
     path:'/:id',
     element:<ProductDetails></ProductDetails>,
-    loader: ({params})=> fetch(`https://wapparels-server.vercel.app/products/${params.id}`)
+    loader: ({params})=> fetch(`https://wapparels-server-eosin.vercel.app/products/${params.id}`)
   },
   {
     path:'/meettheteam',

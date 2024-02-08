@@ -32,7 +32,7 @@ const Contact = () => {
     console.log(emaildata);
     
     console.log(emaildata);
-    fetch('https://wapparels-server.vercel.app/contactus',{
+    fetch('https://wapparels-server-eosin.vercel.app/contactus',{
       method:'POST',
       headers:{
         'content-type':'application/json'

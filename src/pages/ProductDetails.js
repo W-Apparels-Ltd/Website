@@ -39,7 +39,7 @@ const ProductDetails = () => {
     console.log(emaildata);
     
     console.log(emaildata);
-    fetch('https://wapparels-server.vercel.app/inquiry',{
+    fetch('https://wapparels-server-eosin.vercel.app/inquiry',{
       method:'POST',
       headers:{
         'content-type':'application/json'

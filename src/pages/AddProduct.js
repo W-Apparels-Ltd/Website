@@ -39,7 +39,7 @@ const AddProduct = () => {
             img:images
           };
           console.log(item)
-          fetch('https://wapparels-server.vercel.app/products',{
+          fetch('https://wapparels-server-eosin.vercel.app/products',{
             method:'POST',
             headers:{
               'content-type':'application/json',

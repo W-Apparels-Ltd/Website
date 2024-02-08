@@ -9,7 +9,7 @@ import Footer from './Footer';
 const ProductGallary = () => {
   const [product, setProduct]=useState([]);
   useEffect(()=>{
-    fetch('https://wapparels-server.vercel.app/products')
+    fetch('https://wapparels-server-eosin.vercel.app/products')
     .then(res=>res.json())
     .then(data=> setProduct(data))
   },[])
