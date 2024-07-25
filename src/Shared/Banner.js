@@ -157,14 +157,14 @@ const Banner = () => {
               color="white"
               className="hidden lg:block lg:mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
-            UNVEILING VERSATILITY: ELEVATE YOUR WARDROBE WITH OUR DIVERSE THREADS - TOPS, BOTTOMS, SWEATERS AND BEYOND!
+            Unveiling Versatility: Elevate Your Wardrobe With Our Diverse Threads - Tops, Bottoms, Swaeaters And Beyond!
             </Typography>
             <Typography
               variant="h1"
               color="white"
               className="lg:hidden mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
-          UNVEILING VERSATILITY: ELEVATE YOUR WARDROBE WITH OUR DIVERSE THREADS - TOPS, BOTTOMS, SWEATERS AND BEYOND!
+          Unveiling Versatility: Elevate Your Wardrobe With Our Diverse Threads - Tops, Bottoms, Swaeaters And Beyond!
             </Typography>
             <Typography
               variant="lead"
