@@ -99,12 +99,14 @@ const Banner = () => {
             <Link className='group' to='/productgallery'>
             <button className='mb-12 lg:mb-0 text-white lg:ms-5 md:ms-5'>
                   <div className='flex items-center'>
-                    <h1 className='text-md font-bold'>PRODUCT GALLERY</h1>
+                    <h1 className='text-md font-bold'>PRODUCT GALLERY
+                    <div className='bg-white h-[2px] w-0 group-hover:w-full transition-all duration-500'></div>
+                    </h1>
                   
                     <img className='w-12' src={arrow}></img>
                   </div>
                   
-                  <div className='bg-white h-[2px] w-0 group-hover:w-3/4 transition-all duration-500'></div>
+                 
             </button> 
             
             </Link>
@@ -149,12 +151,18 @@ const Banner = () => {
               We are dedicated to empowering lives by providing meaningful employment opportunities. We understand the transformative power of work and believe in fostering an inclusive environment that embraces growth and development.
             </Typography>
             <div>
-            <Link className='flex lg:justify-start justify-end' to='/career'>
-            <button className='btn btn-ghost text-white lg:me-5 md:me-5 '>Career
-                  <span className=" w-12 transition-colors group-hover:bg-[#000066]">
-                  <img src={arrow}></img>
-                  </span>
-            </button>
+            <Link className='group flex lg:justify-start justify-end' to='/career'>
+            <button className='mb-12 lg:mb-0 text-white lg:ms-5 md:ms-5'>
+                  <div className='flex items-center'>
+                    <h1 className='text-md font-bold'>CAREERS
+                    <div className='bg-white h-[2px] w-0 group-hover:w-full transition-all duration-500'></div>
+                    </h1>
+                  
+                    <img className='w-12' src={arrow}></img>
+                  </div>
+                  
+                  
+            </button> 
             </Link> 
             </div> 
             </div>
