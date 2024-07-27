@@ -1,5 +1,5 @@
 import React from 'react';
-import pic from '../images/IMG_.jpg'
+import pic from '../images/IMG_.JPG'
 import Dr from '../images/personnel/team-1.png'
 import D1 from '../images/personnel/team-2.png'
 import D2 from '../images/personnel/team-3-removebg-preview.jpg'

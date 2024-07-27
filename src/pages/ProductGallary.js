@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from '../images/IMG_3304.jpg'
+import bg from '../images/IMG_3304.JPG'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import ProductItem from '../Shared/ProductItem';
