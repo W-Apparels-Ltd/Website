@@ -74,14 +74,14 @@ const Banner = () => {
               color="white"
               className="hidden lg:block lg:mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
-            UNVEILING VERSATILITY: ELEVATE YOUR WARDROBE WITH OUR DIVERSE THREADS - TOPS, BOTTOMS, SWEATERS AND BEYOND!
+            Unveiling Versatility: Elevate Your Wardrobe With Our Diverse Threads - Tops, Bottoms, Swaeaters And Beyond!
             </Typography>
             <Typography
               variant="h1"
               color="white"
               className="lg:hidden mb-4 text-xl md:text-3xl lg:text-4xl font-Nunito"
             >
-          UNVEILING VERSATILITY: ELEVATE YOUR WARDROBE WITH OUR DIVERSE THREADS - TOPS, BOTTOMS, SWEATERS AND BEYOND!
+          Unveiling Versatility: Elevate Your Wardrobe With Our Diverse Threads - Tops, Bottoms, Swaeaters And Beyond!
             </Typography>
             <Typography
               variant="lead"
@@ -96,12 +96,17 @@ const Banner = () => {
             >
              We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem.
                  </Typography>
-            <Link className=' ' to='/productgallery'>
-            <button className='btn btn-ghost mb-12 lg:mb-0 text-white lg:ms-5 md:ms-5'>Product Gallery
-                  <span className=" w-12 transition-colors group-hover:bg-[#000066]">
-                  <img src={arrow}></img>
-                  </span>
+            <Link className='group' to='/productgallery'>
+            <button className='mb-12 lg:mb-0 text-white lg:ms-5 md:ms-5'>
+                  <div className='flex items-center'>
+                    <h1 className='text-md font-bold'>PRODUCT GALLERY</h1>
+                  
+                    <img className='w-12' src={arrow}></img>
+                  </div>
+                  
+                  <div className='bg-white h-[2px] w-0 group-hover:w-3/4 transition-all duration-500'></div>
             </button> 
+            
             </Link>
             
           </div>
