@@ -74,16 +74,17 @@ const ProductSlider = () => {
             </Carousel>
           </div>
           <div className='flex justify-center mt-10'><Link to='/productgallery'>
-          <button
-              class="group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-[#000066] py-3 px-7 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-nonegroup relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-gradient-to-tr from-light-blue-900 to-sky-900 py-2 px-5 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-indigo-500/20 transition-all hover:shadow-lg hover:shadow-light-blue-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="button"
-              data-ripple-light="true"
-            >
-              View Product Gallery
-              <span className="absolute right-0 grid h-full w-12 place-items-center bg-[#00004d] transition-colors group-hover:bg-[#000066]">
-                <img src={arrow}></img>
-              </span>
-            </button>
+          <button className='mb-12 lg:mb-0 text-dark lg:ms-5 md:ms-5'>
+                  <div className='flex items-center'>
+                    <h1 className='text-md font-bold'>VIEW PRODUCT GALLERY
+                    <div className='bg-dark h-[2px] w-0 group-hover:w-full transition-all duration-500'></div>
+                    </h1>
+                  
+                    <img className='w-12' src={arrow}></img>
+                  </div>
+                  
+                 
+            </button> 
             </Link></div>
       </div>
     </div>
