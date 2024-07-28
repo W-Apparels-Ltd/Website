@@ -26,11 +26,11 @@ const Building = () => {
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src={building} className="lg:max-w-xl w-full rounded-lg shadow-2xl" />
                 <div>
-                  <h1 className="lg:text-4xl text-3xl  font-bold">W. apparels ltd.</h1>
-                  <p className="py-6 text-justify">W. Apparels Ltd is among one of the most successful garment
+                  <h1 className="lg:text-4xl text-3xl  font-bold">W. Apparels Ltd.</h1>
+                  <p className="py-6 text-justify">W. Apparels Ltd. is among one of the most successful garment
                 manufacturers in Bangladesh; a country with great potential in the field of
                 garment-manufacturing. It started its journey in the year 1992. W. Apparels
-                Ltd has passed over 17 successful years of accomplishment, aiming to
+                Ltd. has passed over 32 successful years of accomplishment, aiming to
                 lead the competitive knit/Woven/Non-Woven wear-organizations of
                 Bangladesh. It has arduously reengineered each step of its value-chain to
                 match the dynamism of the fashion market. W. Apparels Ltd has expanded
@@ -45,10 +45,10 @@ const Building = () => {
               <div className="hero-content flex-col lg:flex-row">
                 <img src={sis1} className="lg:max-w-lg w-full rounded-lg shadow-2xl" />
                 <div className='lg:ps-5'>
-                  <h1 className="lg:text-4xl text-3xl  font-bold">Quality apparels ltd.</h1>
-                  <p className="py-6 text-justify">Quality Apparels Ltd. stands tall as a 9-story, 100% export-oriented factory that
-              commenced its operations in September 2019. Situated in Bangladesh, it has
-              swiftly established itself as a compliant manufacturer of woven and knitwear
+                  <h1 className="lg:text-4xl text-3xl  font-bold">Quality Apparels</h1>
+                  <p className="py-6 text-justify">Quality Apparels stands tall as a 9-story, 100% export-oriented factory that
+              commenced its operations in September 1992. Situated in ( Harindhora, Hemayetpur, Savar, Dhaka ) Bangladesh, it has
+              swiftly established itself as a compliant manufacturer of woven 
               garments.</p>
                   
                 </div>
