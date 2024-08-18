@@ -7,7 +7,7 @@ const OurFactoryComponent = () => {
     <div className=' bg-base-100 py-20 font-Nunito'>
         <div className='lg:p-15 text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Our Factory Component</h1></div>
 
-        <div className='mx-20 grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-0 justify-items-center justify-center'>
+        <div className='mx-20 grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-0 justify-items-center justify-center'>
                 <div className=' my-5 cursor-pointer group'>
                   
                   <div className='grid justify-items-center mt-10 relative max-w-xs overflow-hidden bg-cover bg-no-repeat '>
@@ -50,9 +50,9 @@ const OurFactoryComponent = () => {
 
                 </div>
                 
-                <div className=' cursor-pointer group'>
+                <div className='my-5 cursor-pointer group'>
                   
-                  <div className='grid justify-items-center mt-5 relative max-w-xs overflow-hidden bg-cover bg-no-repeat '>
+                  <div className='grid justify-items-center mt-10 relative max-w-xs overflow-hidden bg-cover bg-no-repeat '>
                       <img className='w-52 h-80 object-cover transition duration-700 ease-in-out hover:scale-125' src={D1} alt="" />
                   </div>
                   <div className='my-2'>

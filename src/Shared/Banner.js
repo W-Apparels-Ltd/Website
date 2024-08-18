@@ -1,6 +1,6 @@
 import React from 'react';
 import img from '../images/Certificates/s1.png'
-import img1 from '../images/Certificates/s11.jpg'
+import img1 from '../images/Certificates/s12.jpg'
 import img4 from '../images/IMG_3291.JPG'
 import img3 from '../images/IMG_3306.JPG'
 import arrow from '../images/Untitled__1_-removebg-preview.png'
@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
   
   return (
-    <Carousel autoplayDelay={8000} autoplay='true' loop='true' prevArrow={false} nextArrow={false}>
+    <Carousel autoplayDelay={9000} autoplay='true' loop='true' prevArrow={false} nextArrow={false}>
 
       <div className="relative w-full overflow-hidden" >
         <img
@@ -22,8 +22,37 @@ const Banner = () => {
           
         />
         
-        <div className="absolute inset-0 grid h-full w-full place-content-end place-items-end bg-black/10">
-          
+        <div className="absolute inset-0 grid h-full w-full bg-black/30 pb-16">
+              <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-0 justify-items-center place-items-end  justify-center '>
+                <div className='text-center  text-white font-Nunito hidden lg:block'>
+                  <h1 className='font-bold text-4xl'>Let's Do Business <br/>
+                  Together</h1>
+                  <h1 className='text-3xl'>Our promise is to keep<br/>
+                  strong commitments, best<br/>
+                  quality and building good<br/>
+                  relationships.</h1>
+                </div>
+                <div className='text-center  text-white font-Nunito'>
+                  <h1 className='font-bold text-4xl mb-5'>Why choose us?</h1>
+                  <div className='text-xl grid grid-cols-2  gap-4 justify-items-center items-center mb-4'>
+                    <div className='bg-indigo-500 rounded-md py-1	px-3'><h1>30+ Years Of<br/>Experience</h1></div>
+                    <div className='bg-indigo-500 rounded-md py-1	px-3'>Best Quality<br/>Products</div>
+                    <div className='bg-indigo-500 rounded-md py-1	px-3'>Work with<br/>Sustainability</div>
+                    <div className='bg-indigo-500 rounded-md py-1	px-3'>Maintain<br/>Consistency</div>
+                    
+                  </div>
+                </div>
+                
+                <div className='text-center  text-white font-Nunito'>
+                  <h1 className='font-bold text-4xl'>Get in touch!</h1>
+                  <h1 className='text-xl'>+8801853340765<br/>+8801819274335<br/>
+                  Email us: info@wapparels.com<br/>
+                  Visit wapparels.com to learn more<br/>
+                  about our industry<br/>
+                  295/JA/4 Rayer Bazar,<br/>
+                  Dhaka-1209, Bangladesh.</h1>
+                </div>
+              </div>
         </div>
       </div>
       <div className="relative w-full overflow-hidden" >

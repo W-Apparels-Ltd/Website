@@ -80,10 +80,10 @@ const Contact = () => {
               </div>
             </div>
             </Link>
-            <Link>
+            <Link to='http://www.youtube.com/@w.apparelsltd.5425'>
             <div className='me-3'>
               <div className='flex justify-center'>
-                <div><i className='fa fa-brands fa-instagram bg-gray-700 text-white py-1 px-[6px] rounded'/></div>
+                <div><i className='fa fa-brands fa-youtube-play bg-gray-700 text-white py-1 px-[6px] rounded'/></div>
               </div>
             </div>
             </Link>
