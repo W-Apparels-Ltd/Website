@@ -17,9 +17,9 @@ const OurFactoryComponent = () => {
                   <div className='grid justify-items-center mt-10 relative max-w-xs overflow-hidden bg-cover bg-no-repeat '>
                       <img className='w-52 h-80 object-cover transition duration-700 ease-in-out hover:scale-125' src={D1} alt="" />
                   </div>
-                  <div className='my-2'>
+                  <div className='my-2 text-center'>
                     <a className=" text-xl group text-gray-700 font-bold">Fabric Inspection
-                    <div className='bg-amber-500 h-[2px] w-0 group-hover:w-3/4 transition-all duration-500'></div>
+                    
                     </a>
                     
                   </div>
@@ -31,9 +31,9 @@ const OurFactoryComponent = () => {
                   <div className='grid justify-items-center mt-10 relative max-w-xs overflow-hidden bg-cover bg-no-repeat '>
                       <img className='w-52 h-80 object-cover transition duration-700 ease-in-out hover:scale-125' src={D2} alt="" />
                   </div>
-                  <div className='my-2'>
+                  <div className='my-2 text-center'>
                     <a className=" text-xl group text-gray-700 font-bold">Sewing
-                    <div className='bg-amber-500 h-[2px] w-0 group-hover:w-2/5 transition-all duration-500'></div>
+                    
                     </a>
                     
                   </div>
@@ -47,9 +47,9 @@ const OurFactoryComponent = () => {
                   <div className='grid justify-items-center mt-10 relative max-w-xs overflow-hidden bg-cover bg-no-repeat '>
                       <img className='w-52 h-80 object-cover transition duration-700 ease-in-out hover:scale-125' src={D3} alt="" />
                   </div>
-                  <div className='my-2'>
+                  <div className='my-2 text-center'>
                     <a className=" text-xl group text-gray-700 font-bold">Cutting
-                    <div className='bg-amber-500 h-[2px] w-0 group-hover:w-2/5 transition-all duration-500'></div>
+                    
                     </a>
                     
                   </div>
@@ -61,9 +61,9 @@ const OurFactoryComponent = () => {
                   <div className='grid justify-items-center mt-10 relative max-w-xs overflow-hidden bg-cover bg-no-repeat '>
                       <img className='w-52 h-80 object-cover transition duration-700 ease-in-out hover:scale-125' src={D4} alt="" />
                   </div>
-                  <div className='my-2'>
+                  <div className='my-2 text-center'>
                     <a className=" text-xl group text-gray-700 font-bold">Quality Assurance
-                    <div className='bg-amber-500 h-[2px] w-0 group-hover:w-3/4 transition-all duration-500'></div>
+                   
                     </a>
                     
                   </div>
@@ -75,9 +75,9 @@ const OurFactoryComponent = () => {
                   <div className='grid justify-items-center mt-10 relative max-w-xs overflow-hidden bg-cover bg-no-repeat '>
                       <img className='w-52 h-80 object-cover transition duration-700 ease-in-out hover:scale-125' src={D5} alt="" />
                   </div>
-                  <div className='my-2 text-center flex justify-start'>
+                  <div className='my-2 text-center'>
                     <a className=" text-xl group text-gray-700 font-bold">Sustainability<br/> & <br/> Development
-                    <div className='bg-amber-500 h-[2px] w-0 group-hover:w-3/4 transition-all duration-500'></div>
+                    
                     </a>
                     
                   </div>
@@ -88,9 +88,9 @@ const OurFactoryComponent = () => {
                   <div className='grid justify-items-center mt-10 relative max-w-xs overflow-hidden bg-cover bg-no-repeat '>
                       <img className='w-52 h-80 object-cover transition duration-700 ease-in-out hover:scale-125' src={D6} alt="" />
                   </div>
-                  <div className='my-2'>
+                  <div className='my-2 text-center'>
                     <a className=" text-xl group text-gray-700 font-bold">Packaging
-                    <div className='bg-amber-500 h-[2px] w-0 group-hover:w-2/4 transition-all duration-500'></div>
+                    
                     </a>
                     
                   </div>

@@ -60,8 +60,8 @@ const Contact = () => {
       <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-start">
         <div className="p-5 lg:p-0 lg:text-left">
           <h1 className="lg:text-5xl text-2xl md:text-3xl font-bold text-primary">Contact Us</h1>
-          <p className="pt-5">W. Apparels Ltd.
-            295/JA/4 Rayer Bazar,<br/>Dhaka-1209, Bangladesh.<br />
+          <p className="pt-2"><span className='font-bold' >W. Apparels Ltd.</span>
+            <br/>295/JA/4 Rayer Bazar,<br/>Dhaka-1209, Bangladesh.<br />
             Phone: +8802 9181198,<br /> Email: info@wapparels.com
           </p>
           <div className='font-bold'><h1>Follow us on:</h1></div>
@@ -92,7 +92,7 @@ const Contact = () => {
           <div className='lg:me-12 '>
             <iframe className='
             w-full h-[100px]
-            lg:w-[550px] lg:h-[285px] mb-5' id="gmap_canvas" src="https://maps.google.com/maps?q=W apparels&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            lg:w-[550px] lg:h-[275px] mb-5' id="gmap_canvas" src="https://maps.google.com/maps?q=W apparels&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
           </div>
         </div>
         <div className="card flex-shrink-0 lg:w-1/2 w-[90%] max-w-xl shadow-2xl bg-base-100 mb-5">
