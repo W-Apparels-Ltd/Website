@@ -24,10 +24,10 @@ const Banner = () => {
         
         <div className="absolute inset-0 grid h-full w-full bg-black/30 lg:pb-16 md:pb-16 pb-16">
               <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-0 justify-items-center place-items-end  justify-center '>
-                <div className='text-center  text-white font-Nunito hidden lg:block'>
+                <div className='text-center  text-white font-Nunito hidden lg:block pb-3'>
                   <h1 className='font-bold text-4xl'>Let's Do Business <br/>
                   Together</h1>
-                  <h1 className='text-3xl'>Our promise is to keep<br/>
+                  <h1 className='text-2xl'>Our promise is to keep<br/>
                   strong commitments, best<br/>
                   quality and building good<br/>
                   relationships.</h1>
@@ -43,12 +43,10 @@ const Banner = () => {
                   </div>
                 </div>
                 
-                <div className='text-center  text-white font-Nunito'>
+                <div className='text-center  text-white font-Nunito pb-2'>
                   <h1 className='font-bold text-4xl'>Get in touch!</h1>
                   <h1 className='text-xl'>+8801853340765<br/>+8801819274335<br/>
                   Email us: info@wapparels.com<br/>
-                  Visit wapparels.com to learn more<br/>
-                  about our industry<br/>
                   295/JA/4 Rayer Bazar,<br/>
                   Dhaka-1209, Bangladesh.<br/>
                   <div className='flex flex-row justify-center pt-1 '>
