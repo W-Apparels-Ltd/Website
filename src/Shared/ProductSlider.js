@@ -74,17 +74,8 @@ const ProductSlider = () => {
             </Carousel>
           </div>
           <div className='flex justify-center mt-10'><Link to='/productgallery'>
-          <button className='mb-12 lg:mb-0 text-dark lg:ms-5 md:ms-5'>
-                  <div className='flex items-center'>
-                    <h1 className='text-md font-bold'>VIEW PRODUCT GALLERY
-                    <div className='bg-dark h-[2px] w-0 group-hover:w-full transition-all duration-500'></div>
-                    </h1>
-                  
-                    <img className='w-12' src={arrow}></img>
-                  </div>
-                  
-                 
-            </button> 
+          
+            <button className="btn btn-primary btn-sm">View Product Gallery</button>
             </Link></div>
       </div>
     </div>

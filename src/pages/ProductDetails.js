@@ -81,8 +81,16 @@ const ProductDetails = () => {
                 
                   <div className='flex lg:flex-col flex-row my-5 lg:my-0'>
 
-                      <img className='mr-2 lg:mr-0 h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[1])} src={img[1]}/>
+                      {(img[1]==null)?
+                        <img className='hidden mr-2 lg:mr-0 h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[1])} src={img[1]}/>
+                        :
+                        <img className='mr-2 lg:mr-0 h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[1])} src={img[1]}/>
+                      }
+                      {(img[0]==null)?
+                      <img className='hidden h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[0])} src={img[0]}/>
+                      :
                       <img className='h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer' onClick={()=>changePic(img[0])} src={img[0]}/>
+                      }
                   </div>
                 
               <TransformWrapper>
@@ -92,7 +100,7 @@ const ProductDetails = () => {
               </TransformWrapper>
                 
               </div>
-              <div className='text-center lg:ms-12'>
+              <div className='text-center lg:ms-12 mt-10'>
                 
                   
                   <div><h1 className='text-3xl font-bold'>{label}</h1></div>
@@ -101,10 +109,17 @@ const ProductDetails = () => {
               
               <div className='flex justify-center lg:ms-5'>
              
-                  <div class="card-body">
-                    
-                    <h2 >FABRIC: {fabrictype}</h2>
-                    <h2 >Size: {size}</h2>   
+                  <div class="card-body text-center">
+                    {(fabrictype=="")?
+                    <h2 className='hidden' >FABRIC: {fabrictype}</h2>
+                    :
+                    <h2  >FABRIC: {fabrictype}</h2>
+                    }
+                    {(size=="")?
+                    <h2 className='hidden'>Size: {size}</h2>
+                    :
+                    <h2 >Size: {size}</h2>
+                    }   
                   </div>
               
               </div>

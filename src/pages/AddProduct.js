@@ -91,14 +91,14 @@ const AddProduct = () => {
           <label className="label">
             <span className="label-text">Fabric Type</span>
           </label>
-          <input type="text" name='fabrictype'  placeholder="Fabric Type" className="input input-bordered"  required/>
+          <input type="text" name='fabrictype'  placeholder="Fabric Type" className="input input-bordered" />
         
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Size</span>
           </label>
-          <input type="text" name='size'  placeholder="Size" className="input input-bordered"  required/>
+          <input type="text" name='size'  placeholder="Size" className="input input-bordered" />
         
         </div>
         <div className="form-control">

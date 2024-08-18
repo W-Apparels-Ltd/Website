@@ -10,32 +10,33 @@ const BuildingAndOccupation = () => {
 
     <div className=' grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-0 justify-items-center justify-center'>
 
-          <div className="relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-full h-80 group bg-cover cursor-pointer group">
+          <div className="relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-full h-[450px] group bg-cover cursor-pointer group">
             <img className='absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover group-hover:scale-150' src={img} alt="" />
             <div className='bg-black/75 h-full w-full opacity-50'></div>
-            <Link to='/building'>
+            <Link to='/building1'>
             <div
         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/50 bg-fixed opacity-0 transition duration-300 ease-in-out group-hover:opacity-50"></div>
             </Link>
-            <h1 className="absolute text-2xl font-black transition-all duration-500 ease-in-out transform scale-150 text-white opacity-90 group-hover:scale-100">W. Apparels Ltd.</h1>
+            <h1 className="absolute text-2xl font-black transition-all duration-500 ease-in-out transform scale-150 text-white opacity-90"><Link to='/building1'>W. Apparels Ltd.</Link></h1>
           </div>
-          <div className="relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-full h-80 group bg-cover cursor-pointer group">
+          <div className="relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-full h-[450px] group bg-cover cursor-pointer group">
             <img className='absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover group-hover:scale-150' src={img1} alt="" />
             <div className='bg-black/75 h-full w-full opacity-50'></div>
-            <Link to='/building'>
+            <Link to='/building2'>
             <div
         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/50 bg-fixed opacity-0 transition duration-300 ease-in-out group-hover:opacity-50"></div>
             </Link>
-            <h1 className="absolute text-2xl font-black transition-all duration-500 ease-in-out transform scale-150 text-white opacity-90 group-hover:scale-100">Quality Apparels</h1>
+            
+            <h1 className="absolute text-2xl font-black transition-all duration-500 ease-in-out transform scale-150 text-white opacity-90"><Link to='/building2'>Quality Apparels</Link></h1>
           </div>
-          <div className="relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-full h-80 group bg-cover cursor-pointer group">
+          <div className="relative flex items-center justify-center m-3 overflow-hidden shadow-xl w-full h-[450px] group bg-cover cursor-pointer group">
             <img className='absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover group-hover:scale-150' src={img2} alt="" />
             <div className='bg-black/75 h-full w-full opacity-50'></div>
-            <Link to='building'>
+            <Link to='building3'>
             <div
         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/50 bg-fixed opacity-0 transition duration-300 ease-in-out group-hover:opacity-50"></div>
             </Link>
-            <h1 className="absolute text-2xl font-black transition-all duration-500 ease-in-out transform scale-150 text-white opacity-90 group-hover:scale-100">3NA Fashion</h1>
+            <h1 className="absolute text-2xl font-black transition-all duration-500 ease-in-out transform scale-150 text-white opacity-90 "><Link to='/building3'>3NA Fashion</Link></h1>
           </div>
           
                 

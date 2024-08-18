@@ -9,8 +9,8 @@ const ProductItem = ({item}) => {
                   <img className='object-contain h-[220px]' src={item.img[1]} alt="Shoes" />
                   </figure>
                   <div className='mb-5 text-center'>
-                    <h2 className='font-bold'>{item.label}</h2>
-                    <p className='mb-2'>Size: {item.size}</p>
+                    <h2 className='font-bold mb-3'>{item.label}</h2>
+                   
                     <div>
                       <Link to={`/${item._id}`}>
                         <button className="btn btn-primary btn-sm">Inquire Now</button>

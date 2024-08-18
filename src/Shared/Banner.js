@@ -1,6 +1,6 @@
 import React from 'react';
-import img from '../images/Certificates/s2.png'
-
+import img from '../images/Certificates/s1.png'
+import img1 from '../images/Certificates/s11.jpg'
 import img4 from '../images/IMG_3291.JPG'
 import img3 from '../images/IMG_3306.JPG'
 import arrow from '../images/Untitled__1_-removebg-preview.png'
@@ -14,6 +14,18 @@ const Banner = () => {
   return (
     <Carousel autoplayDelay={8000} autoplay='true' loop='true' prevArrow={false} nextArrow={false}>
 
+      <div className="relative w-full overflow-hidden" >
+        <img
+          src={img1}
+          alt="image 2"
+          className="h-screen w-full object-cover"
+          
+        />
+        
+        <div className="absolute inset-0 grid h-full w-full place-content-end place-items-end bg-black/10">
+          
+        </div>
+      </div>
       <div className="relative w-full overflow-hidden" >
         <img
           src={img}
@@ -46,7 +58,7 @@ const Banner = () => {
                   <Typography
                     variant="lead"
                     color="white"
-                    className="hidden lg:block  mb-12 opacity-80 font-Nunito text-5md"
+                    className="hidden lg:block  mb-20 opacity-80 font-Nunito text-6md"
                   >
                     <Slide direction='right'>In an industry driven by mass production, our commitment to quality sets us apart. We believe in prioritizing excellence over mediocrity, setting higher standards that redefine the RMG sector.</Slide>
                   </Typography>
@@ -99,7 +111,7 @@ const Banner = () => {
             <Link className='group' to='/productgallery'>
             <button className='mb-12 lg:mb-0 text-white lg:ms-5 md:ms-5'>
                   <div className='flex items-center'>
-                    <h1 className='text-md font-bold'>PRODUCT GALLERY
+                    <h1 className='text-md font-bold'>View Product
                     <div className='bg-white h-[2px] w-0 group-hover:w-full transition-all duration-500'></div>
                     </h1>
                   
@@ -154,7 +166,7 @@ const Banner = () => {
             <Link className='group flex lg:justify-start justify-end' to='/career'>
             <button className='mb-12 lg:mb-0 text-white lg:ms-5 md:ms-5'>
                   <div className='flex items-center'>
-                    <h1 className='text-md font-bold'>CAREERS
+                    <h1 className='text-md font-bold'>View Opportunities
                     <div className='bg-white h-[2px] w-0 group-hover:w-full transition-all duration-500'></div>
                     </h1>
                   

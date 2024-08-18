@@ -23,6 +23,9 @@ import FirstAidTraining from './pages/FirstAidTraining';
 import FoodFacilities from './pages/FoodFacilities';
 import CareerForm1 from './pages/CareerForm1';
 import CareerForm2 from './pages/CareerForm2';
+import WappBuilding from './pages/WappBuilding';
+import QualityBuilding from './pages/QualityBuilding';
+import NaBuilding from './pages/NaBuilding';
 
 
 function App() {
@@ -70,8 +73,16 @@ function App() {
     element:<MeetTheTeam></MeetTheTeam>
   },
   {
-    path:'/building',
-    element:<Building></Building>
+    path:'/building1',
+    element:<WappBuilding></WappBuilding>
+  },
+  {
+    path:'/building2',
+    element:<QualityBuilding></QualityBuilding>
+  },
+  {
+    path:'/building3',
+    element:<NaBuilding></NaBuilding>
   },
   {
     path:'/productgallery',
