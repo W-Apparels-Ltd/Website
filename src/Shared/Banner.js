@@ -22,7 +22,7 @@ const Banner = () => {
           
         />
         
-        <div className="absolute inset-0 grid h-full w-full bg-black/30 pb-16">
+        <div className="absolute inset-0 grid h-full w-full bg-black/30 lg:pb-16 md:pb-16 pb-16">
               <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-0 justify-items-center place-items-end  justify-center '>
                 <div className='text-center  text-white font-Nunito hidden lg:block'>
                   <h1 className='font-bold text-4xl'>Let's Do Business <br/>
@@ -50,7 +50,32 @@ const Banner = () => {
                   Visit wapparels.com to learn more<br/>
                   about our industry<br/>
                   295/JA/4 Rayer Bazar,<br/>
-                  Dhaka-1209, Bangladesh.</h1>
+                  Dhaka-1209, Bangladesh.<br/>
+                  <div className='flex flex-row justify-center pt-1 '>
+
+            <Link to='https://www.linkedin.com/company/w-apparels-ltd/'>
+            <div className='mx-3'>
+              <div className='flex justify-center'>
+                <div><i className='fa fa-brands fa-linkedin bg-gray-700 text-white py-1 px-[5px] rounded'/></div>
+              </div>
+            </div >
+            </Link>
+            <Link to='https://www.facebook.com/profile.php?id=100063651540871'><div className='me-3'>
+              <div className='flex justify-center'>
+                <div><i className='fa fa-brands fa-facebook bg-gray-700 text-white py-1 px-[8px] rounded'/></div>
+              </div>
+            </div>
+            </Link>
+            <Link to='http://www.youtube.com/@w.apparelsltd.5425'>
+            <div className='me-3'>
+              <div className='flex justify-center'>
+                <div><i className='fa fa-brands fa-youtube-play bg-gray-700 text-white py-1 px-[6px] rounded'/></div>
+              </div>
+            </div>
+            </Link>
+
+          </div>
+                  </h1>
                 </div>
               </div>
         </div>
