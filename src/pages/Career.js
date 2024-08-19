@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Nav2 from './Nav2';
 
 const Career = () => {
-  const [active,setactive]=useState(true);
+  const [active,setactive]=useState(false);
   return (
     <>
     <Nav2></Nav2>

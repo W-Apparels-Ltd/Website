@@ -75,7 +75,7 @@ const OurCertificates = () => {
     return (
       <div id='ourcertificates' className='pt-5 pb-20 bg-base-100 font-Nunito'>
         <div>
-          <div className='lg:p-15 text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Accreditation</h1></div>
+          <div className='lg:p-15 text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Accreditations</h1></div>
           <div>
               <Carousel responsive={responsive} 
               additionalTransfrom={0}

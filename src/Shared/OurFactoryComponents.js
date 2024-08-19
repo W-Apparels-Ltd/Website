@@ -9,7 +9,7 @@ import D6 from '../images/factoryComponant/6.PACKAGING.jpg'
 const OurFactoryComponent = () => {
   return (
     <div className=' bg-base-100 py-20 font-Nunito'>
-        <div className='lg:p-15 text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Our Factory Component</h1></div>
+        <div className='lg:p-15 text-center'><h1 className='lg:text-4xl text-2xl md:text-3xl font-bold text-primary'>Our Factory Components</h1></div>
 
         <div className='mx-20 grid lg:grid-cols-6 md:grid-cols-3 grid-cols-1 gap-2 justify-items-center justify-center'>
                 <div className=' lg:my-10 my-5  cursor-pointer group'>
