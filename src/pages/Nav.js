@@ -103,10 +103,20 @@ const Nav = () => {
             value={wordEntered}
             onChange={handleFilter}
             />
-            <button className="searchButton1 flex justify-center items-center">
-                <i className="material-icons">
-                    search
-                </i>
+            <button className="p-2.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white transition-all shadow-md hover:shadow-emerald-500/20 active:scale-95 flex justify-center items-center">
+              <svg 
+                className="w-5 h-5" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" 
+                />
+              </svg>
             </button>
             
             {filteredData.length != 0 && (

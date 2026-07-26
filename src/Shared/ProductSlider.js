@@ -8,11 +8,34 @@ import { Link } from 'react-router-dom';
 const ProductSlider = () => {
   
   const [product, setProduct]=useState([]);
-  useEffect(()=>{
+  // useEffect(()=>{
+  //   fetch('https://wapparels-server.vercel.app/products')
+  //   .then(res=>res.json())
+  //   .then(data=> setProduct(data))
+  // },[])
+
+  useEffect(() => {
     fetch('https://wapparels-server.vercel.app/products')
-    .then(res=>res.json())
-    .then(data=> setProduct(data))
-  },[])
+      .then((res) => res.json())
+      .then((data) => {
+        const targetString = 'Whats-App-Image-2023-11-16';
+
+        const cleanedData = data.filter((item) => {
+          // If img is an array, check if any item inside contains the target string
+          if (Array.isArray(item.img)) {
+            return !item.img.some((url) => url.includes(targetString));
+          }
+          // Fallback if img is a single string
+          return !item.img?.includes(targetString);
+        });
+
+        setProduct(cleanedData);
+      })
+      .catch((err) => console.error('Error fetching products:', err));
+  }, []);
+    
+
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.

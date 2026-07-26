@@ -1,5 +1,5 @@
 import './App.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom'; // Changed to createHashRouter
 import Main from './Layout/Main';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -24,89 +24,88 @@ import FoodFacilities from './pages/FoodFacilities';
 
 
 function App() {
-  const router = createBrowserRouter([{
-    path: '/',
-    element: <Main></Main>,
-    children: [
-      {
-        path: '/',
-        element: <Home></Home>
-      },
-      {
-        path: '/login',
-        element: <Login></Login>
-      },
-      {
-        path:'/meettheteam',
-        element:<MeetTheTeam></MeetTheTeam>
-      },
-      {
-        path:'/addproduct',
-        element:<AddProduct></AddProduct>
-      },
-      
-      {
-        path:'/building',
-        element:<Building></Building>
-      },
-      {
-        path:'/teams',
-        element:<Teams></Teams>
-      },
-      {
-        path:'/career',
-        element:<Career></Career>
-      },
-      {
-        path:'/careerForm',
-        element:<CareerForm></CareerForm>
-      },
-      {
-        path:'/costing',
-        element:<CostingForm></CostingForm>
-      },
-      {
-        path:'/productgallery',
-        element:<ProductGallary></ProductGallary>
-      },
-      {
-        path:'/safetymeasures',
-        element:<SafetyMeasures></SafetyMeasures>
-      },
-      {
-        path:'/medicalfacilities',
-        element:<MedicalFacilities></MedicalFacilities>
-      },
-      {
-        path:'/childcare',
-        element:<ChildCare></ChildCare>
-      },
-      {
-        path:'/firetraining',
-        element:<FireTraining></FireTraining>
-      },
-      {
-        path:'/fireaidtraining',
-        element:<FirstAidTraining></FirstAidTraining>
-      },
-      {
-        path:'/foodfacilities',
-        element:<FoodFacilities></FoodFacilities>
-      },
-      
+  // Switched createBrowserRouter -> createHashRouter for double-click file:// support
+  const router = createHashRouter([
+    {
+      path: '/',
+      element: <Main></Main>,
+      children: [
+        {
+          path: '/',
+          element: <Home></Home>
+        },
+        {
+          path: '/login',
+          element: <Login></Login>
+        },
+        {
+          path:'/meettheteam',
+          element:<MeetTheTeam></MeetTheTeam>
+        },
+        {
+          path:'/addproduct',
+          element:<AddProduct></AddProduct>
+        },
+        {
+          path:'/building',
+          element:<Building></Building>
+        },
+        {
+          path:'/teams',
+          element:<Teams></Teams>
+        },
+        {
+          path:'/career',
+          element:<Career></Career>
+        },
+        {
+          path:'/careerForm',
+          element:<CareerForm></CareerForm>
+        },
+        {
+          path:'/costing',
+          element:<CostingForm></CostingForm>
+        },
+        {
+          path:'/productgallery',
+          element:<ProductGallary></ProductGallary>
+        },
+        {
+          path:'/safetymeasures',
+          element:<SafetyMeasures></SafetyMeasures>
+        },
+        {
+          path:'/medicalfacilities',
+          element:<MedicalFacilities></MedicalFacilities>
+        },
+        {
+          path:'/childcare',
+          element:<ChildCare></ChildCare>
+        },
+        {
+          path:'/firetraining',
+          element:<FireTraining></FireTraining>
+        },
+        {
+          path:'/fireaidtraining',
+          element:<FirstAidTraining></FirstAidTraining>
+        },
+        {
+          path:'/foodfacilities',
+          element:<FoodFacilities></FoodFacilities>
+        },
+      ],
+    },
+    {
+      path:'/:id',
+      element:<ProductDetails></ProductDetails>,
+      loader: ({params})=> fetch(`https://wapparels-server.vercel.app/products/${params.id}`)
+    },
+  ]);
 
-    ],
-  },
-  {
-    path:'/:id',
-    element:<ProductDetails></ProductDetails>,
-    loader: ({params})=> fetch(`https://wapparels-server.vercel.app/products/${params.id}`)
-  },
-])
   return (
-    <div className='	mx-auto'>
+    <div className='mx-auto'>
       <RouterProvider router={router}></RouterProvider>
-      
     </div>
   );
 }

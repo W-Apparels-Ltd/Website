@@ -5,12 +5,35 @@ import { useEffect } from 'react';
 import ProductItem from '../Shared/ProductItem';
 
 const ProductGallary = () => {
-  const [product, setProduct]=useState([]);
-  useEffect(()=>{
+  // const [product, setProduct]=useState([]);
+  // useEffect(()=>{
+  //   fetch('https://wapparels-server.vercel.app/products')
+  //   .then(res=>res.json())
+  //   .then(data=> setProduct(data))
+  // },[])
+
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
     fetch('https://wapparels-server.vercel.app/products')
-    .then(res=>res.json())
-    .then(data=> setProduct(data))
-  },[])
+      .then((res) => res.json())
+      .then((data) => {
+        const targetString = 'Whats-App-Image-2023-11-16';
+
+        const cleanedData = data.filter((item) => {
+          // If img is an array, check if any item inside contains the target string
+          if (Array.isArray(item.img)) {
+            return !item.img.some((url) => url.includes(targetString));
+          }
+          // Fallback if img is a single string
+          return !item.img?.includes(targetString);
+        });
+
+        setProduct(cleanedData);
+      })
+      .catch((err) => console.error('Error fetching products:', err));
+  }, []);
+  
   return (
     <div style={{
       backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${bg})`,
@@ -24,11 +47,11 @@ const ProductGallary = () => {
         <div className=' grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 p-10'>
 
         {
-                 product.map(item=>
-                  <ProductItem key={item._id} item={item}
-                  ></ProductItem>
-                  )
-               }
+          product.map(item=>
+          <ProductItem key={item._id} item={item}
+          ></ProductItem>
+          )
+        }
 
         </div>
           

@@ -6,7 +6,7 @@ const ProductItem = ({item}) => {
   return (
                 <div className="card bg-base-100 shadow-xl m-5 ">
                   <figure >
-                  <img className='object-contain h-[250px] p-5' src={item.img[1]} alt="Shoes" />
+                  <img className='object-contain h-[250px] p-5' src={item.img[0]} alt="Shoes" />
                   </figure>
                   <div className='m-5 text-center'>
                     <h2 className='font-bold'>{item.label}</h2>

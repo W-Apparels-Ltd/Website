@@ -1,6 +1,6 @@
 import React from 'react';
 import img from '../images/factory_purpose/ourstory-300x225-1.jpg'
-import pic from '../images/factory_purpose/1.jpg'
+import pic from '../images/factory_purpose/9.jpg'
 import o2 from '../images/Our1 (1).jpg'
 import o3 from '../images/our2 (1).jpg'
 import arrow from '../images/Untitled__1_-removebg-preview.png'
@@ -8,18 +8,13 @@ import { Link } from 'react-router-dom';
 
 const Story = () => {
   const downloadPdf = () => {
-    fetch('WapparelsPDF.pdf').then(response => {
-        response.blob().then(blob => {
-            // Creating new object of PDF file
-            const fileURL = window.URL.createObjectURL(blob);
-            // Setting various property values
-            let alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = 'WapparelsPDF.pdf';
-            alink.click();
-        })
-    })
-}
+    const alink = document.createElement('a');
+    alink.href = './WapparelsPDF.pdf'; // Path relative to public folder
+    alink.download = 'WapparelsPDF.pdf';
+    document.body.appendChild(alink);
+    alink.click();
+    document.body.removeChild(alink);
+  };
   return (
     <div id='aboutus'>
       <div style={{
@@ -46,17 +41,17 @@ const Story = () => {
             
             <div className='flex justify-end'>
           
-            <button onClick={downloadPdf}
-              class="group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-[#000066] py-3 px-7 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-nonegroup relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-gradient-to-tr from-light-blue-900 to-sky-900 py-2 px-5 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-indigo-500/20 transition-all hover:shadow-lg hover:shadow-light-blue-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+           <button
+              onClick={downloadPdf}
               type="button"
-              data-ripple-light="true"
-            >
-              View Corporate Profile
-              <span className="absolute right-0 grid h-full w-12 place-items-center bg-[#00004d] transition-colors group-hover:bg-[#000066]">
-                <img src={arrow}></img>
-              </span>
+              className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-all active:scale-95"
+              >
+                View Corporate Profile
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
             </button>
-            
+
             </div>
           </div>
         </div>
