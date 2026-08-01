@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Thankyoumodal from '../modal/Thankyoumodal';
 import bg from '../images/factory_purpose/1.jpg'
@@ -10,7 +10,20 @@ const ProductDetails = () => {
   const {_id,label,fabrictype,size,img}= useLoaderData();
   const [open,setOpen]=useState(false);
   const [openError,setOpenError]=useState(false);
+  const [isSubmitting,setIsSubmitting]=useState(false);
   const [pic,setPic]=useState(img[0]);
+  const activeRequestRef=useRef(null);
+  const isMountedRef=useRef(true);
+
+  useEffect(()=>{
+    isMountedRef.current=true;
+
+    return ()=>{
+      isMountedRef.current=false;
+      activeRequestRef.current?.abort();
+    }
+  },[]);
+
   const handleClick=()=>{
     setOpen(false);
   }
@@ -20,47 +33,82 @@ const ProductDetails = () => {
   const changePic=img=>{
     setPic(img);
   }
-  const handleSubmit=event=>{
+  const handleSubmit=async event=>{
     event.preventDefault();
-    
-    const form = event.target;
-    const name=form.name.value;
-    const email =form.email.value;
-    const message =form.message.value;
+
+    if(isSubmitting){
+      return;
+    }
+
+    const form = event.currentTarget;
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(()=>controller.abort(),15000);
+    activeRequestRef.current?.abort();
+    activeRequestRef.current=controller;
+
     const emaildata={
-      name,
-      email,
-      message,
+      name:form.elements.name.value.trim(),
+      email:form.elements.email.value.trim(),
+      message:form.elements.message.value.trim(),
       label,
-      fabrictype,
+      fabrictype:form.elements.fabrictype.value,
       size,
       img
     }
-    console.log(emaildata);
-    
-    console.log(emaildata);
-    fetch('https://wapparels-server.vercel.app/contactus',{
-      method:'POST',
-      headers:{
-        'content-type':'application/json'
-      },
-      body:JSON.stringify(emaildata)
-    })
-    .then(res=>res.json())
-    .then(data=>{
-      console.log(data);
-      if(data.status===201){
-        console.log('mail sent');
-        setOpen(!open);
-      }
-      else{
-        console.log('error');
-        setOpenError(!openError);
-      }
-      
-    })
-    form.reset();
 
+    setIsSubmitting(true);
+    setOpen(false);
+    setOpenError(false);
+
+    try{
+      const response=await fetch('https://wapparels-server.vercel.app/contactus',{
+        method:'POST',
+        headers:{
+          'content-type':'application/json'
+        },
+        body:JSON.stringify(emaildata),
+        signal:controller.signal
+      });
+
+      const responseText=await response.text();
+      let data={};
+
+      if(responseText){
+        try{
+          data=JSON.parse(responseText);
+        }
+        catch(error){
+          throw new Error(`Server returned an invalid response (${response.status})`);
+        }
+      }
+
+      if(!response.ok || (data.status && Number(data.status)!==201)){
+        throw new Error(data.message || `Request failed with status ${response.status}`);
+      }
+
+      if(isMountedRef.current){
+        form.reset();
+        setOpen(true);
+      }
+    }
+    catch(error){
+      console.error('Inquiry submission failed:',error);
+
+      if(isMountedRef.current){
+        setOpenError(true);
+      }
+    }
+    finally{
+      window.clearTimeout(timeoutId);
+
+      if(activeRequestRef.current===controller){
+        activeRequestRef.current=null;
+      }
+
+      if(isMountedRef.current){
+        setIsSubmitting(false);
+      }
+    }
   }
   return (
     <>
@@ -114,12 +162,16 @@ const ProductDetails = () => {
           <div className="card flex-shrink-0 lg:w-1/2 w-[90%] max-w-xl shadow-2xl bg-base-100 text-black mb-5 lg:mb-0">
             
             <form onSubmit={handleSubmit} className='card-body'>
+            <div className="mb-1">
+              <h2 className="text-2xl font-bold">Send Product Inquiry</h2>
+              <p className="mt-1 text-sm text-gray-600">Complete the form below and our team will contact you.</p>
+            </div>
             <div className="form-control">
-              <label className="label">
-                <span className="label-text font-bold">Fabrictype</span>
+              <label className="label" htmlFor="inquiry-fabric-type">
+                <span className="label-text font-bold">Fabric Type</span>
               </label>
-              <select className="select select-bordered" required>
-                <option disabled selected>Select One</option>
+              <select id="inquiry-fabric-type" name="fabrictype" className="select select-bordered" defaultValue="" required disabled={isSubmitting}>
+                <option value="" disabled>Select a fabric type</option>
                 <option>100 % Viscose, 125 gsm</option>
                 <option>100% Cotton, Thin Twill</option>
                 <option>100 % Cotton , 4.5 oz</option>
@@ -131,24 +183,27 @@ const ProductDetails = () => {
               </select>
             </div>
             <div className="form-control">
-              <label className="label">
+              <label className="label" htmlFor="inquiry-name">
                 <span className="label-text font-bold">Name</span>
               </label>
-              <input type="text" name='name'  className="input input-bordered"  required/>
+              <input id="inquiry-name" type="text" name='name' placeholder="Enter your full name" maxLength={100} className="input input-bordered" required disabled={isSubmitting}/>
             </div>
             <div className="form-control">
-              <label className="label">
+              <label className="label" htmlFor="inquiry-email">
                 <span className="label-text font-bold">Email</span>
               </label>
-              <input type="text" name='email' className="input input-bordered" required/>
+              <input id="inquiry-email" type="email" name='email' placeholder="Enter your email address" maxLength={254} className="input input-bordered" required disabled={isSubmitting}/>
             </div>
             <div className="form-control">
-              <label className="label">
+              <label className="label" htmlFor="inquiry-message">
                 <span className="label-text font-bold">Message</span>
               </label>
-              <textarea type="textarea" name='message' className="textarea textarea-bordered" required/>
+              <textarea id="inquiry-message" name='message' rows={5} placeholder="Write your inquiry here" maxLength={5000} className="textarea textarea-bordered" required disabled={isSubmitting}/>
             </div>
-            <input className="w-full btn btn-primary" type='submit' value='SEND INQUIRY'/>
+            <button className="w-full btn btn-primary" type='submit' disabled={isSubmitting} aria-live="polite">
+              {isSubmitting && <span className="loading loading-spinner loading-sm" aria-hidden="true"></span>}
+              {isSubmitting ? 'SENDING...' : 'SEND INQUIRY'}
+            </button>
             
             
             </form>
