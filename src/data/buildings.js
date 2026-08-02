@@ -51,10 +51,10 @@ export const buildings = [
     id: 'building2',
     route: '/BUILDING2',
     number: '02',
-    name: 'Quality Apparels Ltd.',
+    name: 'W Apparels Ltd',
     shortDescription: 'A sister concern of W. Apparels Ltd. serving the group’s export-oriented apparel operations.',
     overview:
-      'Quality Apparels Ltd. is listed in the official company profile as a sister concern of W. Apparels Ltd. The facility contributes to the group’s apparel manufacturing activities and follows the same focus on quality, reliability and responsible production.',
+      'Quality Apparels is listed in the official company profile as a sister concern of W. Apparels Ltd. The facility contributes to the group’s apparel manufacturing activities and follows the same focus on quality, reliability and responsible production.',
     image: qualityApparelsImage,
     facts: [
       { label: 'Organization type', value: 'W. Apparels sister concern' },
