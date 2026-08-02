@@ -473,3 +473,209 @@
     transition: none;
   }
 }
+
+/* WAPPARELS_PARTNERSHIP_CARDS_V12_START */
+.hero-carousel__business-cards {
+  align-items: stretch;
+  gap: 1.5rem;
+  max-width: 1280px;
+}
+
+.hero-carousel__business-card {
+  display: flex;
+  min-width: 0;
+  min-height: 238px;
+  flex-direction: column;
+  padding: 1.55rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  border-radius: 1rem;
+  background: rgba(34, 37, 54, 0.96);
+  box-shadow: none;
+  color: #fff;
+  backdrop-filter: blur(12px);
+}
+
+.hero-carousel__business-card h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.hero-carousel__business-card p,
+.hero-carousel__business-card li,
+.hero-carousel__business-card span,
+.hero-carousel__business-card a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.hero-carousel__business-card p {
+  margin: 0.65rem 0 0;
+}
+
+.hero-carousel__business-card > span {
+  display: block;
+  margin-top: auto;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  font-size: 0.76rem;
+}
+
+.hero-carousel__card-top-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: 1.45rem;
+  color: #e5e7eb;
+}
+
+.hero-carousel__card-top-icon svg,
+.hero-carousel__card-heading-icon svg,
+.hero-carousel__contact-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-carousel__card-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.85rem;
+}
+
+.hero-carousel__card-heading-icon {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 auto;
+}
+
+.hero-carousel__card-heading-icon--gold {
+  color: #facc15;
+}
+
+.hero-carousel__card-heading-icon--blue {
+  color: #38a8ff;
+}
+
+.hero-carousel__benefit-list,
+.hero-carousel__contact-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.62rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-carousel__benefit-list li,
+.hero-carousel__contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.hero-carousel__benefit-list li::before,
+.hero-carousel__contact-list li::before {
+  display: none;
+  content: none;
+}
+
+.hero-carousel__benefit-list strong {
+  color: #fff;
+  font-weight: 800;
+}
+
+.hero-carousel__benefit-check {
+  width: 0.9rem;
+  flex: 0 0 0.9rem;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.hero-carousel__benefit-check--gold {
+  color: #facc15 !important;
+}
+
+.hero-carousel__benefit-check--white {
+  color: #f8fafc !important;
+}
+
+.hero-carousel__benefit-check--blue {
+  color: #42a5ff !important;
+}
+
+.hero-carousel__benefit-check--purple {
+  color: #c653d9 !important;
+}
+
+.hero-carousel__contact-item {
+  gap: 0.7rem !important;
+}
+
+.hero-carousel__contact-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 1.05rem;
+  margin-top: 0.12rem;
+  color: #d7d9e2 !important;
+}
+
+.hero-carousel__contact-icon--blue {
+  color: #38a8ff !important;
+}
+
+.hero-carousel__business-card a {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.55);
+  text-underline-offset: 3px;
+}
+
+.hero-carousel__business-card a:hover,
+.hero-carousel__business-card a:focus-visible {
+  color: #fff;
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .hero-carousel__business-cards {
+    gap: 0.9rem;
+  }
+
+  .hero-carousel__business-card {
+    min-height: 210px;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-carousel__business-card {
+    min-height: 0;
+    padding: 1rem;
+  }
+
+  .hero-carousel__card-top-icon {
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-carousel__business-card > span {
+    display: block;
+  }
+
+  .hero-carousel__business-card p,
+  .hero-carousel__business-card li,
+  .hero-carousel__business-card span,
+  .hero-carousel__business-card a {
+    font-size: 0.75rem;
+    line-height: 1.42;
+  }
+
+  .hero-carousel__benefit-list,
+  .hero-carousel__contact-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* WAPPARELS_PARTNERSHIP_CARDS_V12_END */
