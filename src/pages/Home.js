@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Shared/Banner';
 import Story from '../Shared/Story';
 import BuildingsandOccupants from '../Shared/BuildingsandOccupants';
+import FactoryComponents from '../Shared/FactoryComponents';
 import CorporateViewpoint from '../Shared/CorporateViewpoint';
 import MessageFromtheChairman from '../Shared/MessageFromtheChairman';
 import SisterConcern from '../Shared/SisterConcern';
@@ -20,6 +21,7 @@ const Home = () => {
       <Banner></Banner>
       <Story></Story>
       <BuildingsandOccupants></BuildingsandOccupants>
+      <FactoryComponents></FactoryComponents>
       <CorporateViewpoint></CorporateViewpoint>
       <MessageFromtheChairman></MessageFromtheChairman>
       <ProductSlider></ProductSlider>

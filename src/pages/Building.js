@@ -1,57 +1,48 @@
 import React from 'react';
-import sis1 from '../images/factory_purpose/888888.jpg'
-import sis2 from '../images/factory_purpose/aftab-1.jpg'
-import sis3 from '../images/factory_purpose/333333-1.jpg'
-import building from '../images/factory_purpose/building.jpg'
+import { Link } from 'react-router-dom';
+import { buildings } from '../data/buildings';
 
 const Building = () => {
   return (
-    <div style={{
-      backgroundImage:`linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${building})`,
-    }}  className= "  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg">
-      
-      <div>
-          <div className='p-20 text-center'><h1 className='lg:text-5xl text-3xl text-white font-bold mt-5'>Buildings and Occupants</h1></div>
-          
-      </div>
-      <div className=' bg-base-100 lg:px-20'>
-      <div className='p-10'>
-        <div className=' grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>
-          <div className="card w-50 bg-base-100 shadow-xl">
-            <figure><img src={building} alt="Shoes" /></figure>
-            <div className="card-body">
-              <h2 className="card-title">W. apparels ltd.</h2>
-              <p>Aftabunnesa Garments Ltd. is 9 storied 100% export oriented factory initiating its activities since September, 2019.....</p>
-              <div className="card-actions justify-end">
-                
-              </div>
-            </div>
-          </div>
-          <div className="card w-50 bg-base-100 shadow-xl">
-            <figure><img src={sis1} alt="Shoes" /></figure>
-            <div className="card-body">
-              <h2 className="card-title">Quality apparels ltd.</h2>
-              <p>Aftabunnesa Garments Ltd. is 9 storied 100% export oriented factory initiating its activities since September, 2019.....</p>
-              <div className="card-actions justify-end">
-                
-              </div>
-            </div>
-          </div>
-          <div className="card w-50 bg-base-100 shadow-xl">
-            <figure><img src={sis3} alt="Shoes" /></figure>
-            <div className="card-body">
-              <h2 className="card-title">3NA Fashion</h2>
-              <p>The Industry has a yearly production capacity of 28,00,000 lakh pieces (2.8 million pieces) of woven-wear.....</p>
-              <div className="card-actions justify-end">
-                
-              </div>
-            </div>
-          </div>
+    <main className="bg-white font-Nunito">
+      <section aria-labelledby="buildings-heading" className="w-full bg-white">
+        <header className="flex min-h-[108px] items-center justify-center px-5 py-8 text-center lg:min-h-[120px]">
+          <h1 id="buildings-heading" className="text-3xl font-bold text-black md:text-4xl">
+            Buildings and Occupants
+          </h1>
+        </header>
 
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {buildings.map((building) => (
+            <Link
+              key={building.id}
+              to={building.route}
+              className="group relative isolate flex min-h-[360px] items-center justify-center overflow-hidden bg-gray-900 focus:outline-none focus-visible:z-10 focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-white md:min-h-[400px] lg:min-h-[405px]"
+              aria-label={`View ${building.name} building details`}
+            >
+              <img
+                src={building.image}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105 group-focus-visible:scale-105"
+              />
+              <span
+                aria-hidden="true"
+                className="absolute inset-0 bg-black/30 transition duration-300 group-hover:bg-black/45 group-focus-visible:bg-black/45"
+              />
+              <span
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10"
+              />
+
+              <span className="relative z-10 px-6 text-center text-3xl font-bold tracking-wide text-white drop-shadow-lg lg:text-[34px]">
+                {building.name}
+              </span>
+            </Link>
+          ))}
         </div>
-      </div>
-    </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

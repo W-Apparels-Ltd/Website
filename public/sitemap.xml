@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.wapparels.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.wapparels.com/building</loc><priority>0.8</priority></url>
+  <url><loc>https://www.wapparels.com/BUILDING1</loc><priority>0.7</priority></url>
+  <url><loc>https://www.wapparels.com/BUILDING2</loc><priority>0.7</priority></url>
+  <url><loc>https://www.wapparels.com/BUILDING3</loc><priority>0.7</priority></url>
+  <url><loc>https://www.wapparels.com/productgallery</loc><priority>0.8</priority></url>
+  <url><loc>https://www.wapparels.com/meettheteam</loc><priority>0.6</priority></url>
+  <url><loc>https://www.wapparels.com/career</loc><priority>0.6</priority></url>
+</urlset>

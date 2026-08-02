@@ -1,5 +1,5 @@
 import './App.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Main from './Layout/Main';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -8,12 +8,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import AddProduct from './pages/AddProduct';
 import ProductDetails from './pages/ProductDetails';
 import Building from './pages/Building';
+import BuildingDetails from './pages/BuildingDetails';
 import Teams from './pages/Teams';
 import Career from './pages/Career';
 import CareerForm from './pages/CareerForm';
-import Costing from './Shared/Costing';
 import CostingForm from './Costing/CostingForm';
-import PrintFast from './Costing/PrintFast';
 import ProductGallary from './pages/ProductGallary';
 import SafetyMeasures from './pages/SafetyMeasures';
 import MedicalFacilities from './pages/MedicalFacilities';
@@ -22,91 +21,46 @@ import FireTraining from './pages/FireTraining';
 import FirstAidTraining from './pages/FirstAidTraining';
 import FoodFacilities from './pages/FoodFacilities';
 
-
 function App() {
-  const router = createBrowserRouter([{
-    path: '/',
-    element: <Main></Main>,
-    children: [
-      {
-        path: '/',
-        element: <Home></Home>
-      },
-      {
-        path: '/login',
-        element: <Login></Login>
-      },
-      {
-        path:'/meettheteam',
-        element:<MeetTheTeam></MeetTheTeam>
-      },
-      {
-        path:'/addproduct',
-        element:<AddProduct></AddProduct>
-      },
-      
-      {
-        path:'/building',
-        element:<Building></Building>
-      },
-      {
-        path:'/teams',
-        element:<Teams></Teams>
-      },
-      {
-        path:'/career',
-        element:<Career></Career>
-      },
-      {
-        path:'/careerForm',
-        element:<CareerForm></CareerForm>
-      },
-      {
-        path:'/costing',
-        element:<CostingForm></CostingForm>
-      },
-      {
-        path:'/productgallery',
-        element:<ProductGallary></ProductGallary>
-      },
-      {
-        path:'/safetymeasures',
-        element:<SafetyMeasures></SafetyMeasures>
-      },
-      {
-        path:'/medicalfacilities',
-        element:<MedicalFacilities></MedicalFacilities>
-      },
-      {
-        path:'/childcare',
-        element:<ChildCare></ChildCare>
-      },
-      {
-        path:'/firetraining',
-        element:<FireTraining></FireTraining>
-      },
-      {
-        path:'/fireaidtraining',
-        element:<FirstAidTraining></FirstAidTraining>
-      },
-      {
-        path:'/foodfacilities',
-        element:<FoodFacilities></FoodFacilities>
-      },
-      
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Main />,
+      children: [
+        { path: '/', element: <Home /> },
+        { path: '/login', element: <Login /> },
+        { path: '/meettheteam', element: <MeetTheTeam /> },
+        { path: '/addproduct', element: <AddProduct /> },
+        { path: '/building', element: <Building /> },
+        { path: '/BUILDING1', element: <BuildingDetails buildingId="building1" /> },
+        { path: '/BUILDING2', element: <BuildingDetails buildingId="building2" /> },
+        { path: '/BUILDING3', element: <BuildingDetails buildingId="building3" /> },
+        { path: '/building1', element: <Navigate to="/BUILDING1" replace /> },
+        { path: '/building2', element: <Navigate to="/BUILDING2" replace /> },
+        { path: '/building3', element: <Navigate to="/BUILDING3" replace /> },
+        { path: '/teams', element: <Teams /> },
+        { path: '/career', element: <Career /> },
+        { path: '/careerForm', element: <CareerForm /> },
+        { path: '/costing', element: <CostingForm /> },
+        { path: '/productgallery', element: <ProductGallary /> },
+        { path: '/safetymeasures', element: <SafetyMeasures /> },
+        { path: '/medicalfacilities', element: <MedicalFacilities /> },
+        { path: '/childcare', element: <ChildCare /> },
+        { path: '/firetraining', element: <FireTraining /> },
+        { path: '/fireaidtraining', element: <FirstAidTraining /> },
+        { path: '/foodfacilities', element: <FoodFacilities /> },
+      ],
+    },
+    {
+      path: '/:id',
+      element: <ProductDetails />,
+      loader: ({ params }) => fetch(`https://wapparels-server.vercel.app/products/${params.id}`),
+    },
+  ]);
 
-    ],
-  },
-  {
-    path:'/:id',
-    element:<ProductDetails></ProductDetails>,
-    loader: ({params})=> fetch(`https://wapparels-server.vercel.app/products/${params.id}`)
-  },
-])
   return (
-    <div className='	mx-auto'>
-      <RouterProvider router={router}></RouterProvider>
-      
+    <div className="mx-auto">
+      <RouterProvider router={router} />
     </div>
   );
 }
