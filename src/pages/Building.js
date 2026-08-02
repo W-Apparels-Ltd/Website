@@ -1,23 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { buildings } from '../data/buildings';
+import React from "react";
+import { Link } from "react-router-dom";
+import { buildings } from "../data/buildings";
 
 const Building = () => {
   return (
     <main className="bg-white font-Nunito">
       <section aria-labelledby="buildings-heading" className="w-full bg-white">
         <header className="flex min-h-[108px] items-center justify-center px-5 py-8 text-center lg:min-h-[120px]">
-          <h1 id="buildings-heading" className="text-3xl font-bold text-black md:text-4xl">
+          <h1
+            id="buildings-heading"
+            className="text-3xl font-bold text-black md:text-4xl"
+          >
             Buildings and Occupants
           </h1>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 px-4 pb-4 md:grid-cols-3 md:gap-0 md:px-0 md:pb-0">
           {buildings.map((building) => (
             <Link
               key={building.id}
               to={building.route}
-              className="group relative isolate flex min-h-[360px] items-center justify-center overflow-hidden bg-gray-900 focus:outline-none focus-visible:z-10 focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-white md:min-h-[400px] lg:min-h-[405px]"
+              className="mb-3 group relative isolate flex min-h-[360px] items-center justify-center overflow-hidden rounded-xl bg-gray-900 focus:outline-none focus-visible:z-10 focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-white md:min-h-[400px] md:rounded-none lg:min-h-[405px]"
               aria-label={`View ${building.name} building details`}
             >
               <img
