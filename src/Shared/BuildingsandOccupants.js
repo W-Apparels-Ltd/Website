@@ -1,17 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { buildings } from '../data/buildings';
+import React from "react";
+import { Link } from "react-router-dom";
+import { buildings } from "../data/buildings";
 
 const BuildingsandOccupants = () => {
   return (
-    <section aria-labelledby="buildings-heading" className="w-full bg-white font-Nunito">
+    <section
+      aria-labelledby="buildings-heading"
+      className="w-full bg-white font-Nunito"
+    >
       <header className="flex min-h-[108px] items-center justify-center px-5 py-8 text-center lg:min-h-[120px]">
-        <h2 id="buildings-heading" className="text-3xl font-bold text-black md:text-4xl">
+        <h2
+          id="buildings-heading"
+          className="text-3xl font-bold text-black md:text-4xl"
+        >
           Buildings and Occupants
         </h2>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-0">
         {buildings.map((building) => (
           <Link
             key={building.id}
