@@ -30,9 +30,9 @@ export const buildings = [
     facts: [
       { label: 'Established', value: '1992' },
       { label: 'Business', value: 'Knit and woven garments' },
-      { label: 'Monthly capacity', value: 'Approx. 1,200,000 pieces' },
+      { label: 'Monthly capacity', value: 'Approx. 650,000 pieces' },
       { label: 'Factory location', value: '295/JA/4, Rayer Bazar, Dhaka-1209' },
-      { label: 'Employees', value: '2,600' },
+      { label: 'Employees', value: '1,700' },
       { label: 'Machines', value: '1,475' },
     ],
     sections: [
