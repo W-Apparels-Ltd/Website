@@ -3,7 +3,6 @@ import CS2 from "../../images/personnel/IMG_2437(2) (1)-min.jpg";
 import CS8 from "../../images/personnel/last.jpg";
 import CS10 from "../../images/personnel/Mahmunibnebashar.png";
 import AM from "../../images/personnel/AM.jpg";
-import Sujan from "../../images/personnel/Sujan.jpg";
 import AlaminImg from "../../images/personnel/alamin.png"
 import LitonImg from "../../images/personnel/nurulislamliton.png";
 import MahmudHasan from "../../images/personnel/mahmudhasan.jpeg"
@@ -42,7 +41,7 @@ export const corporateStaff = [
     id: "abdullah",
     img: AM,
     name: "Muhammad Abdullah",
-    title: "Commercial In charge ( Export)",
+    title: "Asstt. Manager (Commercial)",
     desc: "",
   },
   {
