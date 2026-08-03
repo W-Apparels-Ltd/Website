@@ -6,7 +6,7 @@ import ErrorModal from "../modal/ErrorModal";
 
 const EMAIL_API_BASE_URL =
   process.env.REACT_APP_EMAIL_API_BASE_URL ||
-  "https://wapparels-email-server.vercel.app";
+  "https://wapparels-email-server-nu.vercel.app";
 const CONTACT_URL = `${EMAIL_API_BASE_URL}/contact-email`;
 const REQUEST_TIMEOUT_MS = 10000;
 

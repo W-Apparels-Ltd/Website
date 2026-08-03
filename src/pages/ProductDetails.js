@@ -6,13 +6,13 @@ import Nav2 from "./Nav2";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import ErrorModal from "../modal/ErrorModal";
 
-const APP_API_BASE_URL =
-  process.env.REACT_APP_APP_API_BASE_URL ||
-  "https://wapparels-server.vercel.app";
-const PRODUCT_INQUIRY_URL = `${APP_API_BASE_URL}/product-inquiery-email`;
+const EMAIL_API_BASE_URL =
+  process.env.REACT_APP_EMAIL_API_BASE_URL ||
+  "https://wapparels-email-server-nu.vercel.app";
+const PRODUCT_INQUIRY_URL = `${EMAIL_API_BASE_URL}/product-inquiery-email`;
 
 const ProductDetails = () => {
-  const { _id, label, fabrictype, size, img } = useLoaderData();
+  const { label, fabrictype, size, img } = useLoaderData();
   const [open, setOpen] = useState(false);
   const [openError, setOpenError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -137,11 +137,13 @@ const ProductDetails = () => {
                     className="mr-2 lg:mr-0 h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer"
                     onClick={() => changePic(img[0])}
                     src={img[0]}
+                    alt={`${label} preview 1`}
                   />
                   <img
                     className="h-12 w-18 border-2 rounded p-1 mb-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 cursor-pointer"
                     onClick={() => changePic(img[1])}
                     src={img[1]}
+                    alt={`${label} preview 2`}
                   />
                 </div>
 
