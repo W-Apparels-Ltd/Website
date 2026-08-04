@@ -1,50 +1,66 @@
 import React, { useEffect, useState } from "react";
 import bg from "../images/factory_purpose/1.jpg";
 import ProductItem from "../Shared/ProductItem";
-import { fetchProducts } from "../services/productApi";
-import { filterProductsWithValidImages } from "../utils/productImageValidation";
+
+const PRODUCTS_API_URL = "https://wapparels-server.vercel.app/products";
+
+const BLOCKED_PRODUCT_IDS = new Set([
+  "651bdc092023da937f74738f", // Denim Jacket
+  "651bdc7e2023da937f747390", // Swimwear
+  "6a6dcfb3241aa6f2ec8e01e2", // Security Test
+]);
 
 const ProductGallary = () => {
   const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadError, setLoadError] = useState("");
 
   useEffect(() => {
     const controller = new AbortController();
-    let isActive = true;
+    let isMounted = true;
 
-    const loadProducts = async () => {
-      setIsLoading(true);
-      setLoadError("");
-
-      try {
-        const productList = await fetchProducts({
-          signal: controller.signal,
-        });
-        const validProducts = await filterProductsWithValidImages(productList);
-
-        if (isActive) {
-          setProducts(validProducts);
+    fetch(PRODUCTS_API_URL, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+      cache: "no-store",
+      signal: controller.signal,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            `Products request failed with status ${response.status}`,
+          );
         }
-      } catch (error) {
-        if (!isActive || error?.name === "AbortError") {
+
+        return response.json();
+      })
+      .then((data) => {
+        if (!isMounted) {
+          return;
+        }
+
+        const visibleProducts = Array.isArray(data)
+          ? data.filter(
+              (product) =>
+                product &&
+                product._id &&
+                !BLOCKED_PRODUCT_IDS.has(String(product._id)),
+            )
+          : [];
+
+        setProducts(visibleProducts);
+      })
+      .catch((error) => {
+        if (!isMounted || error?.name === "AbortError") {
           return;
         }
 
         console.error("Unable to load product gallery:", error);
         setProducts([]);
-        setLoadError("Products could not be loaded. Please try again later.");
-      } finally {
-        if (isActive) {
-          setIsLoading(false);
-        }
-      }
-    };
-
-    loadProducts();
+      });
 
     return () => {
-      isActive = false;
+      isMounted = false;
       controller.abort();
     };
   }, []);
@@ -66,39 +82,11 @@ const ProductGallary = () => {
 
       <div className="mt-5 rounded-xl lg:mt-20">
         <div className="bg-base-200">
-          {isLoading && (
-            <div
-              className="flex min-h-[320px] items-center justify-center"
-              role="status"
-              aria-live="polite"
-            >
-              <span
-                className="loading loading-spinner loading-lg text-primary"
-                aria-hidden="true"
-              />
-              <span className="ml-3 font-semibold">Loading products...</span>
-            </div>
-          )}
-
-          {!isLoading && loadError && (
-            <div className="px-6 py-20 text-center" role="alert">
-              <p className="font-semibold text-error">{loadError}</p>
-            </div>
-          )}
-
-          {!isLoading && !loadError && products.length === 0 && (
-            <div className="px-6 py-20 text-center" role="status">
-              <p className="font-semibold">No available products were found.</p>
-            </div>
-          )}
-
-          {!isLoading && !loadError && products.length > 0 && (
-            <div className="grid grid-cols-1 gap-5 p-4 sm:p-6 md:grid-cols-2 lg:grid-cols-3 lg:p-10">
-              {products.map((item) => (
-                <ProductItem key={item._id} item={item} />
-              ))}
-            </div>
-          )}
+          <div className="grid gap-5 p-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {products.map((item) => (
+              <ProductItem key={item._id} item={item} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

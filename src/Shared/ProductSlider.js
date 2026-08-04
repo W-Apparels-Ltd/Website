@@ -5,7 +5,6 @@ import arrow from "../images/Untitled__1_-removebg-preview.png";
 import ProductItem from "./ProductItem";
 import { Link } from "react-router-dom";
 import { fetchProducts } from "../services/productApi";
-import { filterProductsWithValidImages } from "../utils/productImageValidation";
 
 const ProductSlider = () => {
   const [products, setProducts] = useState([]);
@@ -19,10 +18,9 @@ const ProductSlider = () => {
         const productList = await fetchProducts({
           signal: controller.signal,
         });
-        const validProducts = await filterProductsWithValidImages(productList);
 
         if (isActive) {
-          setProducts(validProducts);
+          setProducts(productList);
         }
       } catch (error) {
         if (!isActive || error?.name === "AbortError") {

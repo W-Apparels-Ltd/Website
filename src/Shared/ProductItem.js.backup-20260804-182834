@@ -1,0 +1,62 @@
+import React, { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import { normalizeProductImages } from "../utils/productImageValidation";
+
+const ProductItem = ({ item, product }) => {
+  const productData = item || product || {};
+  const imageList = useMemo(
+    () => normalizeProductImages(productData.img),
+    [productData.img],
+  );
+  const preferredImages = useMemo(
+    () => [imageList[1], imageList[0]].filter(Boolean),
+    [imageList],
+  );
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    setImageIndex(0);
+  }, [productData._id, preferredImages]);
+
+  if (!productData._id || preferredImages.length === 0) {
+    return null;
+  }
+
+  const productImage = preferredImages[imageIndex];
+
+  if (!productImage) {
+    return null;
+  }
+
+  const handleImageError = () => {
+    setImageIndex((currentIndex) => currentIndex + 1);
+  };
+
+  return (
+    <article className="card m-5 bg-base-100 shadow-xl">
+      <figure>
+        <img
+          className="h-[250px] object-contain p-5"
+          src={productImage}
+          alt={productData.label || "Product"}
+          loading="lazy"
+          onError={handleImageError}
+        />
+      </figure>
+      <div className="m-5 text-center">
+        <h2 className="font-bold">{productData.label}</h2>
+        {productData.size && <p className="mb-2">Size: {productData.size}</p>}
+        <div>
+          <Link
+            className="btn btn-primary btn-sm"
+            to={`/productgallery/${encodeURIComponent(productData._id)}`}
+          >
+            Inquire Now
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
+
+export default ProductItem;
