@@ -18,7 +18,7 @@ const OurCertificates = () => {
       img: client1,
     },
     {
-      _id: 2,
+      _id: 1,
       img: client2,
     },
 
@@ -47,8 +47,6 @@ const OurCertificates = () => {
       img: client8,
     },
   ];
-  const firstRowCertificates = allimg.slice(0, 4);
-  const secondRowCertificates = allimg.slice(4);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -80,13 +78,13 @@ const OurCertificates = () => {
             Our Certificates
           </h1>
         </div>
-        <div className="my-10 space-y-8">
+        <div className="my-10">
           <Carousel
             responsive={responsive}
             additionalTransfrom={0}
             arrows={false}
             autoPlay
-            autoPlaySpeed={3000}
+            autoPlaySpeed={1000}
             centerMode={false}
             className=""
             containerClass="container-with-dots"
@@ -105,38 +103,7 @@ const OurCertificates = () => {
             shouldResetAutoplay
             swipeable
           >
-            {firstRowCertificates.map((item) => (
-              <OurCertificatesPic
-                key={item._id}
-                item={item}
-              ></OurCertificatesPic>
-            ))}
-          </Carousel>
-          <Carousel
-            responsive={responsive}
-            additionalTransfrom={0}
-            arrows={false}
-            autoPlay
-            autoPlaySpeed={3000}
-            centerMode={false}
-            className=""
-            containerClass="container-with-dots"
-            dotListClass=""
-            draggable
-            focusOnSelect
-            infinite
-            itemClass=""
-            keyBoardControl
-            renderArrowsWhenDisabled={false}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            rewind={false}
-            rewindWithAnimation={false}
-            rtl
-            shouldResetAutoplay
-            swipeable
-          >
-            {secondRowCertificates.map((item) => (
+            {allimg.map((item) => (
               <OurCertificatesPic
                 key={item._id}
                 item={item}
