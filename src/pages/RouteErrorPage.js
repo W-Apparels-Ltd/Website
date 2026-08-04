@@ -1,8 +1,11 @@
 import React from "react";
-import { isRouteErrorResponse, useRouteError } from "react-router-dom";
+import { isRouteErrorResponse, useLocation, useRouteError } from "react-router-dom";
+import Seo from "../seo/Seo";
+import { SITE_NAME } from "../seo/siteConfig";
 
 const RouteErrorPage = () => {
   const error = useRouteError();
+  const location = useLocation();
   const status = isRouteErrorResponse(error) ? error.status : 500;
   const isNotFound = status === 404;
 
@@ -11,7 +14,14 @@ const RouteErrorPage = () => {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-slate-950 px-4 py-16 font-Nunito text-white">
+    <>
+      <Seo
+        title={`${isNotFound ? "Page not found" : "Page error"} | ${SITE_NAME}`}
+        description="This page is unavailable and should not appear in public search results."
+        path={location.pathname}
+        noIndex
+      />
+      <main className="flex min-h-screen items-center justify-center bg-slate-950 px-4 py-16 font-Nunito text-white">
       <section className="w-full max-w-xl rounded-2xl border border-white/10 bg-white/5 p-6 text-center shadow-2xl backdrop-blur sm:p-10">
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-primary">
           Error {status}
@@ -38,6 +48,7 @@ const RouteErrorPage = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

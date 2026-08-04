@@ -3,17 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000033" />
-    <meta
-      name="description"
-      content="W. Apparels Ltd. is a Bangladesh-based export-oriented knit and woven garment manufacturer serving international apparel markets."
-    />
-    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#00052a" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="author" content="W. Apparels Ltd." />
     <meta name="application-name" content="W. Apparels Ltd." />
     <meta name="apple-mobile-web-app-title" content="W. Apparels Ltd." />
+    <meta
+      name="description"
+      content="W. Apparels Ltd. is a Bangladesh-based, export-oriented knit and woven garment manufacturer serving international apparel markets."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta
+      name="googlebot"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
 
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="any" />
-
     <link
       rel="icon"
       type="image/png"
@@ -23,13 +33,8 @@
     <link
       rel="icon"
       type="image/png"
-      sizes="192x192"
-      href="%PUBLIC_URL%/logo192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="%PUBLIC_URL%/logo512.png"
+      sizes="96x96"
+      href="%PUBLIC_URL%/favicon-96x96.png"
     />
     <link
       rel="apple-touch-icon"
@@ -37,18 +42,43 @@
       href="%PUBLIC_URL%/apple-touch-icon.png"
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="canonical" href="https://www.wapparels.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://i.ibb.co" />
 
+    <meta property="og:site_name" content="W. Apparels Ltd." />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="W. Apparels Ltd." />
+    <meta
+      property="og:title"
+      content="W. Apparels Ltd. | Knit &amp; Woven Garment Manufacturer"
+    />
     <meta
       property="og:description"
       content="Export-oriented knit and woven garment manufacturing from Bangladesh."
     />
     <meta property="og:url" content="https://www.wapparels.com/" />
-    <meta property="og:image" content="https://www.wapparels.com/logo512.png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
+    <meta property="og:image" content="https://www.wapparels.com/og-image.png" />
+    <meta
+      property="og:image:secure_url"
+      content="https://www.wapparels.com/og-image.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="W. Apparels Ltd." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="W. Apparels Ltd. | Knit &amp; Woven Garment Manufacturer"
+    />
+    <meta
+      name="twitter:description"
+      content="Export-oriented knit and woven garment manufacturing from Bangladesh."
+    />
+    <meta name="twitter:image" content="https://www.wapparels.com/og-image.png" />
+    <meta name="twitter:image:alt" content="W. Apparels Ltd." />
 
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -64,32 +94,68 @@
             "@id": "https://www.wapparels.com/#website",
             "url": "https://www.wapparels.com/",
             "name": "W. Apparels Ltd.",
-            "alternateName": "Wapparels"
+            "alternateName": ["W. Apparels", "W Apparels Ltd"],
+            "description": "Export-oriented knit and woven garment manufacturing from Bangladesh.",
+            "publisher": {
+              "@id": "https://www.wapparels.com/#organization"
+            },
+            "inLanguage": "en"
           },
           {
             "@type": "Organization",
             "@id": "https://www.wapparels.com/#organization",
             "name": "W. Apparels Ltd.",
+            "legalName": "W. Apparels Ltd.",
+            "alternateName": ["W. Apparels", "W Apparels Ltd"],
             "url": "https://www.wapparels.com/",
-            "logo": "https://www.wapparels.com/logo512.png",
+            "description": "A Bangladesh-based, export-oriented knit and woven garment manufacturer established in 1992.",
+            "foundingDate": "1992",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://www.wapparels.com/#logo",
+              "url": "https://www.wapparels.com/logo512.png",
+              "contentUrl": "https://www.wapparels.com/logo512.png",
+              "width": 512,
+              "height": 512,
+              "caption": "W. Apparels Ltd."
+            },
+            "image": {
+              "@id": "https://www.wapparels.com/#logo"
+            },
             "email": "info@wapparels.com",
-            "telephone": "+880-2-9181198",
+            "telephone": "+88029181198",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "295/JA/4, Rayer Bazar",
               "addressLocality": "Dhaka",
               "postalCode": "1209",
               "addressCountry": "BD"
-            }
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+88029181198",
+              "email": "info@wapparels.com",
+              "contactType": "customer service",
+              "availableLanguage": ["English", "Bengali"]
+            },
+            "areaServed": "Worldwide",
+            "sameAs": [
+              "https://www.linkedin.com/company/w-apparels-ltd/",
+              "https://www.facebook.com/profile.php?id=100063651540871"
+            ]
           }
         ]
       }
     </script>
 
-    <title>W. Apparels Ltd. | Knit & Woven Garment Manufacturer</title>
+    <title>W. Apparels Ltd. | Knit &amp; Woven Garment Manufacturer</title>
+    <meta name="google-site-verification" content="mZGCPO4qs8jhjZiDwA3llqi5CNXa2Rqq-Jli_IqZiBs" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      W. Apparels Ltd. requires JavaScript to display this website. Please
+      enable JavaScript and reload the page.
+    </noscript>
     <div id="root"></div>
   </body>
 </html>

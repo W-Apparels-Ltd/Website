@@ -1,27 +1,32 @@
 {
+  "id": "/",
   "short_name": "W. Apparels",
   "name": "W. Apparels Ltd.",
+  "description": "Export-oriented knit and woven garment manufacturer based in Bangladesh.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#00052a",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "16x16 32x32 48x48",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "any"
     },
     {
-      "src": "logo192.png",
+      "src": "brand-icon-192.png",
       "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "logo512.png",
+      "src": "brand-icon-512.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
-  ],
-  "start_url": "/",
-  "display": "standalone",
-  "theme_color": "#000033",
-  "background_color": "#ffffff"
+  ]
 }

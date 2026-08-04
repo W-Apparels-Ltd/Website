@@ -8,9 +8,159 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/login",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/meettheteam",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/addproduct",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/building",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/wapparelltd",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/quality-apparels",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/3na-fashion",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/teams",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/career",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/careerForm",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/costing",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/productgallery{,/**}",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/safetymeasures",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/medicalfacilities",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/childcare",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/firetraining",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/fireaidtraining",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/foodfacilities",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "headers": [
+      {
+        "source": "/index.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "404.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300"
+          },
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow, noarchive"
+          }
+        ]
+      },
+      {
+        "source": "/static/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "/@(favicon.ico|favicon-48x48.png|favicon-96x96.png|apple-touch-icon.png|brand-icon-192.png|brand-icon-512.png|logo192.png|logo512.png|og-image.png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=604800"
+          }
+        ]
+      },
+      {
+        "source": "/@(robots.txt|sitemap.xml|manifest.json)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "/@(login|addproduct|costing|careerForm|teams|safetymeasures|medicalfacilities|childcare|firetraining|fireaidtraining|foodfacilities)",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow, noarchive"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "Permissions-Policy",
+            "value": "camera=(), microphone=(), geolocation=()"
+          }
+        ]
+      }
+    ],
+    "trailingSlash": false
   }
 }

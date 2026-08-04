@@ -3,16 +3,26 @@ import {
   Link,
   isRouteErrorResponse,
   useRouteError,
+  useLocation,
 } from "react-router-dom";
 import bg from "../images/factory_purpose/1.jpg";
 import Nav from "./Nav";
+import Seo from "../seo/Seo";
+import { SITE_NAME } from "../seo/siteConfig";
 
 const ProductDetailsError = () => {
   const error = useRouteError();
+  const location = useLocation();
   const isNotFound = isRouteErrorResponse(error) && error.status === 404;
 
   return (
     <>
+      <Seo
+        title={`${isNotFound ? "Product unavailable" : "Unable to load product"} | ${SITE_NAME}`}
+        description="This product page is unavailable and should not appear in public search results."
+        path={location.pathname}
+        noIndex
+      />
       <Nav />
       <main
         style={{ backgroundImage: `url(${bg})` }}

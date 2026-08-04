@@ -5,6 +5,8 @@ import bg from "../images/factory_purpose/1.jpg";
 import Nav from "./Nav";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import ErrorModal from "../modal/ErrorModal";
+import Seo from "../seo/Seo";
+import { SITE_NAME, SITE_URL, buildCanonicalUrl } from "../seo/siteConfig";
 import {
   normalizeProductImages,
   validateImageUrl,
@@ -29,6 +31,7 @@ const ProductDetails = () => {
   const product = useLoaderData() || {};
   const navigate = useNavigate();
   const {
+    _id = "",
     label = "",
     size = "",
     img,
@@ -38,6 +41,96 @@ const ProductDetails = () => {
   const imageList = useMemo(() => normalizeProductImages(img), [img]);
   const productFabricType =
     typeof fabrictype === "string" ? fabrictype.trim() : "";
+  const productPath = `/productgallery/${encodeURIComponent(_id)}`;
+  const productTitle = `${label || "Apparel Product"} | ${SITE_NAME}`;
+  const productDescription = [
+    label ? `View ${label}` : "View this apparel product",
+    productFabricType ? `made with ${productFabricType}` : "from W. Apparels Ltd.",
+    size ? `in size ${size}` : "",
+    "and send a product inquiry.",
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const productCanonicalUrl = buildCanonicalUrl(productPath);
+  const productSeoData = useMemo(
+    () => [
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemPage",
+        "@id": `${productCanonicalUrl}#webpage`,
+        url: productCanonicalUrl,
+        name: productTitle,
+        description: productDescription,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        mainEntity: {
+          "@type": "Thing",
+          name: label || "Apparel product",
+          description: productDescription,
+          image: imageList,
+          additionalProperty: [
+            productFabricType
+              ? {
+                  "@type": "PropertyValue",
+                  name: "Fabric type",
+                  value: productFabricType,
+                }
+              : null,
+            size
+              ? {
+                  "@type": "PropertyValue",
+                  name: "Size",
+                  value: size,
+                }
+              : null,
+          ].filter(Boolean),
+        },
+        primaryImageOfPage: imageList[0]
+          ? {
+              "@type": "ImageObject",
+              contentUrl: imageList[0],
+              caption: label || "Apparel product",
+            }
+          : undefined,
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        inLanguage: "en",
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: `${SITE_URL}/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Product Gallery",
+            item: `${SITE_URL}/productgallery`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: label || "Product Details",
+            item: productCanonicalUrl,
+          },
+        ],
+      },
+    ],
+    [
+      imageList,
+      label,
+      productCanonicalUrl,
+      productDescription,
+      productFabricType,
+      productTitle,
+      size,
+    ],
+  );
   const selectableFabricOptions = useMemo(() => {
     if (!productFabricType || FABRIC_OPTIONS.includes(productFabricType)) {
       return FABRIC_OPTIONS;
@@ -208,6 +301,15 @@ const ProductDetails = () => {
 
   return (
     <>
+      <Seo
+        title={productTitle}
+        description={productDescription}
+        path={productPath}
+        image={imageList[0]}
+        imageAlt={label || `${SITE_NAME} apparel product`}
+        type="product"
+        structuredData={productSeoData}
+      />
       <Nav />
       <main
         style={{ backgroundImage: `url(${bg})` }}

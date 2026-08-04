@@ -1,31 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { getBuildingById } from '../data/buildings';
 
 const BuildingDetails = ({ buildingId }) => {
   const building = getBuildingById(buildingId);
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
-
-    if (!building) {
-      return undefined;
-    }
-
-    const previousTitle = document.title;
-    const descriptionElement = document.querySelector('meta[name="description"]');
-    const previousDescription = descriptionElement?.getAttribute('content');
-
-    document.title = `${building.name} | W. Apparels Ltd.`;
-    descriptionElement?.setAttribute('content', building.shortDescription);
-
-    return () => {
-      document.title = previousTitle;
-      if (descriptionElement && previousDescription) {
-        descriptionElement.setAttribute('content', previousDescription);
-      }
-    };
-  }, [building]);
 
   if (!building) {
     return null;

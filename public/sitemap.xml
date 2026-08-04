@@ -1,11 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.wapparels.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.wapparels.com/building</loc><priority>0.8</priority></url>
-  <url><loc>https://www.wapparels.com/BUILDING1</loc><priority>0.7</priority></url>
-  <url><loc>https://www.wapparels.com/BUILDING2</loc><priority>0.7</priority></url>
-  <url><loc>https://www.wapparels.com/BUILDING3</loc><priority>0.7</priority></url>
-  <url><loc>https://www.wapparels.com/productgallery</loc><priority>0.8</priority></url>
-  <url><loc>https://www.wapparels.com/meettheteam</loc><priority>0.6</priority></url>
-  <url><loc>https://www.wapparels.com/career</loc><priority>0.6</priority></url>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://www.wapparels.com/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.wapparels.com/logo512.png</image:loc>
+      <image:title>W. Apparels Ltd. logo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wapparels.com/building</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wapparels.com/wapparelltd</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wapparels.com/quality-apparels</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wapparels.com/3na-fashion</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wapparels.com/productgallery</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.wapparels.com/meettheteam</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.wapparels.com/career</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
