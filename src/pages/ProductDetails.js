@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Thankyoumodal from "../modal/Thankyoumodal";
 import bg from "../images/factory_purpose/1.jpg";
 import Nav from "./Nav";
@@ -29,7 +29,6 @@ const ProductDetails = () => {
   const product = useLoaderData() || {};
   const navigate = useNavigate();
   const {
-    _id: productId,
     label = "",
     size = "",
     img,
@@ -212,219 +211,187 @@ const ProductDetails = () => {
       <Nav />
       <main
         style={{ backgroundImage: `url(${bg})` }}
-        className="min-h-screen bg-cover bg-center font-Nunito"
+        className="relative mx-auto min-h-screen w-full bg-cover font-Nunito"
       >
-        <div className="min-h-screen bg-black/75 px-4 pb-12 pt-24 text-white sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-8 text-center">
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-200">
-                Product Gallery
-              </p>
-              <h1 className="mt-2 text-3xl font-bold sm:text-4xl">
-                Product Details
-              </h1>
-            </div>
-
-            {isValidatingImages ? (
-              <div
-                className="flex min-h-[420px] items-center justify-center"
-                role="status"
-                aria-live="polite"
-              >
-                <span
-                  className="loading loading-spinner loading-lg"
-                  aria-hidden="true"
-                />
-                <span className="ml-3 font-semibold">Loading product...</span>
-              </div>
-            ) : (
-              <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(360px,520px)]">
-                <section className="rounded-xl bg-black/30 p-4 shadow-2xl backdrop-blur-sm sm:p-6">
-                  <div className="flex flex-col gap-4 sm:flex-row">
-                    <div className="order-2 flex gap-3 overflow-x-auto sm:order-1 sm:w-20 sm:flex-col">
-                      {validImages.map((imageUrl, index) => (
-                        <button
-                          key={imageUrl}
-                          type="button"
-                          className={`shrink-0 rounded-lg border-2 bg-white/10 p-1 transition hover:-translate-y-0.5 hover:scale-105 ${
-                            pic === imageUrl
-                              ? "border-white"
-                              : "border-white/30"
-                          }`}
-                          onClick={() => changePic(imageUrl)}
-                          aria-label={`Show ${label || "product"} image ${
-                            index + 1
-                          }`}
-                          aria-pressed={pic === imageUrl}
-                        >
-                          <img
-                            className="h-16 w-16 object-contain"
-                            src={imageUrl}
-                            alt=""
-                            onError={() =>
-                              navigate("/productgallery", { replace: true })
-                            }
-                          />
-                        </button>
-                      ))}
-                    </div>
-
-                    <div className="order-1 flex min-h-[360px] flex-1 items-center justify-center overflow-hidden rounded-xl bg-white sm:order-2">
-                      <TransformWrapper>
-                        <TransformComponent>
-                          <img
-                            className="max-h-[520px] w-full object-contain p-4"
-                            src={pic}
-                            alt={label || "Product preview"}
-                            onError={() =>
-                              navigate("/productgallery", { replace: true })
-                            }
-                          />
-                        </TransformComponent>
-                      </TransformWrapper>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 rounded-lg bg-black/35 p-5">
-                    <h2 className="text-2xl font-bold sm:text-3xl">{label}</h2>
-                    <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2 sm:text-base">
-                      {productFabricType && (
-                        <div>
-                          <dt className="font-bold text-blue-200">
-                            Fabric Type
-                          </dt>
-                          <dd className="mt-1">{productFabricType}</dd>
-                        </div>
-                      )}
-                      {size && (
-                        <div>
-                          <dt className="font-bold text-blue-200">Size</dt>
-                          <dd className="mt-1">{size}</dd>
-                        </div>
-                      )}
-                    </dl>
-                    <Link
-                      to="/productgallery"
-                      className="btn btn-ghost btn-sm mt-5 text-white"
-                    >
-                      Back to Product Gallery
-                    </Link>
-                  </div>
-                </section>
-
-                <section className="card w-full bg-base-100 text-base-content shadow-2xl">
-                  <form onSubmit={handleSubmit} className="card-body p-5 sm:p-8">
-                    <div className="mb-1">
-                      <h2 className="text-2xl font-bold">
-                        Send Product Inquiry
-                      </h2>
-                      <p className="mt-1 text-sm text-gray-600">
-                        Complete the form below and our team will contact you.
-                      </p>
-                    </div>
-
-                    <div className="form-control">
-                      <label className="label" htmlFor="inquiry-fabric-type">
-                        <span className="label-text font-bold">
-                          Fabric Type
-                        </span>
-                      </label>
-                      <select
-                        id="inquiry-fabric-type"
-                        name="fabrictype"
-                        className="select select-bordered"
-                        defaultValue={productFabricType}
-                        required
-                        disabled={isSubmitting}
-                      >
-                        <option value="" disabled>
-                          Select a fabric type
-                        </option>
-                        {selectableFabricOptions.map((fabricOption) => (
-                          <option key={fabricOption} value={fabricOption}>
-                            {fabricOption}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div className="form-control">
-                      <label className="label" htmlFor="inquiry-name">
-                        <span className="label-text font-bold">Name</span>
-                      </label>
-                      <input
-                        id="inquiry-name"
-                        type="text"
-                        name="name"
-                        placeholder="Enter your full name"
-                        maxLength={100}
-                        className="input input-bordered"
-                        autoComplete="name"
-                        required
-                        disabled={isSubmitting}
-                      />
-                    </div>
-
-                    <div className="form-control">
-                      <label className="label" htmlFor="inquiry-email">
-                        <span className="label-text font-bold">Email</span>
-                      </label>
-                      <input
-                        id="inquiry-email"
-                        type="email"
-                        name="email"
-                        placeholder="Enter your email address"
-                        maxLength={254}
-                        className="input input-bordered"
-                        autoComplete="email"
-                        required
-                        disabled={isSubmitting}
-                      />
-                    </div>
-
-                    <div className="form-control">
-                      <label className="label" htmlFor="inquiry-message">
-                        <span className="label-text font-bold">Message</span>
-                      </label>
-                      <textarea
-                        id="inquiry-message"
-                        name="message"
-                        rows={5}
-                        placeholder="Write your inquiry here"
-                        maxLength={5000}
-                        className="textarea textarea-bordered"
-                        required
-                        disabled={isSubmitting}
-                      />
-                    </div>
-
-                    <button
-                      className="btn btn-primary mt-2 w-full"
-                      type="submit"
-                      disabled={isSubmitting}
-                      aria-live="polite"
-                    >
-                      {isSubmitting && (
-                        <span
-                          className="loading loading-spinner loading-sm"
-                          aria-hidden="true"
-                        />
-                      )}
-                      {isSubmitting ? "SENDING..." : "SEND INQUIRY"}
-                    </button>
-                  </form>
-                </section>
-              </div>
-            )}
+        <div className="min-h-screen bg-black/75 text-white">
+          <div className="pt-10 text-center lg:py-5">
+            <h1 className="mt-8 text-3xl font-bold">Product Details</h1>
           </div>
+
+          {isValidatingImages ? (
+            <div
+              className="flex min-h-[420px] items-center justify-center"
+              role="status"
+              aria-live="polite"
+            >
+              <span
+                className="loading loading-spinner loading-lg"
+                aria-hidden="true"
+              />
+              <span className="ml-3 font-semibold">Loading product...</span>
+            </div>
+          ) : (
+            <div className="flex flex-col items-center gap-8 px-4 pb-10 lg:flex-row lg:items-start lg:justify-around lg:gap-6 lg:px-8">
+              <section className="w-full lg:w-auto">
+                <div className="flex flex-col justify-center lg:flex-row">
+                  <div className="flex flex-row lg:flex-col">
+                    {validImages.slice(0, 2).map((imageUrl, index) => (
+                      <button
+                        key={imageUrl}
+                        type="button"
+                        className="mr-2 mb-3 cursor-pointer rounded border-2 bg-transparent p-1 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 lg:mr-0"
+                        onClick={() => changePic(imageUrl)}
+                        aria-label={`Show ${label || "product"} image ${index + 1}`}
+                        aria-pressed={pic === imageUrl}
+                      >
+                        <img
+                          className="h-12 w-18 object-contain"
+                          src={imageUrl}
+                          alt={`${label || "Product"} preview ${index + 1}`}
+                          onError={() =>
+                            navigate("/productgallery", { replace: true })
+                          }
+                        />
+                      </button>
+                    ))}
+                  </div>
+
+                  <TransformWrapper>
+                    <TransformComponent>
+                      <img
+                        className="h-80 max-w-full object-contain"
+                        src={pic || validImages[0] || ""}
+                        alt={label || "Product preview"}
+                        onError={() =>
+                          navigate("/productgallery", { replace: true })
+                        }
+                      />
+                    </TransformComponent>
+                  </TransformWrapper>
+                </div>
+
+                <div className="flex justify-center">
+                  <h2 className="text-center text-3xl font-bold">{label}</h2>
+                </div>
+
+                <div className="flex justify-center">
+                  <div className="card-body py-4 text-center">
+                    {productFabricType && (
+                      <h3>Fabric Type: {productFabricType}</h3>
+                    )}
+                    {size && <h3>Size: {size}</h3>}
+                  </div>
+                </div>
+              </section>
+
+              <section className="card mb-5 w-[90%] max-w-xl flex-shrink-0 bg-base-100 text-black shadow-2xl lg:mb-0 lg:w-1/2">
+                <form onSubmit={handleSubmit} className="card-body">
+                  <div className="mb-1">
+                    <h2 className="text-2xl font-bold">Send Product Inquiry</h2>
+                    <p className="mt-1 text-sm text-gray-600">
+                      Complete the form below and our team will contact you.
+                    </p>
+                  </div>
+
+                  <div className="form-control">
+                    <label className="label" htmlFor="inquiry-fabric-type">
+                      <span className="label-text font-bold">Fabric Type</span>
+                    </label>
+                    <select
+                      id="inquiry-fabric-type"
+                      name="fabrictype"
+                      className="select select-bordered"
+                      defaultValue={productFabricType}
+                      required
+                      disabled={isSubmitting}
+                    >
+                      <option value="" disabled>
+                        Select a fabric type
+                      </option>
+                      {selectableFabricOptions.map((fabricOption) => (
+                        <option key={fabricOption} value={fabricOption}>
+                          {fabricOption}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="form-control">
+                    <label className="label" htmlFor="inquiry-name">
+                      <span className="label-text font-bold">Name</span>
+                    </label>
+                    <input
+                      id="inquiry-name"
+                      type="text"
+                      name="name"
+                      placeholder="Enter your full name"
+                      maxLength={100}
+                      className="input input-bordered"
+                      autoComplete="name"
+                      required
+                      disabled={isSubmitting}
+                    />
+                  </div>
+
+                  <div className="form-control">
+                    <label className="label" htmlFor="inquiry-email">
+                      <span className="label-text font-bold">Email</span>
+                    </label>
+                    <input
+                      id="inquiry-email"
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email address"
+                      maxLength={254}
+                      className="input input-bordered"
+                      autoComplete="email"
+                      required
+                      disabled={isSubmitting}
+                    />
+                  </div>
+
+                  <div className="form-control">
+                    <label className="label" htmlFor="inquiry-message">
+                      <span className="label-text font-bold">Message</span>
+                    </label>
+                    <textarea
+                      id="inquiry-message"
+                      name="message"
+                      rows={5}
+                      placeholder="Write your inquiry here"
+                      maxLength={5000}
+                      className="textarea textarea-bordered"
+                      required
+                      disabled={isSubmitting}
+                    />
+                  </div>
+
+                  <button
+                    className="btn btn-primary w-full"
+                    type="submit"
+                    disabled={isSubmitting}
+                    aria-live="polite"
+                  >
+                    {isSubmitting && (
+                      <span
+                        className="loading loading-spinner loading-sm"
+                        aria-hidden="true"
+                      />
+                    )}
+                    {isSubmitting ? "SENDING..." : "SEND INQUIRY"}
+                  </button>
+                </form>
+              </section>
+            </div>
+          )}
+
+          <Thankyoumodal open={open} handleClick={handleClick} />
+          <ErrorModal
+            openError={openError}
+            handleClickError={handleClickError}
+          />
         </div>
       </main>
-
-      <Thankyoumodal open={open} handleClick={handleClick} />
-      <ErrorModal
-        openError={openError}
-        handleClickError={handleClickError}
-      />
     </>
   );
 };
