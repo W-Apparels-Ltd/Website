@@ -316,7 +316,7 @@ const ProductDetails = () => {
         className="relative mx-auto min-h-screen w-full bg-cover font-Nunito"
       >
         <div className="min-h-screen bg-black/75 text-white">
-          <div className="pt-10 text-center lg:py-5">
+          <div className="py-10 text-center lg:py-20">
             <h1 className="mt-8 text-3xl font-bold">Product Details</h1>
           </div>
 
