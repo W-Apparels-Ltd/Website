@@ -53,12 +53,12 @@ const OurCertificates = () => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1024 },
-      items: 4,
+      items: 8,
       partialVisibilityGutter: 40,
     },
     desktop: {
       breakpoint: { max: 1024, min: 701 },
-      items: 3,
+      items: 8,
       partialVisibilityGutter: 40,
     },
     tablet: {
@@ -80,69 +80,41 @@ const OurCertificates = () => {
             Our Certificates
           </h1>
         </div>
-        <div className="my-10 space-y-8">
+        <div className="my-10">
           <Carousel
             responsive={responsive}
-            additionalTransfrom={0}
-            arrows={false}
-            autoPlay
-            autoPlaySpeed={3000}
-            centerMode={false}
-            className=""
-            containerClass="container-with-dots"
-            dotListClass=""
-            draggable
-            focusOnSelect
             infinite
-            itemClass=""
-            keyBoardControl
-            renderArrowsWhenDisabled={false}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            rewind={false}
-            rewindWithAnimation={false}
-            rtl={false}
-            shouldResetAutoplay
-            swipeable
+            autoPlay
+            autoPlaySpeed={1}
+            transitionDuration={10000}
+            customTransition="transform 10s linear"
+            arrows={false}
+            draggable={false}
+            swipeable={false}
+            keyBoardControl={false}
           >
-            {firstRowCertificates.map((item) => (
-              <OurCertificatesPic
-                key={item._id}
-                item={item}
-              ></OurCertificatesPic>
+            {allimg.map((item) => (
+              <OurCertificatesPic key={item._id} item={item} />
             ))}
           </Carousel>
-          <Carousel
+
+          {/* <Carousel
             responsive={responsive}
-            additionalTransfrom={0}
-            arrows={false}
-            autoPlay
-            autoPlaySpeed={3000}
-            centerMode={false}
-            className=""
-            containerClass="container-with-dots"
-            dotListClass=""
-            draggable
-            focusOnSelect
             infinite
-            itemClass=""
-            keyBoardControl
-            renderArrowsWhenDisabled={false}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            rewind={false}
-            rewindWithAnimation={false}
-            rtl
-            shouldResetAutoplay
-            swipeable
+            autoPlay
+            autoPlaySpeed={1}
+            transitionDuration={12000}
+            customTransition="transform 12s linear"
+            arrows={false}
+            draggable={false}
+            swipeable={false}
+            keyBoardControl={false}
+            rtl={false}
           >
             {secondRowCertificates.map((item) => (
-              <OurCertificatesPic
-                key={item._id}
-                item={item}
-              ></OurCertificatesPic>
+              <OurCertificatesPic key={item._id} item={item} />
             ))}
-          </Carousel>
+          </Carousel> */}
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ const Nav = () => {
   const data = [
     { title: "About Us", goto: "/#aboutus", target: "" },
     { title: "Our Profile", goto: PROFILE_URL, target: "_blank" },
-    { title: "Products", goto: "/#products", target: "" },
+    { title: "Products", goto: "/productgallery", target: "" },
     { title: "Facilities", goto: "/#facilities", target: "" },
     { title: "Our Clients", goto: "/#ourclients", target: "" },
     { title: "Our Leaders", goto: "/meettheteam", target: "" },
@@ -81,7 +81,7 @@ const Nav = () => {
                 </a>
               </li>
               <li>
-                <HashLink smooth to="/#products">
+                <HashLink smooth to="/productgallery">
                   Products
                 </HashLink>
               </li>
@@ -127,7 +127,7 @@ const Nav = () => {
               </a>
             </li>
             <li className="rounded-xl hover:bg-[rgba(1,1,1,0.7)] hover:text-[#b8b8b8]">
-              <HashLink smooth to="/#products">
+              <HashLink smooth to="/productgallery">
                 Products
               </HashLink>
             </li>
