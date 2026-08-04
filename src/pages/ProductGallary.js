@@ -1,49 +1,104 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bg from "../images/factory_purpose/1.jpg";
-import { useState } from "react";
-import { useEffect } from "react";
 import ProductItem from "../Shared/ProductItem";
-
-const BLOCKED_PRODUCT_IDS = new Set([
-  "651bdc092023da937f74738f",
-  "651bdc7e2023da937f747390",
-  "6a6dcfb3241aa6f2ec8e01e2",
-]);
+import { fetchProducts } from "../services/productApi";
+import { filterProductsWithValidImages } from "../utils/productImageValidation";
 
 const ProductGallary = () => {
-  const [product, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState("");
+
   useEffect(() => {
-    fetch("https://wapparels-server.vercel.app/products")
-      .then((res) => res.json())
-      .then((data) =>
-        setProduct(
-          Array.isArray(data)
-            ? data.filter((item) => !BLOCKED_PRODUCT_IDS.has(String(item._id)))
-            : [],
-        ),
-      );
+    const controller = new AbortController();
+    let isActive = true;
+
+    const loadProducts = async () => {
+      setIsLoading(true);
+      setLoadError("");
+
+      try {
+        const productList = await fetchProducts({
+          signal: controller.signal,
+        });
+        const validProducts = await filterProductsWithValidImages(productList);
+
+        if (isActive) {
+          setProducts(validProducts);
+        }
+      } catch (error) {
+        if (!isActive || error?.name === "AbortError") {
+          return;
+        }
+
+        console.error("Unable to load product gallery:", error);
+        setProducts([]);
+        setLoadError("Products could not be loaded. Please try again later.");
+      } finally {
+        if (isActive) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    loadProducts();
+
+    return () => {
+      isActive = false;
+      controller.abort();
+    };
   }, []);
+
   return (
     <div
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${bg})`,
       }}
-      className="  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg"
+      className="mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg"
     >
       <div>
         <div className="p-20 text-center">
-          <h1 className="lg:text-4xl md:text-3xl text-2xl text-white font-bold mt-5">
+          <h1 className="mt-5 text-2xl font-bold text-white md:text-3xl lg:text-4xl">
             Welcome to Product Gallery
           </h1>
         </div>
       </div>
-      <div className="lg:mt-20 mt-5 rounded-xl">
-        <div className="bg-base-200 ">
-          <div className=" grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 p-10">
-            {product.map((item) => (
-              <ProductItem key={item._id} item={item}></ProductItem>
-            ))}
-          </div>
+
+      <div className="mt-5 rounded-xl lg:mt-20">
+        <div className="bg-base-200">
+          {isLoading && (
+            <div
+              className="flex min-h-[320px] items-center justify-center"
+              role="status"
+              aria-live="polite"
+            >
+              <span
+                className="loading loading-spinner loading-lg text-primary"
+                aria-hidden="true"
+              />
+              <span className="ml-3 font-semibold">Loading products...</span>
+            </div>
+          )}
+
+          {!isLoading && loadError && (
+            <div className="px-6 py-20 text-center" role="alert">
+              <p className="font-semibold text-error">{loadError}</p>
+            </div>
+          )}
+
+          {!isLoading && !loadError && products.length === 0 && (
+            <div className="px-6 py-20 text-center" role="status">
+              <p className="font-semibold">No available products were found.</p>
+            </div>
+          )}
+
+          {!isLoading && !loadError && products.length > 0 && (
+            <div className="grid grid-cols-1 gap-5 p-4 sm:p-6 md:grid-cols-2 lg:grid-cols-3 lg:p-10">
+              {products.map((item) => (
+                <ProductItem key={item._id} item={item} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

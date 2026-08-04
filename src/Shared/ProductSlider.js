@@ -4,29 +4,46 @@ import "react-multi-carousel/lib/styles.css";
 import arrow from "../images/Untitled__1_-removebg-preview.png";
 import ProductItem from "./ProductItem";
 import { Link } from "react-router-dom";
-
-const BLOCKED_PRODUCT_IDS = new Set([
-  "651bdc092023da937f74738f",
-  "651bdc7e2023da937f747390",
-  "6a6dcfb3241aa6f2ec8e01e2",
-]);
+import { fetchProducts } from "../services/productApi";
+import { filterProductsWithValidImages } from "../utils/productImageValidation";
 
 const ProductSlider = () => {
-  const [product, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
-    fetch("https://wapparels-server.vercel.app/products")
-      .then((res) => res.json())
-      .then((data) =>
-        setProduct(
-          Array.isArray(data)
-            ? data.filter((item) => !BLOCKED_PRODUCT_IDS.has(String(item._id)))
-            : [],
-        ),
-      );
+    const controller = new AbortController();
+    let isActive = true;
+
+    const loadProducts = async () => {
+      try {
+        const productList = await fetchProducts({
+          signal: controller.signal,
+        });
+        const validProducts = await filterProductsWithValidImages(productList);
+
+        if (isActive) {
+          setProducts(validProducts);
+        }
+      } catch (error) {
+        if (!isActive || error?.name === "AbortError") {
+          return;
+        }
+
+        console.error("Unable to load product slider:", error);
+        setProducts([]);
+      }
+    };
+
+    loadProducts();
+
+    return () => {
+      isActive = false;
+      controller.abort();
+    };
   }, []);
+
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
       partialVisibilityGutter: 40,
@@ -47,15 +64,17 @@ const ProductSlider = () => {
       partialVisibilityGutter: 30,
     },
   };
+
   return (
-    <div id="products" className=" min-h-screen  bg-[#e5e4e2] lg:px-20">
+    <div id="products" className="min-h-screen bg-[#e5e4e2] lg:px-20">
       <div className="pb-20 font-Nunito">
         <div className="p-10 text-center">
-          <h1 className="lg:text-5xl text-2xl md:text-3xl text-primary font-bold">
+          <h1 className="text-2xl font-bold text-primary md:text-3xl lg:text-5xl">
             Apparel Products
           </h1>
         </div>
-        <div>
+
+        {products.length > 0 && (
           <Carousel
             responsive={responsive}
             additionalTransfrom={0}
@@ -80,23 +99,22 @@ const ProductSlider = () => {
             shouldResetAutoplay
             swipeable
           >
-            {product.map((item) => (
-              <ProductItem key={item._id} item={item}></ProductItem>
+            {products.map((item) => (
+              <ProductItem key={item._id} item={item} />
             ))}
           </Carousel>
-        </div>
-        <div className="flex justify-center mt-10">
-          <Link to="/productgallery">
-            <button
-              className="group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-[#000066] py-3 px-7 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg hover:shadow-light-blue-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="button"
-              data-ripple-light="true"
-            >
-              View Product Gallery
-              <span className="absolute right-0 grid h-full w-12 place-items-center bg-[#00004d] transition-colors group-hover:bg-[#000066]">
-                <img src={arrow}></img>
-              </span>
-            </button>
+        )}
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            to="/productgallery"
+            className="group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-[#000066] py-3 px-7 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg hover:shadow-light-blue-500/40 active:opacity-[0.85]"
+            data-ripple-light="true"
+          >
+            View Product Gallery
+            <span className="absolute right-0 grid h-full w-12 place-items-center bg-[#00004d] transition-colors group-hover:bg-[#000066]">
+              <img src={arrow} alt="" />
+            </span>
           </Link>
         </div>
       </div>

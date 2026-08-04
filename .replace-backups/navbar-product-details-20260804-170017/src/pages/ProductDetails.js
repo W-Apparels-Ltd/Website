@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import Thankyoumodal from "../modal/Thankyoumodal";
 import bg from "../images/factory_purpose/1.jpg";
-import Nav from "./Nav";
+import Nav2 from "./Nav2";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import ErrorModal from "../modal/ErrorModal";
 import {
@@ -209,7 +209,7 @@ const ProductDetails = () => {
 
   return (
     <>
-      <Nav />
+      <Nav2 />
       <main
         style={{ backgroundImage: `url(${bg})` }}
         className="min-h-screen bg-cover bg-center font-Nunito"
