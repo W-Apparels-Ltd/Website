@@ -1,5 +1,9 @@
 import "./App.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import Main from "./Layout/Main";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -21,15 +25,15 @@ import ChildCare from "./pages/ChildCare";
 import FireTraining from "./pages/FireTraining";
 import FirstAidTraining from "./pages/FirstAidTraining";
 import FoodFacilities from "./pages/FoodFacilities";
-import NotFound from "./pages/NotFound";
-import RouteErrorPage from "./pages/RouteErrorPage";
-import { productDetailsLoader } from "./services/productApi";
+import {
+  legacyProductRedirectLoader,
+  productDetailsLoader,
+} from "./services/productApi";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    errorElement: <RouteErrorPage />,
     children: [
       { index: true, element: <Home /> },
       { path: "login", element: <Login /> },
@@ -59,7 +63,6 @@ const router = createBrowserRouter([
       { path: "firetraining", element: <FireTraining /> },
       { path: "fireaidtraining", element: <FirstAidTraining /> },
       { path: "foodfacilities", element: <FoodFacilities /> },
-      { path: "*", element: <NotFound /> },
     ],
   },
   {
@@ -67,6 +70,14 @@ const router = createBrowserRouter([
     element: <ProductDetails />,
     loader: productDetailsLoader,
     errorElement: <ProductDetailsError />,
+  },
+  {
+    path: "/:id",
+    loader: legacyProductRedirectLoader,
+  },
+  {
+    path: "*",
+    element: <Navigate to="/" replace />,
   },
 ]);
 
