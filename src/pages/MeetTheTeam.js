@@ -9,7 +9,7 @@ const MeetTheTeam = () => {
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic})`,
       }}
-      className="  mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg font-Nunito"
+      className="mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg font-Nunito"
     >
       <div>
         <div className="pb-10 pt-20 text-center">
