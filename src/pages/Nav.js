@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "../pages/Nav.css";
 
-const PROFILE_URL = "/WapparelsPDF.pdf";
+const PROFILE_URL = "/Business Profile Of W. Apparels Ltd..pdf";
 
 const Nav = () => {
   const [filteredData, setFilteredData] = useState([]);

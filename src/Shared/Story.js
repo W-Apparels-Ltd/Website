@@ -5,7 +5,7 @@ import o2 from "../images/Our1 (1).jpg";
 import o3 from "../images/our2 (1).jpg";
 import arrow from "../images/Untitled__1_-removebg-preview.png";
 
-const PROFILE_URL = "/WapparelsPDF.pdf";
+const PROFILE_URL = "/Business Profile Of W. Apparels Ltd..pdf";
 
 const Story = () => {
   return (
