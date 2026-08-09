@@ -17,7 +17,7 @@ import OurCertificates from '../Shared/OurCertificates';
 
 const Home = () => {
   return (
-    <div>
+    <div className=''>
       <Banner></Banner>
       <Story></Story>
       <BuildingsandOccupants></BuildingsandOccupants>
