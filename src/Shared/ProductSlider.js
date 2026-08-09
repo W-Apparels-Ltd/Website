@@ -64,7 +64,7 @@ const ProductSlider = () => {
   };
 
   return (
-    <div id="products" className="min-h-screen bg-[#e5e4e2] lg:px-20">
+    <div id="products" className="bg-[#e5e4e2] lg:px-20">
       <div className="pb-20 font-Nunito">
         <div className="p-10 text-center">
           <h1 className="text-2xl font-bold text-primary md:text-3xl lg:text-5xl">

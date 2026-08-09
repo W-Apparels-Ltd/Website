@@ -10,7 +10,7 @@ const Facilities = () => {
   return (
     <div
       id="facilities"
-      className="min-h-screen bg-base-100 pb-10 font-Nunito lg:px-20"
+      className="min-h-scree bg-base-100 pb-10 font-Nunito lg:px-20"
     >
       <div className="pb-20">
         <div className="pb-10 text-center">
@@ -19,7 +19,7 @@ const Facilities = () => {
           </h1>
         </div>
 
-        <div className="grid gap-8 px-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 px-2 grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
           <div className="card w-50 bg-base-100 shadow-xl transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
             <figure>
               <img className="w-full" src={product1} alt="Safety Measures" />
