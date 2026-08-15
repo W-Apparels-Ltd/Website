@@ -17,14 +17,20 @@ const normalizeImages = (images) =>
 
 const ProductItem = ({ item, product }) => {
   const productData = item || product || {};
+
   const imageList = useMemo(
     () => normalizeImages(productData.img),
-    [productData.img],
+    [productData.img]
   );
+
   const displayImages = useMemo(
-    () => Array.from(new Set([imageList[1], imageList[0]].filter(Boolean))),
-    [imageList],
+    () =>
+      Array.from(
+        new Set([imageList[1], imageList[0]].filter(Boolean))
+      ),
+    [imageList]
   );
+
   const [imageIndex, setImageIndex] = useState(0);
   const [hideCard, setHideCard] = useState(false);
 
@@ -56,10 +62,22 @@ const ProductItem = ({ item, product }) => {
   };
 
   return (
-    <div className="card m-5 bg-base-100 shadow-xl">
+    <div
+      className="
+        card
+        m-5
+        bg-base-100
+        shadow-xl
+        transition-transform
+        duration-300
+        ease-out
+        hover:scale-[1.03]
+        hover:shadow-2xl
+      "
+    >
       <figure>
         <img
-          className="h-[250px] object-contain p-5"
+          className="h-[250px] w-full object-contain p-5"
           src={displayImages[imageIndex]}
           alt={productData.label || "Product"}
           loading="lazy"
@@ -69,7 +87,10 @@ const ProductItem = ({ item, product }) => {
 
       <div className="m-5 text-center">
         <h2 className="font-bold">{productData.label}</h2>
-        <p className="mb-2">Size: {productData.size}</p>
+
+        <p className="mb-2">
+          Size: {productData.size}
+        </p>
 
         <div>
           <Link

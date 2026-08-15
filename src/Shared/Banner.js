@@ -20,7 +20,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-const AUTOPLAY_DELAY_MS = 7000;
+const AUTOPLAY_DELAY_MS = 5000;
 
 const partnershipHighlights = [
   {
@@ -250,13 +250,15 @@ const Banner = () => {
         customContent: true,
       },
       {
-        id: "community-impact",
-        eyebrow: "COMMUNITY & IMPACT",
-        title: "Empowering Local Businesses for a Thriving Community",
+        id: "product-collection",
+        eyebrow: "PRODUCT COLLECTION",
+        title:
+          "Unveiling Versatility: Elevate Your Wardrobe With Our Diverse Threads",
         description:
-          "We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem.",
-        image: communityImage,
-        alt: "Garments displayed in a local apparel business",
+          "We take pride in crafting a diverse collection for every facet of your style. From tops and bottoms to sweaters and outerwear, our garments combine thoughtful design, dependable quality, and everyday versatility.",
+        image: productImage,
+        alt: "A selection of W. Apparels garments on display",
+        cta: { label: "View Products", to: "/productgallery" },
       },
       {
         id: "career-culture",
@@ -270,16 +272,15 @@ const Banner = () => {
         cta: { label: "View Opportunities", to: "/career" },
       },
       {
-        id: "product-collection",
-        eyebrow: "PRODUCT COLLECTION",
-        title:
-          "Unveiling Versatility: Elevate Your Wardrobe With Our Diverse Threads",
+        id: "community-impact",
+        eyebrow: "COMMUNITY & IMPACT",
+        title: "Empowering Local Businesses for a Thriving Community",
         description:
-          "We take pride in crafting a diverse collection for every facet of your style. From tops and bottoms to sweaters and outerwear, our garments combine thoughtful design, dependable quality, and everyday versatility.",
-        image: productImage,
-        alt: "A selection of W. Apparels garments on display",
-        cta: { label: "View Products", to: "/productgallery" },
+          "We recognize the vital role that small businesses play in fostering economic growth, preserving unique craftsmanship, and nurturing a sense of community. By championing local businesses, we empower entrepreneurs, create employment opportunities, and cultivate a vibrant and sustainable ecosystem.",
+        image: communityImage,
+        alt: "Garments displayed in a local apparel business",
       },
+
       {
         id: "core-philosophy",
         eyebrow: "OUR CORE PHILOSOPHY",

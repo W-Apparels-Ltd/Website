@@ -15,7 +15,7 @@ const CorporateViewpoint = () => {
           <h1 className="lg:text-5xl text-3xl font-bold text-white">
             Corporate Viewpoint
           </h1>
-          <p className="pt-6 lg:px-20 px-5 text-white lg:text-xl text-md">
+          <p className="pt-6 lg:px-20 px-5 text-white lg:text-2xl text-md">
             W. Apparels Ltd. is among one of the most successful garment
             manufacturers in Bangladesh; a country with great potential in the
             field of garment-manufacturing. It started its journey in the year

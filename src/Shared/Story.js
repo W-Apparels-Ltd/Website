@@ -53,7 +53,7 @@ const Story = () => {
             <h1 className="lg:text-5xl text-2xl md:text-3xl font-bold">
               Our Story
             </h1>
-            <p className="py-6 lg:text-xl text-md text-justify">
+            <p className="py-6 l text-md text-justify text-3xl">
               Starting as W. Apparels in 1992 and further expanding into W.
               Apparels Ltd. in 2019, we are a garments based company maintaining
               a consistent contribution in readymade garments export. Our team

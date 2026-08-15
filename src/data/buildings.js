@@ -76,14 +76,14 @@ export const buildings = [
     number: "02",
     name: "Quality Apparels",
     shortDescription:
-      "A sister concern of W. Apparels Ltd. serving the group’s export-oriented apparel operations.",
+      "Quality Apparels operates as an integrated production division of W. Apparels Ltd.",
     overview:
-      "Quality Apparels is listed in the official company profile as a sister concern of W. Apparels Ltd. The facility contributes to the group’s apparel manufacturing activities and follows the same focus on quality, reliability and responsible production.",
+      "Quality Apparels is a specialized manufacturing facility operating within the unified production network of W. Apparels Ltd. The facility contributes directly to the group’s corporate apparel manufacturing activities, adhering strictly to the same core standards of quality, reliable delivery, and responsible production.",
     image: qualityApparelsImage,
 
     homePageCardDetails: {
       workforce: 700,
-      monthlyCapacity: "250,000",
+      monthlyCapacity: "350,000",
       veryShortDesc: "According to Group",
     },
 
@@ -110,7 +110,7 @@ export const buildings = [
       },
       {
         label: "Monthly capacity",
-        value: "250,000 pieces",
+        value: "350,000 pieces",
       },
     ],
 
@@ -125,15 +125,16 @@ export const buildings = [
     number: "03",
     name: "3NA Fashion",
     shortDescription:
-      "A woven-wear manufacturing concern with an annual production capacity of approximately 2.8 million pieces.",
+      "A premier embroidery division providing high-capacity, reliable manufacturing support to our group for over a decade.",
     overview:
-      "3NA Fashion is part of the W. Apparels group of sister concerns. The facility supports woven-wear manufacturing with an annual production capacity of approximately 2.8 million pieces.",
+      "3NA Fashion represents the premier embroidery and embellishment division of the Group, serving as a vital operational and financial backbone for the past decade.",
     image: threeNaFashionImage,
 
     homePageCardDetails: {
-      workforce: 500,
+      workforce: 70,
       monthlyCapacity: "200,000",
-      veryShortDesc: "According to Group",
+      veryShortDesc:
+        "A premier embroidery division providing high-capacity, reliable manufacturing support to our group for over a decade.",
     },
 
     facts: [

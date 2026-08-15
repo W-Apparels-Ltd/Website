@@ -48,19 +48,19 @@ const FactoryComponents = () => {
           Our Factory Component
         </h2>
 
-        <div className="grid grid-cols-1 gap-x-7 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        <div className="grid grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {factoryComponents.map((component) => (
             <article key={component.name} className="group text-center">
-              <div className="mx-auto aspect-[2/3] w-full max-w-[230px] overflow-hidden bg-gray-100 shadow-sm">
+              <div className="mx-auto aspect-[4/6] w-full max-w-[350px] overflow-hidden bg-gray-100 shadow-sm">
                 <img
                   src={component.image}
                   alt={`${component.name} at W. Apparels factory`}
                   loading="lazy"
-                  className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.03]"
+                  className="h-full w-full object-cover transition duration-500 ease-out group-hover:scale-[1.1]"
                 />
               </div>
 
-              <h3 className="mx-auto mt-3 max-w-[240px] text-lg font-semibold leading-7 text-[#5f554f] md:text-xl">
+              <h3 className="mx-auto mt-3 max-w-[240px] text-lg font-bold leading-7 text-[#5f554f] md:text-2xl">
                 {component.name}
               </h3>
             </article>

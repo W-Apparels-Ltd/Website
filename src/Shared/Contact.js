@@ -119,10 +119,12 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="pt-6">
-            W. Apparels Ltd. 295 JA/ 4 Rayer Bazar, Dhaka 1209
-            <br />
+            W. Apparels Ltd. 295/JA/4, Rayer Bazar, Dhaka-1209, Bangladesh.
+            {/* <br />
             Phone: +8802 9181198,
-            <br /> Email: info@wapparels.com
+            <br /> */}
+            <br />
+            Email: info@wapparels.com
           </p>
           <div className="font-bold">
             <h1>Follow us on:</h1>
