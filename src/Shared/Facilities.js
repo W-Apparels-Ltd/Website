@@ -73,7 +73,7 @@ const Facilities = () => {
         </div>
 
         {/* Facilities Grid */}
-        <div className="grid grid-cols-2 gap-4 px-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="grid grid-cols-1 gap-4 px-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {facilities.map((facility) => (
             <div
               key={facility.id}
@@ -133,7 +133,7 @@ const Facilities = () => {
                     className="
                       max-w-md
                       translate-y-3
-                      text-lg
+                      text-xl
                       font-medium
                       leading-relaxed
                       text-gray-200
@@ -141,7 +141,7 @@ const Facilities = () => {
                       transition-transform
                       duration-300
                       group-hover:translate-y-0
-                      md:text-xl
+                      md:text-3xl
                     "
                   >
                     {facility.description}
@@ -151,7 +151,7 @@ const Facilities = () => {
 
               {/* Title */}
               <div className="flex min-h-[60px] items-center justify-center px-2 py-3">
-                <h2 className="text-center text-sm font-bold md:text-base lg:text-lg">
+                <h2 className="text-center text-lg font-bold md:text-base lg:text-lg">
                   {facility.title}
                 </h2>
               </div>

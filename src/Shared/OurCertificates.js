@@ -73,7 +73,7 @@ const OurCertificates = () => {
 
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 4,
+      items: 2,
       partialVisibilityGutter: 30,
     },
   };
@@ -88,7 +88,7 @@ const OurCertificates = () => {
           </h1>
         </div>
 
-        <div className="my-10">
+        <div className="my-1">
           <Carousel
             responsive={responsive}
             infinite
@@ -100,26 +100,6 @@ const OurCertificates = () => {
             draggable={false}
             swipeable={false}
             keyBoardControl={false}
-          >
-            {allimg.map((item) => (
-              <OurCertificatesPic key={item._id} item={item} />
-            ))}
-          </Carousel>
-        </div>
-
-        <div className="my-10">
-          <Carousel
-            responsive={responsive}
-            infinite
-            autoPlay
-            autoPlaySpeed={1}
-            transitionDuration={10000}
-            customTransition="transform 10s linear"
-            arrows={false}
-            draggable={false}
-            swipeable={false}
-            keyBoardControl={false}
-            rtl
           >
             {allimg.map((item) => (
               <OurCertificatesPic key={item._id} item={item} />
