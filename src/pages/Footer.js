@@ -10,7 +10,7 @@ const Footer = () => {
         <img className='w-12 rounded-full' src={logo} alt="" />
       </div>
       <div>
-        <p>Copyright © 2023 - All right reserved by W. Apparels Ltd.</p>
+        <p>Copyright © 2026 - All right reserved by W. Apparels Ltd.</p>
       </div>
     </footer>
   );
