@@ -1,85 +1,87 @@
 import React from "react";
-import img from "../images/factory_purpose/ourstory-300x225-1.jpg";
-import pic from "../images/factory_purpose/1.jpg";
-import o2 from "../images/Our1 (1).jpg";
-import o3 from "../images/our2 (1).jpg";
-import arrow from "../images/Untitled__1_-removebg-preview.png";
-
-const PROFILE_URL = "/Business Profile Of W. Apparels Ltd..pdf";
+import story from "../data/story";
 
 const Story = () => {
+  const {
+    id,
+    title,
+    description,
+    background,
+    images,
+    corporateProfile,
+  } = story;
+
   return (
-    <div id="aboutus">
+    <div id={id}>
       <div
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(135, 124, 201, 0.52), rgba(24, 22, 117, 0.73)), url(${pic})`,
+          backgroundImage: `${background.overlay}, url(${background.image})`,
         }}
-        className="hero min-h-screen lg:py-0 py-5 lg:px-20 px-5 mx-auto w-full bg-cover bg-fixed bg-center bg-no-repeat"
+        className="hero min-h-screen w-full bg-cover bg-fixed bg-center bg-no-repeat px-5 py-5 mx-auto lg:px-20 lg:py-0"
       >
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center  text-white font-Nunito">
+        <div className="flex flex-col text-white font-Nunito lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-col items-center">
             <img
-              src={img}
-              alt="W. Apparels factory"
-              className="w-44 h-44 lg:w-60 lg:h-60 object-cover relative lg:-right-[130px] lg:-bottom-[40px] mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"
+              src={images.factory.src}
+              alt={images.factory.alt}
+              className="mask mask-hexagon relative h-44 w-44 object-cover shadow-2xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 lg:-bottom-[40px] lg:-right-[130px] lg:h-60 lg:w-60"
             />
+
             <div className="flex lg:hidden">
               <img
-                src={o3}
-                alt="W. Apparels production facility"
-                className="w-40 h-40 md:w-48 md:h-48  lg:w-60 lg:h-60 object-cover relative -top-[30px] -left-[15px] mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"
+                src={images.facility.src}
+                alt={images.facility.alt}
+                className="mask mask-hexagon relative -left-[15px] -top-[30px] h-40 w-40 object-cover shadow-2xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 md:h-48 md:w-48"
               />
+
               <img
-                src={o2}
-                alt="W. Apparels production floor"
-                className="w-40 h-40 md:w-48 md:h-48  lg:w-60 lg:h-60 object-cover relative -top-[30px] -right-[15px]  mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"
+                src={images.productionFloor.src}
+                alt={images.productionFloor.alt}
+                className="mask mask-hexagon relative -right-[15px] -top-[30px] h-40 w-40 object-cover shadow-2xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 md:h-48 md:w-48"
               />
             </div>
+
             <div className="hidden lg:block">
               <img
-                src={o3}
-                alt="W. Apparels production facility"
-                className="w-44 h-44 lg:w-60 lg:h-60 object-cover mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"
+                src={images.facility.src}
+                alt={images.facility.alt}
+                className="mask mask-hexagon h-44 w-44 object-cover shadow-2xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 lg:h-60 lg:w-60"
               />
+
               <img
-                src={o2}
-                alt="W. Apparels production floor"
-                className="w-44 h-44 lg:w-60 lg:h-60 object-cover relative lg:-right-[130px] lg:-top-[40px]  mask mask-hexagon  shadow-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 my-5 lg:my-0"
+                src={images.productionFloor.src}
+                alt={images.productionFloor.alt}
+                className="mask mask-hexagon relative my-5 h-44 w-44 object-cover shadow-2xl transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 lg:-right-[130px] lg:-top-[40px] lg:my-0 lg:h-60 lg:w-60"
               />
             </div>
           </div>
 
           <div className="lg:w-3/5">
-            <h1 className="lg:text-5xl text-2xl md:text-3xl font-bold">
-              Our Story
+            <h1 className="text-2xl font-bold md:text-3xl lg:text-5xl">
+              {title}
             </h1>
-            <p className="py-6 l text-md text-justify text-3xl">
-              Starting as W. Apparels in 1992 and further expanding into W.
-              Apparels Ltd. in 2019, we are a garments based company maintaining
-              a consistent contribution in readymade garments export. Our team
-              comprises of well experienced promoters, quality control agents,
-              machinists, commercial supervisors and production labor. Our goals
-              are to maintain better foreign relations and establish a research
-              intensive environment for garments products, maintaining
-              consistent customer satisfaction and using updated machinery.
-              Under the alliance of Bangladesh Garments Manufacturers and
-              Exporters’ Association (BGMEA), we envision a sustainable future
-              of RMG products using technology and a smooth international
-              market.
+
+            <p className="py-6 text-3xl text-justify">
+              {description}
             </p>
 
             <div className="flex justify-end">
               <a
-                href={PROFILE_URL}
+                href={corporateProfile.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={corporateProfile.ariaLabel}
                 className="group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-[#000066] px-7 py-3 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg active:opacity-[0.85]"
                 data-ripple-light="true"
-                aria-label="View W. Apparels corporate profile PDF in a new tab"
               >
-                View Corporate Profile
+                {corporateProfile.label}
+
                 <span className="absolute right-0 grid h-full w-12 place-items-center bg-[#00004d] transition-colors group-hover:bg-[#000066]">
-                  <img src={arrow} alt="" aria-hidden="true" />
+                  <img
+                    src={corporateProfile.arrowIcon}
+                    alt=""
+                    aria-hidden="true"
+                  />
                 </span>
               </a>
             </div>
