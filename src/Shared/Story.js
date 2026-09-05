@@ -2,14 +2,8 @@ import React from "react";
 import story from "../data/story";
 
 const Story = () => {
-  const {
-    id,
-    title,
-    description,
-    background,
-    images,
-    corporateProfile,
-  } = story;
+  const { id, title, description, background, images, corporateProfile } =
+    story;
 
   return (
     <div id={id}>
@@ -57,11 +51,11 @@ const Story = () => {
           </div>
 
           <div className="lg:w-3/5">
-            <h1 className="text-2xl font-bold md:text-3xl lg:text-5xl">
+            <h1 className="text-2xl font-bold sm:text-3xl lg:text-5xl">
               {title}
             </h1>
 
-            <p className="py-6 text-3xl text-justify">
+            <p className="py-6 text-justify text-sm leading-6 sm:text-base sm:leading-7 md:text-lg lg:text-2xl lg:leading-9 xl:text-[26px] xl:leading-10 2xl:text-[24px]">
               {description}
             </p>
 
@@ -71,12 +65,12 @@ const Story = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={corporateProfile.ariaLabel}
-                className="group relative flex select-none items-center gap-3 overflow-hidden rounded-lg bg-[#000066] px-7 py-3 pr-[72px] text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg active:opacity-[0.85]"
+                className="group relative flex select-none items-center gap-2 overflow-hidden rounded-lg bg-[#000066] px-4 py-2.5 pr-14 text-xs font-bold uppercase text-white shadow-md shadow-light-blue-500/20 transition-all hover:shadow-lg active:opacity-[0.85] sm:gap-3 sm:px-6 sm:py-3 sm:pr-[72px] sm:text-sm"
                 data-ripple-light="true"
               >
                 {corporateProfile.label}
 
-                <span className="absolute right-0 grid h-full w-12 place-items-center bg-[#00004d] transition-colors group-hover:bg-[#000066]">
+                <span className="absolute right-0 grid h-full w-10 place-items-center bg-[#00004d] transition-colors group-hover:bg-[#000066] sm:w-12">
                   <img
                     src={corporateProfile.arrowIcon}
                     alt=""

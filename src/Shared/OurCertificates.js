@@ -13,82 +13,63 @@ import client8 from "../images/Certificates/8.png";
 
 import OurCertificatesPic from "./OurCertificatesPic";
 
+const allimg = [
+  { _id: 1, img: client1, name: "Certificate 1" },
+  { _id: 2, img: client2, name: "Certificate 2" },
+  { _id: 3, img: client3, name: "Certificate 3" },
+  { _id: 4, img: client4, name: "Certificate 4" },
+  { _id: 5, img: client5, name: "Certificate 5" },
+  { _id: 6, img: client6, name: "Certificate 6" },
+  { _id: 7, img: client7, name: "Certificate 7" },
+  { _id: 8, img: client8, name: "Certificate 8" },
+];
+
+const responsive = {
+  extraLargeDesktop: {
+    breakpoint: { max: 4000, min: 1600 },
+    items: 6,
+  },
+
+  largeDesktop: {
+    breakpoint: { max: 1600, min: 1280 },
+    items: 5,
+  },
+
+  desktop: {
+    breakpoint: { max: 1280, min: 1024 },
+    items: 4,
+  },
+
+  tablet: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+  },
+
+  smallTablet: {
+    breakpoint: { max: 768, min: 520 },
+    items: 2,
+  },
+
+  mobile: {
+    breakpoint: { max: 520, min: 0 },
+    items: 1,
+  },
+};
+
 const OurCertificates = () => {
-  const allimg = [
-    {
-      _id: 1,
-      img: client1,
-    },
-    {
-      _id: 2,
-      img: client2,
-    },
-    {
-      _id: 3,
-      img: client3,
-    },
-    {
-      _id: 4,
-      img: client4,
-    },
-    {
-      _id: 5,
-      img: client5,
-    },
-    {
-      _id: 6,
-      img: client6,
-    },
-    {
-      _id: 7,
-      img: client7,
-    },
-    {
-      _id: 8,
-      img: client8,
-    },
-  ];
-
-  const firstRowCertificates = allimg.slice(0, 4);
-  const secondRowCertificates = allimg.slice(4);
-
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 7,
-      partialVisibilityGutter: 40,
-    },
-
-    desktop: {
-      breakpoint: { max: 1024, min: 701 },
-      items: 7,
-      partialVisibilityGutter: 40,
-    },
-
-    tablet: {
-      breakpoint: { max: 700, min: 464 },
-      items: 4,
-      partialVisibilityGutter: 30,
-    },
-
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 2,
-      partialVisibilityGutter: 30,
-    },
-  };
-
   return (
-    <div id="ourcertificates" className="bg-base-100 py-20 font-Nunito">
-      <div>
-        {/* Heading */}
-        <div className="text-center lg:p-15">
-          <h1 className="text-2xl font-bold text-primary md:text-3xl lg:text-4xl">
+    <section
+      id="ourcertificates"
+      className="overflow-hidden bg-base-100 py-10 font-Nunito sm:py-12 md:py-14 lg:py-16 xl:py-20"
+    >
+      <div className="mx-auto w-full">
+        <div className="mb-6 px-4 text-center sm:mb-8 md:mb-10 lg:mb-12">
+          <h1 className="text-2xl font-bold text-primary sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px]">
             Our Certificates
           </h1>
         </div>
 
-        <div className="my-1">
+        <div className="w-full">
           <Carousel
             responsive={responsive}
             infinite
@@ -97,9 +78,12 @@ const OurCertificates = () => {
             transitionDuration={10000}
             customTransition="transform 10s linear"
             arrows={false}
-            draggable={false}
-            swipeable={false}
-            keyBoardControl={false}
+            draggable
+            swipeable
+            keyBoardControl
+            pauseOnHover
+            minimumTouchDrag={50}
+            itemClass="px-5 sm:px-6 md:px-7 lg:px-8 xl:px-10"
           >
             {allimg.map((item) => (
               <OurCertificatesPic key={item._id} item={item} />
@@ -107,7 +91,7 @@ const OurCertificates = () => {
           </Carousel>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

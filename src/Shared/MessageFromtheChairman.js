@@ -3,12 +3,12 @@ import React from "react";
 const MessageFromtheChairman = () => {
   return (
     <div>
-      <div className="hero bg-base-100 lg:p-20 p-5 font-Nunito">
+      <div className="hero bg-base-100 lg:p-20 p-10 font-Nunito">
         <div className=" text-center">
           <h1 className="lg:text-5xl text-2xl md:text-3xl text-primary font-bold">
             Message from the Chairman
           </h1>
-          <p className="py-6 text-md text-2xl">
+          <p className="text-md text-justify py-6 leading-6 sm:text-base sm:leading-7 md:text-lg lg:text-2xl lg:leading-9 xl:text-[26px] xl:leading-10 2xl:text-[28px]">
             Starting as W. Apparels in 1992 and further expanding into W.
             Apparels Ltd. in 2019, we are a garments based company maintaining a
             consistent contribution in readymade garments export. Our team

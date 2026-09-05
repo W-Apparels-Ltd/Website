@@ -721,6 +721,7 @@
   }
 
   .hero-carousel__partnership-heading .hero-carousel__eyebrow {
+    margin-bottom: 0.75rem;
 
     font-size: 0.69rem;
   }
@@ -831,6 +832,7 @@
   }
 
   .hero-carousel__partnership-heading .hero-carousel__eyebrow {
+    margin-bottom: 0.7rem;
 
     font-size: 0.65rem;
   }
@@ -1104,7 +1106,7 @@
   }
 
   .hero-carousel__partnership-heading {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.65rem;
   }
 
   .hero-carousel__title--partnership {
@@ -1123,11 +1125,11 @@
   }
 
   .hero-carousel__partnership-heading {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .hero-carousel__partnership-heading .hero-carousel__eyebrow {
-    margin-bottom: 1rem;
+    margin-bottom: 0.65rem;
   }
 
   .hero-carousel__title--partnership {
