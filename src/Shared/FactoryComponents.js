@@ -1,35 +1,36 @@
-import React from 'react';
-import fabricInspection from '../images/factory-components/fabric-inspection.jpg';
-import sewing from '../images/factory-components/sewing.jpg';
-import cutting from '../images/factory-components/cutting.jpg';
-import qualityAssurance from '../images/factory-components/quality-assurance.jpg';
-import sustainabilityDevelopment from '../images/factory-components/sustainability-development.jpg';
-import packaging from '../images/factory-components/packaging.jpg';
+import React from "react";
+import fabricInspection from "../images/factory-components/fabric-inspection.jpg";
+import sewing from "../images/factory-components/sewing.jpg";
+import cutting from "../images/factory-components/cutting.jpg";
+import qualityAssurance from "../images/factory-components/quality-assurance.jpg";
+import sustainabilityDevelopment from "../images/factory-components/sustainability-development.jpg";
+import packaging from "../images/factory-components/packaging.jpg";
 
 const factoryComponents = [
   {
-    name: 'Fabric Inspection',
+    name: "Fabric Inspection",
     image: fabricInspection,
   },
   {
-    name: 'Sewing',
-    image: sewing,
-  },
-  {
-    name: 'Cutting',
+    name: "Cutting",
     image: cutting,
   },
   {
-    name: 'Quality Assurance',
+    name: "Sewing",
+    image: sewing,
+  },
+
+  {
+    name: "Quality Assurance",
     image: qualityAssurance,
   },
   {
-    name: 'Sustainability & Development',
-    image: sustainabilityDevelopment,
+    name: "Packaging",
+    image: packaging,
   },
   {
-    name: 'Packaging',
-    image: packaging,
+    name: "Sustainability & Development",
+    image: sustainabilityDevelopment,
   },
 ];
 
@@ -51,7 +52,7 @@ const FactoryComponents = () => {
         <div className="grid grid-cols-1 gap-x-3 gap-y-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {factoryComponents.map((component) => (
             <article key={component.name} className="group text-center">
-              <div className="mx-auto aspect-[4/6] w-full max-w-[350px] overflow-hidden bg-gray-100 shadow-sm">
+              <div className="mx-auto aspect-[4/6] w-full max-w-[250px] overflow-hidden bg-gray-100 shadow-sm">
                 <img
                   src={component.image}
                   alt={`${component.name} at W. Apparels factory`}
