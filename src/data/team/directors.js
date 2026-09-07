@@ -1,5 +1,5 @@
 import D1 from "../../images/personnel/team-2.png";
-import D2 from "../../images/personnel/team-3-removebg-preview.jpg";
+import D2 from "../../images/personnel/team-3.png";
 import D3 from "../../images/personnel/team-4.jpg";
 import NasifImg from "../../images/personnel/nasifhasan.png";
 
