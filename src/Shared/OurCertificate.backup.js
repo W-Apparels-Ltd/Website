@@ -3,7 +3,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import client1 from "../images/Certificates/1.jpg";
 import client2 from "../images/Certificates/2.jpg";
-import client3 from "../images/Certificates/3.jpg";
 import client4 from "../images/Certificates/4.jpg";
 import client5 from "../images/Certificates/5.jpg";
 import client6 from "../images/Certificates/6.jpeg";
@@ -22,10 +21,6 @@ const OurCertificates = () => {
       img: client2,
     },
 
-    {
-      _id: 3,
-      img: client3,
-    },
     {
       _id: 4,
       img: client4,

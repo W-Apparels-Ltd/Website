@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import client1 from "../images/Certificates/1.jpg";
 import client2 from "../images/Certificates/2.jpg";
-import client3 from "../images/Certificates/3.jpg";
+
 import client4 from "../images/Certificates/4.jpg";
 import client5 from "../images/Certificates/5.jpg";
 import client6 from "../images/Certificates/6.jpeg";
@@ -16,7 +16,7 @@ import OurCertificatesPic from "./OurCertificatesPic";
 const allimg = [
   { _id: 1, img: client1, name: "Certificate 1" },
   { _id: 2, img: client2, name: "Certificate 2" },
-  { _id: 3, img: client3, name: "Certificate 3" },
+
   { _id: 4, img: client4, name: "Certificate 4" },
   { _id: 5, img: client5, name: "Certificate 5" },
   { _id: 6, img: client6, name: "Certificate 6" },
